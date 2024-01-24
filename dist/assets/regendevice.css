@@ -1,0 +1,67 @@
+/* product cards css */
+.cards_div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.c_img_div {
+  overflow: hidden;
+}
+
+.c_img {
+  width: 100%;
+  height: auto;
+}
+
+.c_content_div {
+  padding: 15px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: -3%;
+}
+
+h2 {
+  font-size: 1rem;
+  color: rgb(74, 74, 74);
+  margin-top: -5%;
+}
+
+.c_price {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  margin-top: -5%;
+}
+
+.rs_tag {
+  font-weight: bold;
+  color: rgb(245, 95, 95);
+}
+.view_btn_div{
+  margin-top: -5%;
+}
+.view_btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.view_btn:hover {
+  background-color: #0056b3;
+}
