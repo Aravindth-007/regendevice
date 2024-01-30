@@ -76,6 +76,158 @@ define("regendevice/tests/integration/components/my-component-test", ["qunit", "
     });
   });
 });
+define("regendevice/tests/integration/components/product-detail-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | product-detail', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <ProductDetail />
+      */
+      {
+        id: "tciWxO15",
+        block: "{\"symbols\":[],\"statements\":[[5,\"product-detail\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <ProductDetail>
+              template block text
+            </ProductDetail>
+          
+      */
+      {
+        id: "AroxJq8Z",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"product-detail\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
+define("regendevice/tests/integration/components/product-detail/aboutitem-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | product-detail/aboutitem', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <ProductDetail::Aboutitem />
+      */
+      {
+        id: "tTnnjlZ6",
+        block: "{\"symbols\":[],\"statements\":[[5,\"product-detail/aboutitem\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <ProductDetail::Aboutitem>
+              template block text
+            </ProductDetail::Aboutitem>
+          
+      */
+      {
+        id: "52ClFG2R",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"product-detail/aboutitem\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
+define("regendevice/tests/integration/components/product-detail/description-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | product-detail/description', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <ProductDetail::Description />
+      */
+      {
+        id: "nylQ1fjn",
+        block: "{\"symbols\":[],\"statements\":[[5,\"product-detail/description\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <ProductDetail::Description>
+              template block text
+            </ProductDetail::Description>
+          
+      */
+      {
+        id: "1mwZ51Zs",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"product-detail/description\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
+define("regendevice/tests/integration/components/product-detail/features-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | product-detail/features', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <ProductDetail::Features />
+      */
+      {
+        id: "0zRiSCS/",
+        block: "{\"symbols\":[],\"statements\":[[5,\"product-detail/features\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <ProductDetail::Features>
+              template block text
+            </ProductDetail::Features>
+          
+      */
+      {
+        id: "vAVVdTmh",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"product-detail/features\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/integration/components/product-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -281,6 +433,19 @@ define("regendevice/tests/unit/controllers/cart-test", ["qunit", "ember-qunit"],
     // Replace this with your real tests.
     (0, _qunit.test)('it exists', function (assert) {
       let controller = this.owner.lookup('controller:cart');
+      assert.ok(controller);
+    });
+  });
+});
+define("regendevice/tests/unit/controllers/item-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Controller | item', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let controller = this.owner.lookup('controller:item');
       assert.ok(controller);
     });
   });

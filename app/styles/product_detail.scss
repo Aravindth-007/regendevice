@@ -1,0 +1,46 @@
+.p-d-content {
+  display: flex;
+  gap: 1%;
+  width: 80%;
+  height: 30rem;
+  padding: 1%;
+  margin: 5% auto;
+  border: 1px solid rgb(212, 210, 210);
+  box-shadow: 6px 6px 5px -7px black;
+}
+
+.p-d-img-div{
+  width: 72%;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.p-d-img{
+  width: 95%;
+  height: 95%;
+}
+.p-d-m_p-content {
+flex-grow: 3;
+flex-wrap: wrap;
+width: 50%;
+}
+.fea-content {
+  border-left: 1px solid rgb(228, 227, 227);
+  border-right: 1px solid rgb(226, 225, 225);
+  flex-grow: 4;
+  width: 40%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 0.5%;
+}
+.a-item-content {
+  flex-grow: 3;
+    width: 87%;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+.a-item-content ul li{
+  font-size: 15px;
+}
+  

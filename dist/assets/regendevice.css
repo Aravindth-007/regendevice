@@ -34,23 +34,21 @@ h1 {
 h2 {
   font-size: 1rem;
   color: rgb(74, 74, 74);
-  /* margin-top: -5%; */
+  margin-top: -5%;
 }
 
 .c_price {
   font-size: 1.2rem;
   color: black;
   font-weight: bold;
-  /* margin-top: -8%; */
+  margin-top: -10%;
 }
 
 .rs_tag {
   font-weight: bold;
   color: rgb(245, 95, 95);
 }
-.view_btn_div{
-  margin-top: 2%;
-}
+
 .view_btn {
   display: inline-block;
   padding: 8px 16px;
@@ -66,28 +64,79 @@ h2 {
   background-color: #0056b3;
 }
 
-.nav{
+.p-d-content {
+  display: flex;
+  gap: 1%;
+  width: 80%;
+  height: 30rem;
+  padding: 1%;
+  margin: 5% auto;
+  border: 1px solid rgb(212, 210, 210);
+  box-shadow: 6px 6px 5px -7px black;
+}
+
+.p-d-img-div {
+  width: 72%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p-d-img {
+  width: 95%;
+  height: 95%;
+}
+
+.p-d-m_p-content {
+  flex-grow: 3;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.fea-content {
+  border-left: 1px solid rgb(228, 227, 227);
+  border-right: 1px solid rgb(226, 225, 225);
+  flex-grow: 4;
+  width: 40%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 0.5%;
+}
+
+.a-item-content {
+  flex-grow: 3;
+  width: 87%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+
+.a-item-content ul li {
+  font-size: 15px;
+}
+
+.nav {
   padding: 1%;
   height: 2rem;
   display: flex;
   background-color: rgb(123, 192, 246);
-
 }
-.nav-content{
-  
+
+.nav-content {
   display: flex;
   justify-content: left;
   column-gap: 2%;
   flex-grow: 7;
- 
 }
+
 .n-button {
   text-decoration: none;
   font-weight: bold;
 }
-.nav-l-s{
+
+.nav-l-s {
   display: flex;
   flex-grow: 1;
   justify-content: right;
   column-gap: 5%;
 }
+/*@ sourceMappingURL=regendevice.css.map*/

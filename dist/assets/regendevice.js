@@ -49,6 +49,27 @@
     }
   });
 });
+;define("regendevice/components/data/productdata", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.productArray = void 0;
+  const productArray = _exports.productArray = [{
+    "id": "1",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }];
+});
 ;define("regendevice/components/general-container", ["exports", "@glimmer/component"], function (_exports, _component) {
   "use strict";
 
@@ -90,6 +111,61 @@
   _exports.default = GeneralContainerComponent;
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, GeneralContainerComponent);
 });
+;define("regendevice/components/product-detail", ["exports", "@glimmer/component"], function (_exports, _component) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
+  /*
+    <div class="p-d-content">
+        <div class="p-d-img-div">
+        <img class="p-d-img" src="{{image}}" alt="phone">
+  
+      </div>
+  <div class="p-m-content">
+    <h3>{{this.model.brand}}</h3>
+      <h2> {{this.model.model}} </h2>
+        <h2>{{this.model.description}}</h2>
+  
+  </div>
+  <div class="p-d-rpice-div">
+    <section class="price_sec">
+  <i style="text-decoration: line-through;" >{{this.model.price.original}}</i>
+  <i style="font-weight: bold; color:red; ">{{this.model.price.current}}</i>
+  </section>
+  </div>
+  <div class="fea-content">
+    <h2>Features</h2>
+    <ul>
+      {{#each this.model.features  as |feature|}}
+      <li>{{feature}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="a-item-content">
+    <h2>About this item</h2>
+    <ul>
+      {{#each this.model.about_this_item  as |aboutItem| }}
+      <li>{{aboutItem}}</li>
+      {{/each}}
+    </ul>
+  </div>
+    </div>
+  */
+  {
+    id: "PZ4lne4p",
+    block: "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[22,\"image\"]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"model\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"model\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"model\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,0,[\"model\",\"price\",\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,0,[\"model\",\"price\",\"current\"]],false],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"about_this_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
+    meta: {
+      moduleName: "regendevice/components/product-detail.hbs"
+    }
+  });
+  class ProductDetailComponent extends _component.default {}
+  _exports.default = ProductDetailComponent;
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
+});
 ;define("regendevice/components/product", ["exports", "@glimmer/component"], function (_exports, _component) {
   "use strict";
 
@@ -101,33 +177,11 @@
   /*
     
   <div class="card">
-      
-      <Product::image/>
-      <Product::detail/>
+     <div class="c_img_div">  
+        <img class="c_img" src="https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg" alt="phone">
   
-  </div>
-  */
-  {
-    id: "zUmw22rl",
-    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \\n    \"],[5,\"product/image\",[],[[],[]]],[0,\"\\n    \"],[5,\"product/detail\",[],[[],[]]],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
-    meta: {
-      moduleName: "regendevice/components/product.hbs"
-    }
-  });
-  class ProductComponent extends _component.default {}
-  _exports.default = ProductComponent;
-  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductComponent);
-});
-;define("regendevice/components/product/detail", ["exports", "@glimmer/component"], function (_exports, _component) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
-  /*
-    <div class="c_content_div">
+      </div>
+      <div class="c_content_div">
         <h1>TECNO</h1>
         <h2>Pova 5 Pro 5G </h2>
         <div class="rating-div">
@@ -143,45 +197,22 @@
   <i style="font-weight: bold; color:red; ">$120.00</i>
   </section>
   <div class="view_btn_div">
-    <LinkTo @route="item" @model="1" class="view_btn" href="#">View more</LinkTo> 
+    <LinkTo @route="product-detail" @model="1" class="view_btn" href="#">View more</LinkTo> 
   </div>
       </div>
-  */
-  {
-    id: "DJA8jHLX",
-    block: "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Pova 5 Pro 5G \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9]],\"hasEval\":false}",
-    meta: {
-      moduleName: "regendevice/components/product/detail.hbs"
-    }
-  });
-  class ProductDetailComponent extends _component.default {}
-  _exports.default = ProductDetailComponent;
-  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
-});
-;define("regendevice/components/product/image", ["exports", "@glimmer/component"], function (_exports, _component) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
-  /*
-    <div class="c_img_div">
-        <img class="c_img" src="https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg" alt="phone">
   
-      </div>
+  </div>
   */
   {
-    id: "os60hXJA",
-    block: "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9]],\"hasEval\":false}",
+    id: "FC3C03nP",
+    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n   \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"  \\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Pova 5 Pro 5G \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
     meta: {
-      moduleName: "regendevice/components/product/image.hbs"
+      moduleName: "regendevice/components/product.hbs"
     }
   });
-  class ProductImageComponent extends _component.default {}
-  _exports.default = ProductImageComponent;
-  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductImageComponent);
+  class ProductComponent extends _component.default {}
+  _exports.default = ProductComponent;
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductComponent);
 });
 ;define("regendevice/components/welcome-page", ["exports", "ember-welcome-page/components/welcome-page"], function (_exports, _welcomePage) {
   "use strict";
@@ -217,6 +248,16 @@
     }
   }
   _exports.default = CartController;
+});
+;define("regendevice/controllers/product-detail", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  class ItemController extends Ember.Controller {}
+  _exports.default = ItemController;
 });
 ;define("regendevice/data-adapter", ["exports", "@ember-data/debug"], function (_exports, _debug) {
   "use strict";
@@ -426,8 +467,8 @@
       path: 'contact-us'
     });
     this.route('home');
-    this.route('item', {
-      path: '/item/:item_id'
+    this.route('product-detail', {
+      path: '/product/:product_id'
     });
     this.route('not-found', {
       path: '/*path'
@@ -467,23 +508,6 @@
   }
   _exports.default = CartRoute;
 });
-;define("regendevice/routes/item", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  class ItemRoute extends Ember.Route {
-    model(params) {
-      const {
-        item_id
-      } = params;
-      return item_id;
-    }
-  }
-  _exports.default = ItemRoute;
-});
 ;define("regendevice/routes/not-found", ["exports"], function (_exports) {
   "use strict";
 
@@ -493,6 +517,27 @@
   _exports.default = void 0;
   class NotFoundRoute extends Ember.Route {}
   _exports.default = NotFoundRoute;
+});
+;define("regendevice/routes/product-detail", ["exports", "regendevice/components/data/productdata"], function (_exports, _productdata) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  class ItemRoute extends Ember.Route {
+    model(params) {
+      const {
+        product_id
+      } = params;
+      const oneProduct = _productdata.productArray.find(({
+        id
+      }) => id === product_id);
+      console.log(oneProduct);
+      return oneProduct;
+    }
+  }
+  _exports.default = ItemRoute;
 });
 ;define("regendevice/routes/products", ["exports"], function (_exports) {
   "use strict";
@@ -624,25 +669,10 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "N26MHPLV",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Featured Phones\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Explore our latest and greatest phone offerings.\"],[9],[0,\"\\n        \"],[2,\" Add your phone listings or featured products here \"],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Special Offers\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Don't miss out on these exclusive deals!\"],[9],[0,\"\\n        \"],[2,\" Add special offers and promotions here \"],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"footer\",true],[8],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"© 2024 Your Phone Sale. All rights reserved.\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n  \"]],\"hasEval\":false}",
+    "id": "28IV6442",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\\n\\n    \\n\\n  \"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/index.hbs"
-    }
-  });
-});
-;define("regendevice/templates/item", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "d7HsqzaH",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]],{\"statements\":[[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"TECNO Pova 5 Pro 5G (Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display\"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Brand : TECNO\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Model name : POVA 5Pro 5G\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Special Feature\\t : \\tFront Camera, Camera, Fast Charging\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Connectivity Technology : Bluetooth, Wi-Fi, USB\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Memory Storage Capacity : 256 GB\"],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot\"],[9],[0,\"\\n    \"],[7,\"li\",true],[8],[0,\"6.78\\\"FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations\"],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9],[0,\"\\n\\n\"],[7,\"p\",true],[8],[0,\"model \"],[1,[23,0,[\"model\"]],false],[0,\"\\nworks \"],[9],[0,\"\\n\"]],\"parameters\":[]}]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "regendevice/templates/item.hbs"
     }
   });
 });
@@ -661,6 +691,21 @@
     }
   });
 });
+;define("regendevice/templates/product-detail", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _default = _exports.default = Ember.HTMLBars.template({
+    "id": "ky+1fcGo",
+    "block": "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[5,\"general-container\",[],[[],[]],{\"statements\":[[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,0,[\"model\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"model\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"model\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"model\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,0,[\"model\",\"price\",\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,0,[\"model\",\"price\",\"current\"]],false],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"about_this_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \\n\"],[7,\"p\",true],[8],[0,\"model \"],[1,[23,0,[\"model\",\"id\"]],false],[0,\"\\nworks \"],[9],[0,\"\\n\"]],\"parameters\":[]}]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "regendevice/templates/product-detail.hbs"
+    }
+  });
+});
 ;define("regendevice/templates/products", ["exports"], function (_exports) {
   "use strict";
 
@@ -669,8 +714,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "aoXifDlD",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n  \"],[5,\"product\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71Ftzmh3XWL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Realme\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"realme narzo N55 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"10,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"2\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Tecno camon 20 pro 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"20,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"3\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/81H7FJtH4SL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Redmi\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Redmi 13C 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"12,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"4\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61uUEqO5uQL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"POCO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"POCO C51 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"5,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"5\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "1GIQX8Kd",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n  \"],[5,\"product\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71Ftzmh3XWL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Realme\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"realme narzo N55 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"10,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"2\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Tecno camon 20 pro 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"20,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"3\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/81H7FJtH4SL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Redmi\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Redmi 13C 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"12,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"4\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61uUEqO5uQL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"POCO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"POCO C51 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"5,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"5\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/products.hbs"
     }
@@ -751,7 +796,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+248e24e3"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+2c89eb47"});
           }
         
 //# sourceMappingURL=regendevice.map

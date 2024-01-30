@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact',{path: 'contact-us'});
   this.route('home');
-  this.route('item', {path: '/item/:item_id'});
+  this.route('product-detail', {path: '/product/:product_id'});
   this.route('not-found',{path: '/*path'});
   this.route('cart',{path: 'shop-cart'});
   this.route('products');
