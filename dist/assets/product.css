@@ -41,19 +41,14 @@ h2 {
   font-size: 1.2rem;
   color: black;
   font-weight: bold;
-  margin-top: -5%;
+  margin-top: -10%;
 }
 
 .rs_tag {
   font-weight: bold;
   color: rgb(245, 95, 95);
 }
-.price_sec{
-  margin-top: -3%;
-}
-.view_btn_div{
-  margin-top: 3%;
-}
+
 .view_btn {
   display: inline-block;
   padding: 8px 16px;
@@ -68,5 +63,3 @@ h2 {
 .view_btn:hover {
   background-color: #0056b3;
 }
-
-
