@@ -58,19 +58,30 @@
   _exports.default = void 0;
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
-    
-  <LinkTo @route="cart">
-  <i  class="fas fa-cart-plus">Shop cart</i>
+    <nav class="nav">
+    <div class="nav-content">
+        <LinkTo @route="products" class="n-button">Products</LinkTo>
+        <LinkTo @route="about" class="n-button">About Us</LinkTo>
+        <LinkTo @route="contact" class="n-button">Contact Us</LinkTo>
+    </div>
+    <div class="nav-l-s">
+      <i class="n-button">sign in</i>
+      <i class="n-button">sign up</i>
+      <LinkTo @route="cart">
+  <i class="fas fa-cart-plus  shop-btn"></i>
   </LinkTo>
+    </div>
+    
+  </nav>
   
-  <main class="container mt-5">
+    
     {{yield}}
-  </main>
+  
   
   */
   {
-    id: "m4V8S1vt",
-    block: "{\"symbols\":[\"&default\"],\"statements\":[[0,\"\\n\"],[5,\"link-to\",[],[[\"@route\"],[\"cart\"]],{\"statements\":[[0,\"\\n\"],[7,\"i\",true],[10,\"class\",\"fas fa-cart-plus\"],[8],[0,\"Shop cart\"],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n\\n\"],[7,\"main\",true],[10,\"class\",\"container mt-5\"],[8],[0,\"\\n  \"],[14,1],[0,\"\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    id: "RoqWAgPN",
+    block: "{\"symbols\":[\"&default\"],\"statements\":[[7,\"nav\",true],[10,\"class\",\"nav\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-content\"],[8],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"products\"]],{\"statements\":[[0,\"Products\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"about\"]],{\"statements\":[[0,\"About Us\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"contact\"]],{\"statements\":[[0,\"Contact Us\"]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-l-s\"],[8],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign in\"],[9],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign up\"],[9],[0,\"\\n    \"],[5,\"link-to\",[],[[\"@route\"],[\"cart\"]],{\"statements\":[[0,\"\\n\"],[7,\"i\",true],[10,\"class\",\"fas fa-cart-plus  shop-btn\"],[8],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n  \\n  \"],[14,1],[0,\"\\n\\n\"]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/general-container.hbs"
     }
@@ -88,7 +99,8 @@
   _exports.default = void 0;
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
-    <div class="card">
+    
+  <div class="card">
       
       <Product::image/>
       <Product::detail/>
@@ -96,8 +108,8 @@
   </div>
   */
   {
-    id: "iQuWomeB",
-    block: "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \\n    \"],[5,\"product/image\",[],[[],[]]],[0,\"\\n    \"],[5,\"product/detail\",[],[[],[]]],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
+    id: "zUmw22rl",
+    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \\n    \"],[5,\"product/image\",[],[[],[]]],[0,\"\\n    \"],[5,\"product/detail\",[],[[],[]]],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product.hbs"
     }
@@ -118,6 +130,14 @@
     <div class="c_content_div">
         <h1>TECNO</h1>
         <h2>Pova 5 Pro 5G </h2>
+        <div class="rating-div">
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="fas fa-star"></li>
+          <li class="far fa-star"></li>
+          {{!-- <li class="	fas fa-star-half-alt"></li> --}}
+        </div>
     <section class="price_sec">
   <i style="text-decoration: line-through;" >$198.00</i>
   <i style="font-weight: bold; color:red; ">$120.00</i>
@@ -128,8 +148,8 @@
       </div>
   */
   {
-    id: "q8vk33VV",
-    block: "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Pova 5 Pro 5G \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9]],\"hasEval\":false}",
+    id: "DJA8jHLX",
+    block: "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Pova 5 Pro 5G \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product/detail.hbs"
     }
@@ -415,17 +435,8 @@
     this.route('cart', {
       path: 'shop-cart'
     });
+    this.route('products');
   });
-});
-;define("regendevice/routes/addnewphone", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  class AddnewphoneRoute extends Ember.Route {}
-  _exports.default = AddnewphoneRoute;
 });
 ;define("regendevice/routes/addnewphone/addphone", ["exports"], function (_exports) {
   "use strict";
@@ -456,16 +467,6 @@
   }
   _exports.default = CartRoute;
 });
-;define("regendevice/routes/home", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  class HomeRoute extends Ember.Route {}
-  _exports.default = HomeRoute;
-});
 ;define("regendevice/routes/item", ["exports"], function (_exports) {
   "use strict";
 
@@ -492,6 +493,16 @@
   _exports.default = void 0;
   class NotFoundRoute extends Ember.Route {}
   _exports.default = NotFoundRoute;
+});
+;define("regendevice/routes/products", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  class ProductsRoute extends Ember.Route {}
+  _exports.default = ProductsRoute;
 });
 ;define("regendevice/serializers/-default", ["exports", "@ember-data/serializer/json"], function (_exports, _json) {
   "use strict";
@@ -553,25 +564,10 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "YeYJbFbM",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"header\",true],[8],[0,\"\\n        \"],[7,\"h1\",true],[8],[0,\"About Us\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"team.jpg\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Our Mission\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our mission is to make cutting-edge mobile technology accessible to everyone. We believe in delivering exceptional value through high-quality products and excellent customer service.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Meet the Team\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our team consists of experienced professionals in the field of mobile technology. We work together to bring you the latest trends and innovations in the mobile industry.\"],[9],[0,\"\\n        \"],[5,\"link-to\",[[12,\"class\",\"button\"]],[[\"@route\"],[\"contact\"]],{\"statements\":[[0,\"Contact Us\"]],\"parameters\":[]}],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"footer\",true],[8],[0,\"\\n        © 2024 Mobile Sale Website\\n    \"],[9]],\"hasEval\":false}",
+    "id": "fViLtPG6",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"h2\",true],[8],[0,\"About Us\"],[9],[0,\"\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://lh3.googleusercontent.com/proxy/bf-7VYznqTFJjY2nE4YT7NZ7eZmtg8sWFrjkEunHekyV-Pa3llblTILsWqJv5_RLBm-UnCcgWXri-s8nc1c\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Our Mission\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our mission is to make cutting-edge mobile technology accessible to everyone. We believe in delivering exceptional value through high-quality products and excellent customer service.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Meet the Team\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our team consists of experienced professionals in the field of mobile technology. We work together to bring you the latest trends and innovations in the mobile industry.\"],[9],[0,\"\\n      \\n    \"],[9],[0,\"\\n\\n    \"],[7,\"footer\",true],[8],[0,\"\\n        © 2024 Mobile Sale Website \\n\\n    \"],[9]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/about.hbs"
-    }
-  });
-});
-;define("regendevice/templates/addnewphone", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "cSu0VRzW",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"This is addnewphone content for checking!\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
-    "meta": {
-      "moduleName": "regendevice/templates/addnewphone.hbs"
     }
   });
 });
@@ -613,8 +609,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "qXVNM60S",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"jumbo\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"right tomster\"],[8],[9],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Contact Us\"],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"\\n    Regendevice Representatives would love to help you\"],[7,\"br\",true],[8],[9],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[9],[0,\"\\n  \"],[7,\"address\",true],[8],[0,\"\\n    Regendevice HQ\\n    \"],[7,\"p\",true],[8],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\",true],[8],[9],[0,\"\\n      Testington, OR 97233\\n    \"],[9],[0,\"\\n    \"],[7,\"a\",true],[10,\"href\",\"tel:503.555.1212\"],[8],[0,\"+1 (503) 555-1212\"],[9],[7,\"br\",true],[8],[9],[0,\"\\n    \"],[7,\"a\",true],[10,\"href\",\"mailto:regendevicerep@emberjs.com\"],[8],[0,\"regendevicerep@emberjs.com\"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"button\"]],[[\"@route\"],[\"about\"]],{\"statements\":[[0,\"About\"]],\"parameters\":[]}],[0,\"\\n\"],[9]],\"hasEval\":false}",
+    "id": "6tYO184N",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[7,\"h2\",true],[8],[0,\"Contact Us\"],[9],[0,\"\\n  \"],[7,\"img\",true],[10,\"src\",\"https://media.istockphoto.com/id/1457106246/photo/the-companys-product-quality-certificate-is-compliant-the-check-mark-symbol-represents-the.webp?b=1&s=170667a&w=0&k=20&c=0B-wEScFlzca10cZsOepMEmvm4tNX-9-v_uPJmmSTIw=\"],[10,\"alt\",\"\"],[8],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"\\n    Regendevice Representatives would love to help you\"],[7,\"br\",true],[8],[9],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[9],[0,\"\\n  \"],[7,\"address\",true],[8],[0,\"\\n    Regendevice HQ\\n    \"],[7,\"p\",true],[8],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\",true],[8],[9],[0,\"\\n      Testington, OR 97233\\n    \"],[9],[0,\"\\n \\n  \"],[9],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/contact.hbs"
     }
@@ -628,8 +624,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "0zqCig3W",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[5,\"link-to\",[[12,\"class\",\"button\"]],[[\"@route\"],[\"about\"]],{\"statements\":[[0,\"About Us\"]],\"parameters\":[]}],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]],{\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n  \"],[5,\"product\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71Ftzmh3XWL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Realme\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"realme narzo N55 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"10,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"2\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Tecno camon 20 pro 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"20,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"3\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/81H7FJtH4SL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Redmi\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Redmi 13C 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"12,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"4\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61uUEqO5uQL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"POCO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"POCO C51 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"5,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"5\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n\\n  \"]],\"hasEval\":false}",
+    "id": "N26MHPLV",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Featured Phones\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Explore our latest and greatest phone offerings.\"],[9],[0,\"\\n        \"],[2,\" Add your phone listings or featured products here \"],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Special Offers\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Don't miss out on these exclusive deals!\"],[9],[0,\"\\n        \"],[2,\" Add special offers and promotions here \"],[0,\"\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"footer\",true],[8],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"© 2024 Your Phone Sale. All rights reserved.\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n  \"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/index.hbs"
     }
@@ -658,10 +654,25 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "Cd/Kj3Tc",
-    "block": "{\"symbols\":[],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\\nPage not found 404 ERROR!!!\"]],\"hasEval\":false}",
+    "id": "D3XazEva",
+    "block": "{\"symbols\":[],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n    \"],[7,\"style\",true],[8],[0,\"\\n        body {\\n            background-color: #f4f4f4;\\n            color: #333;\\n            font-family: 'Arial', sans-serif;\\n            text-align: center;\\n            margin: 0;\\n            padding: 0;\\n            display: flex;\\n            align-items: center;\\n            justify-content: center;\\n            height: 100vh;\\n        }\\n\\n        .container {\\n            max-width: 600px;\\n            padding: 20px;\\n            background-color: #fff;\\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\\n            border-radius: 5px;\\n        }\\n\\n        h1 {\\n            color: #e44d26;\\n            font-size: 120px;\\n            margin: 0;\\n        }\\n\\n        p {\\n            font-size: 18px;\\n            margin-top: 10px;\\n        }\\n\\n        a {\\n            color: #3498db;\\n            text-decoration: none;\\n            font-weight: bold;\\n        }\\n\\n        a:hover {\\n            text-decoration: underline;\\n        }\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n        \"],[7,\"h1\",true],[8],[0,\"404\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Oops! The page you are looking for might be in another castle.\"],[9],[0,\"\\n        \"],[5,\"link-to\",[],[[\"@route\"],[\"index\"]],{\"statements\":[[0,\"Return \"]],\"parameters\":[]}],[0,\"\\n    \"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/not-found.hbs"
+    }
+  });
+});
+;define("regendevice/templates/products", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _default = _exports.default = Ember.HTMLBars.template({
+    "id": "aoXifDlD",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n  \"],[5,\"product\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71Ftzmh3XWL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Realme\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"realme narzo N55 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"10,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"2\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Tecno camon 20 pro 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"20,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"3\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/81H7FJtH4SL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Redmi\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Redmi 13C 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"12,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"4\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61uUEqO5uQL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"POCO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"POCO C51 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"5,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"item\",\"5\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "regendevice/templates/products.hbs"
     }
   });
 });
@@ -740,7 +751,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+7cc0036b"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+248e24e3"});
           }
         
 //# sourceMappingURL=regendevice.map

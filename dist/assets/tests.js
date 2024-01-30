@@ -351,6 +351,17 @@ define("regendevice/tests/unit/routes/not-found-test", ["qunit", "ember-qunit"],
     });
   });
 });
+define("regendevice/tests/unit/routes/products-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | products', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:products');
+      assert.ok(route);
+    });
+  });
+});
 define("regendevice/tests/unit/routes/sample-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 

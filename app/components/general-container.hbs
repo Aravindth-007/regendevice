@@ -1,8 +1,19 @@
-
-<LinkTo @route="cart">
-<i  class="fas fa-cart-plus">Shop cart</i>
+<nav class="nav">
+  <div class="nav-content">
+      <LinkTo @route="products" class="n-button">Products</LinkTo>
+      <LinkTo @route="about" class="n-button">About Us</LinkTo>
+      <LinkTo @route="contact" class="n-button">Contact Us</LinkTo>
+  </div>
+  <div class="nav-l-s">
+    <i class="n-button">sign in</i>
+    <i class="n-button">sign up</i>
+    <LinkTo @route="cart">
+<i class="fas fa-cart-plus  shop-btn"></i>
 </LinkTo>
+  </div>
+  
+</nav>
 
-<main class="container mt-5">
+  
   {{yield}}
-</main>
+
