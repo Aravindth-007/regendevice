@@ -3,7 +3,7 @@ import Route from '@ember/routing/route';
 export default class ItemRoute extends Route {
 
   model(params){
-    const{
+    const {
       item_id 
     } = params;
     return item_id;
