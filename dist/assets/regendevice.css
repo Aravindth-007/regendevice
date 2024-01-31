@@ -1,7 +1,7 @@
 /* product cards css */
 .cards_div {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .card {

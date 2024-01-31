@@ -418,6 +418,44 @@ define("regendevice/tests/integration/components/sample-test", ["qunit", "ember-
     });
   });
 });
+define("regendevice/tests/integration/components/search-bar-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | search-bar', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <SearchBar />
+      */
+      {
+        id: "vEij/ssG",
+        block: "{\"symbols\":[],\"statements\":[[5,\"search-bar\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <SearchBar>
+              template block text
+            </SearchBar>
+          
+      */
+      {
+        id: "zb8qanW8",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"search-bar\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/test-helper", ["regendevice/app", "regendevice/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
   "use strict";
 
