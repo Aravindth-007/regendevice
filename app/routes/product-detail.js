@@ -12,5 +12,4 @@ export default class ItemRoute extends Route {
     return oneProduct;
   }
 
-
 }

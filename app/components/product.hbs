@@ -1,12 +1,12 @@
 
 <div class="card">
    <div class="c_img_div">  
-      <img class="c_img" src="https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg" alt="phone">
+      <img class="c_img" src="{{this.args.item.image}}" alt="phone">
 
     </div>
     <div class="c_content_div">
-      <h1>TECNO</h1>
-      <h2>Pova 5 Pro 5G </h2>
+      <h1>{{this.args.item.brand}}</h1>
+      <h2>{{this.args.item.model}} </h2>
       <div class="rating-div">
         <li class="fas fa-star"></li>
         <li class="fas fa-star"></li>
@@ -16,8 +16,8 @@
         {{!-- <li class="	fas fa-star-half-alt"></li> --}}
       </div>
   <section class="price_sec">
-<i style="text-decoration: line-through;" >$198.00</i>
-<i style="font-weight: bold; color:red; ">$120.00</i>
+<i style="text-decoration: line-through;" >{{this.args.item.price.original}}</i>
+<i style="font-weight: bold; color:red; ">{{this.args.item.price.current}}</i>
 </section>
 <div class="view_btn_div">
   <LinkTo @route="product-detail" @model="1" class="view_btn" href="#">View more</LinkTo> 

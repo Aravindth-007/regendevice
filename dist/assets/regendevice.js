@@ -68,6 +68,114 @@
     },
     "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
     "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "2",
+    "image": "https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "TECNO cammon 20 Pro 5G",
+    "description": "(Dark Welkin, 8GB RAM,128GB Storage)| India's 1st MediaTek Dimensity 8050 Processor | 16GB Expandable RAM | 64MP RGBW(G+P) OIS Rear Camera",
+    "price": {
+      "original": "$290.00",
+      "current": "$250.00"
+    },
+    "features": ["Network Service Provider :	Unlocked", "Operating System :	Android 13.0", "Cellular Technology :	5G"],
+    "about_this_item": ["Amazing night photography with 64MP RGBW(G+P) OIS lens & F1.65 large aperture | 32MP Selfie Camera for ultra-clear selfie | DSLR level portrait system, Pro-shooting modes and Video HDR", "6.67FHD+AMOLED 10bit Dot-in display| DC Dimming and 1920Hz PWM Dimming for flicker free display | TÜV Rheinland Low blue light emission certified Eye Protection | Ultra-fast In-display Fingerprint sensor", "India's 1st MediaTek Dimensity 8050 Processor", "Up to 256GB UFS 2.1 Internal Storage for seamless data experience | 8GB LPDDR4x RAM with 8GB Software powered Customizable RAM | Up to 1TB dedicated expandable storage slot", "7.8mm Ultra sleek design | Super Slim Leather finished back | Muse Design Award 2023 Gold winner | Ring Flashlight"]
+  }, {
+    "id": "3",
+    "image": "https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg",
+    "brand": "Redmi",
+    "model": "Redmi Note 13 5G",
+    "description": "Arctic White, 6GB RAM, 128GB Storage) | MTK Dimensity 6080 5G | 7.6mm, Slimmest Note Ever",
+    "price": {
+      "original": "$240.00",
+      "current": "$180.00"
+    },
+    "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System :	Android 13, MIUI 14", "Cellular Technology	: 5G"],
+    "about_this_item": ["Display: 6.67 FHD+ pOLED (1080x2400) Ultra-narrow bezels Display with 120Hz Refresh rate; 1000nits peak brightness; Corning Gorilla Glass 5 Display Protection", "Processor:Mediatek Dimensity 6080 6nm Octa-core 5G processor for high performance ; Up to 2.4GHz; Upto 12GB RAM including 6GB Virtual RAM", "Camera: 108MP 3X in-sensor zoom AI Triple Camera with 8MP Ultra Wide sensor and 2MP Macro camera| 16MP Front camera", "Battery: 5000 mAh large battery with 33W fast charger in-box and Type-C connectivityt", "Memory, Storage & SIM: 6GB RAM | 128GB UFS 2.2 | Dual SIM (nano+nano) 5G"]
+  }, {
+    "id": "4",
+    "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._SX679_.jpg",
+    "brand": "OnePlus",
+    "model": "OnePlus 11 5G",
+    "description": "(Eternal Green, 16GB RAM, 256GB Storage)",
+    "price": {
+      "original": "$540.00",
+      "current": "$470.00"
+    },
+    "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System :	OxygenOS", "Cellular Technology	: 5G"],
+    "about_this_item": ["Camera: 50MP Main Camera with Sony IMX890 (OIS supported), 48MP Ultrawide Camera with Sony IMX581 (FOV: 115 degree) and 32MP Telephoto lens with Sony IMX709 (2X Optical Zoom); 16MP Front (Selfie) Camera with EIS support", "Camera Modes: Photo, Video, Night, PRO, PANO, Portrait, TIME-LAPSE, SLO-MO, Text scanner, Movie, Long Exposure, Dual-view video, TILT-SHIFT, XPAN, Scan, STICKER, and AI ID photo", "Display: 6.7 Inches; 120 Hz AMOLED QHD Display with Corning Gorilla Glass Victus; Resolution: 3216 X 1440 pixels; HDR 10+, sRGB, 10-bit Color Depth, PWM + DC dimming", "Operating System: OxygenOS based on Android 13 Processor: Snapdragon 8 Gen 2 Mobile Platform"]
+  }, {
+    "id": "5",
+    "image": "https://m.media-amazon.com/images/I/41yAce7gd4L._SX300_SY300_QL70_FMwebp_.jpg",
+    "brand": "iQOO",
+    "model": "iQOO Z7 Pro 5G",
+    "description": "(Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment's Slimmest & Lightest Smartphone",
+    "price": {
+      "original": "$198.00",
+      "current": "$130.00"
+    },
+    "features": ["Network Service Provider	: Unlocked for All Carriers", "Operating System :	Funtouch OS 13 Based On Android 13", "Cellular Technology :	5G"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "6",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "7",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "8",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "9",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+  }, {
+    "id": "10",
+    "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
+    "brand": "TECNO",
+    "model": "pova 5 Pro 5G",
+    "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
+    "price": {
+      "original": "$198.00",
+      "current": "$98.00"
+    },
+    "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
+    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
   }];
 });
 ;define("regendevice/components/general-container", ["exports", "@glimmer/component"], function (_exports, _component) {
@@ -182,12 +290,12 @@
     
   <div class="card">
      <div class="c_img_div">  
-        <img class="c_img" src="https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg" alt="phone">
+        <img class="c_img" src="{{this.args.item.image}}" alt="phone">
   
       </div>
       <div class="c_content_div">
-        <h1>TECNO</h1>
-        <h2>Pova 5 Pro 5G </h2>
+        <h1>{{this.args.item.brand}}</h1>
+        <h2>{{this.args.item.model}} </h2>
         <div class="rating-div">
           <li class="fas fa-star"></li>
           <li class="fas fa-star"></li>
@@ -197,8 +305,8 @@
           {{!-- <li class="	fas fa-star-half-alt"></li> --}}
         </div>
     <section class="price_sec">
-  <i style="text-decoration: line-through;" >$198.00</i>
-  <i style="font-weight: bold; color:red; ">$120.00</i>
+  <i style="text-decoration: line-through;" >{{this.args.item.price.original}}</i>
+  <i style="font-weight: bold; color:red; ">{{this.args.item.price.current}}</i>
   </section>
   <div class="view_btn_div">
     <LinkTo @route="product-detail" @model="1" class="view_btn" href="#">View more</LinkTo> 
@@ -208,8 +316,8 @@
   </div>
   */
   {
-    id: "FC3C03nP",
-    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n   \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"  \\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Pova 5 Pro 5G \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[0,\"$198.00\"],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[0,\"$120.00\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
+    id: "CnsX8FQx",
+    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n   \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"  \\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[11,\"src\",[29,[[23,0,[\"args\",\"item\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[1,[23,0,[\"args\",\"item\",\"brand\"]],false],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"args\",\"item\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,0,[\"args\",\"item\",\"price\",\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,0,[\"args\",\"item\",\"price\",\"current\"]],false],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"1\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product.hbs"
     }
@@ -543,14 +651,18 @@
   }
   _exports.default = ItemRoute;
 });
-;define("regendevice/routes/products", ["exports"], function (_exports) {
+;define("regendevice/routes/products", ["exports", "regendevice/components/data/productdata"], function (_exports, _productdata) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
   _exports.default = void 0;
-  class ProductsRoute extends Ember.Route {}
+  class ProductsRoute extends Ember.Route {
+    model() {
+      return _productdata.productArray;
+    }
+  }
   _exports.default = ProductsRoute;
 });
 ;define("regendevice/serializers/-default", ["exports", "@ember-data/serializer/json"], function (_exports, _json) {
@@ -613,8 +725,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "fViLtPG6",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"h2\",true],[8],[0,\"About Us\"],[9],[0,\"\\n    \"],[7,\"section\",true],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://lh3.googleusercontent.com/proxy/bf-7VYznqTFJjY2nE4YT7NZ7eZmtg8sWFrjkEunHekyV-Pa3llblTILsWqJv5_RLBm-UnCcgWXri-s8nc1c\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[7,\"h2\",true],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Our Mission\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our mission is to make cutting-edge mobile technology accessible to everyone. We believe in delivering exceptional value through high-quality products and excellent customer service.\"],[9],[0,\"\\n\\n        \"],[7,\"h2\",true],[8],[0,\"Meet the Team\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Our team consists of experienced professionals in the field of mobile technology. We work together to bring you the latest trends and innovations in the mobile industry.\"],[9],[0,\"\\n      \\n    \"],[9],[0,\"\\n\\n    \"],[7,\"footer\",true],[8],[0,\"\\n        © 2024 Mobile Sale Website \\n\\n    \"],[9]],\"hasEval\":false}",
+    "id": "rwHHyjET",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\\n    \\n        \"],[7,\"div\",true],[10,\"class\",\"a-us-section\"],[8],[0,\"\\n            \"],[7,\"div\",true],[10,\"class\",\"a-c-image\"],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://lh3.googleusercontent.com/proxy/bf-7VYznqTFJjY2nE4YT7NZ7eZmtg8sWFrjkEunHekyV-Pa3llblTILsWqJv5_RLBm-UnCcgWXri-s8nc1c\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[7,\"div\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[10,\"class\",\"a-us-content\"],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \\n      \\n       \\n\\n        \\n    \\n        \\n    \\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/about.hbs"
     }
@@ -718,8 +830,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "1GIQX8Kd",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n  \"],[5,\"product\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71Ftzmh3XWL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Realme\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"realme narzo N55 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"10,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"2\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"TECNO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Tecno camon 20 pro 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"20,000\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"3\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\\n\"],[0,\"\\n \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/81H7FJtH4SL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"Redmi\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"Redmi 13C 5G \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"12,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"4\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[0,\" \"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[10,\"src\",\"https://m.media-amazon.com/images/I/61uUEqO5uQL._SX679_.jpg\"],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[0,\"POCO\"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[0,\"POCO C51 \"],[9],[0,\"\\n\"],[7,\"pre\",true],[10,\"class\",\"c_price\"],[8],[7,\"span\",true],[10,\"class\",\"rs_tag\"],[8],[0,\"Rs\\\\-\"],[9],[0,\"5,999\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",\"5\"]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\"  \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "0gpFWF7Z",
+    "block": "{\"symbols\":[\"productObg\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\\n  \\n\"],[7,\"form\",true],[10,\"action\",\"/search\"],[10,\"method\",\"get\"],[8],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"search\"],[8],[0,\"Search:\"],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"id\",\"search\"],[10,\"name\",\"q\"],[10,\"placeholder\",\"Enter your search term\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n        \"],[7,\"button\",true],[10,\"type\",\"submit\"],[8],[0,\"Search\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/products.hbs"
     }
