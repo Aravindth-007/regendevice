@@ -1,42 +1,5 @@
 <GeneralContainer>
-  <div class="p-d-content">
-      <div class="p-d-img-div">
-      <img class="p-d-img" src="{{this.model.image}}" alt="phone">
 
-    </div>
-    <div class="p-d-m_p-content">
-<div class="p-m-content">
-  <h3>{{this.model.brand}}</h3>
-    <h2> {{this.model.model}} </h2>
-      <h2>{{this.model.description}}</h2>
-
-</div>
-<div class="p-d-rpice-div">
-  <section class="price_sec">
-<i style="text-decoration: line-through;" >{{this.model.price.original}}</i>
-<i style="font-weight: bold; color:red; ">{{this.model.price.current}}</i>
-</section>
-</div>
-</div>
-<div class="fea-content">
-  <h2>Features</h2>
-  <ul>
-    {{#each this.model.features  as |feature|}}
-    <li>{{feature}}</li>
-    {{/each}}
-  </ul>
-</div>
-<div class="a-item-content">
-  <h2>About this item</h2>
-  <ul>
-    {{#each this.model.about_this_item  as |aboutItem| }}
-    <li>{{aboutItem}}</li>
-    {{/each}}
-  </ul>
-</div>
-  </div>
+  <Product-Detail @oneProduct = {{this.model}} />
   
-{{!-- {{product-detail }} --}}
-<p>model {{this.model.id}}
-works </p>
 </GeneralContainer>

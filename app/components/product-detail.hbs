@@ -1,24 +1,28 @@
 <div class="p-d-content">
       <div class="p-d-img-div">
-      <img class="p-d-img" src="{{image}}" alt="phone">
-
+      <img class="p-d-img" src="{{this.args.oneProduct.image}}" alt="phone">
     </div>
+    <div class="p-d-m_p-content">
 <div class="p-m-content">
-  <h3>{{this.model.brand}}</h3>
-    <h2> {{this.model.model}} </h2>
-      <h2>{{this.model.description}}</h2>
+
+  <h3>{{this.args.oneProduct.brand}}</h3>
+    <h2> {{this.args.oneProduct.model}} </h2>
+      <h2>{{this.args.oneProduct.description}}</h2>
 
 </div>
 <div class="p-d-rpice-div">
   <section class="price_sec">
-<i style="text-decoration: line-through;" >{{this.model.price.original}}</i>
-<i style="font-weight: bold; color:red; ">{{this.model.price.current}}</i>
+<i style="text-decoration: line-through;" >{{this.args.oneProduct.price.original}}</i>
+<i style="font-weight: bold; color:red; ">{{this.args.oneProduct.price.current}}</i>
+
 </section>
+<button>Add to cart</button>
+</div>
 </div>
 <div class="fea-content">
   <h2>Features</h2>
   <ul>
-    {{#each this.model.features  as |feature|}}
+    {{#each this.args.oneProduct.features  as |feature|}}
     <li>{{feature}}</li>
     {{/each}}
   </ul>
@@ -26,7 +30,7 @@
 <div class="a-item-content">
   <h2>About this item</h2>
   <ul>
-    {{#each this.model.about_this_item  as |aboutItem| }}
+    {{#each this.args.oneProduct.about_this_item  as |aboutItem| }}
     <li>{{aboutItem}}</li>
     {{/each}}
   </ul>
