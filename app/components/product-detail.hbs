@@ -16,8 +16,10 @@
 <i style="font-weight: bold; color:red; ">{{this.args.oneProduct.price.current}}</i>
 
 </section>
-<button>Add to cart</button>
-<button {{on "click" this.offerStatus}}>Offers</button>
+<div class="buy-div">
+<button class="add-cart-btn">ADD TO CART</button><button class="buy-btn">BUY NOW</button>
+</div>
+<button class="offer-btn" {{on "click" this.offerStatus}}>Offers</button>
 {{#if this.active}}
 <div class="offer-div">
   <p  class="off-div-head">Bank Offer</p>

@@ -6,7 +6,6 @@
 
 }
 .nav-content{
-  
   display: flex;
   justify-content: left;
   column-gap: 2%;
@@ -16,6 +15,15 @@
 .n-button {
   text-decoration: none;
   font-weight: bold;
+  color: black;
+  
+}
+.n-button:hover {
+  background-color: black;
+  color: white;
+  padding: 3px;
+  border-radius: 4px;
+  transition: background-color 1s;
 }
 .nav-l-s{
   display: flex;
