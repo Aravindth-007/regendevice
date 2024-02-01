@@ -362,16 +362,19 @@
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
       
-  <form action="/search" method="get">
-          <label for="search">Search:</label>
-          <input type="text" id="search" name="q" placeholder="Enter your search term">
+  <form class="search-bar-f" action="/search" method="get">
+  <div class="search-icon-div">
+      <li class="fas fa-search serch-icon"></li>
+  </div>
+          
+          <input class="search-bar-i" type="text" id="search" name="q" placeholder="Enter your search term">
           
       </form>
      
   */
   {
-    id: "wOTHO6Qu",
-    block: "{\"symbols\":[],\"statements\":[[0,\"  \\n\"],[7,\"form\",true],[10,\"action\",\"/search\"],[10,\"method\",\"get\"],[8],[0,\"\\n        \"],[7,\"label\",true],[10,\"for\",\"search\"],[8],[0,\"Search:\"],[9],[0,\"\\n        \"],[7,\"input\",true],[10,\"id\",\"search\"],[10,\"name\",\"q\"],[10,\"placeholder\",\"Enter your search term\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n        \\n    \"],[9],[0,\"\\n   \"]],\"hasEval\":false}",
+    id: "8VpYJnaR",
+    block: "{\"symbols\":[],\"statements\":[[0,\"  \\n\"],[7,\"form\",true],[10,\"class\",\"search-bar-f\"],[10,\"action\",\"/search\"],[10,\"method\",\"get\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"search-icon-div\"],[8],[0,\"\\n    \"],[7,\"li\",true],[10,\"class\",\"fas fa-search serch-icon\"],[8],[9],[0,\"\\n\"],[9],[0,\"\\n        \\n        \"],[7,\"input\",true],[10,\"class\",\"search-bar-i\"],[10,\"id\",\"search\"],[10,\"name\",\"q\"],[10,\"placeholder\",\"Enter your search term\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n        \\n    \"],[9],[0,\"\\n   \"]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/search-bar.hbs"
     }
