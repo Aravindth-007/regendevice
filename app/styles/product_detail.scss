@@ -2,7 +2,7 @@
   display: flex;
   gap: 1%;
   width: 80%;
-  height: 30rem;
+  height: 25rem;
   padding: 1%;
   margin: 5% auto;
   border: 1px solid rgb(212, 210, 210);
@@ -22,6 +22,7 @@
 }
 .p-d-m_p-content {
 flex-grow: 3;
+margin: unset;
 flex-wrap: wrap;
 width: 50%;
 }
@@ -44,3 +45,20 @@ width: 50%;
   font-size: 15px;
 }
   
+.offer-div {
+  padding: 1%;
+  width: 80%;
+  margin: 10% auto;
+  border: 1px solid grey;
+  border-radius: 3%;
+}
+
+.off-div-head{
+  margin: unset;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.off-div-para {
+ margin: unset;
+  font-size: 15px;
+}

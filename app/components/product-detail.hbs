@@ -17,6 +17,13 @@
 
 </section>
 <button>Add to cart</button>
+<button {{on "click" this.offerStatus}}>Offers</button>
+{{#if this.active}}
+<div class="offer-div">
+  <p  class="off-div-head">Bank Offer</p>
+  <p class="off-div-para">Upto ₹850.00 discount on select Credit Cards.</p>
+</div>
+{{/if}}
 </div>
 </div>
 <div class="fea-content">
