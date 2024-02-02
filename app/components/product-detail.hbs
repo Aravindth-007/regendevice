@@ -1,23 +1,24 @@
 <div class="p-d-content">
       <div class="p-d-img-div">
-      <img class="p-d-img" src="{{this.args.oneProduct.image}}" alt="phone">
+      <img class="p-d-img" src="{{@image}}" alt="phone">
     </div>
     <div class="p-d-m_p-content">
 <div class="p-m-content">
 
-  <h3>{{this.args.oneProduct.brand}}</h3>
-    <h2> {{this.args.oneProduct.model}} </h2>
+  <h3>{{@brand}}</h3>
+    <h2> {{@model}} </h2>
       <h2>{{this.args.oneProduct.description}}</h2>
 
 </div>
 <div class="p-d-rpice-div">
   <section class="price_sec">
-<i style="text-decoration: line-through;" >{{this.args.oneProduct.price.original}}</i>
-<i style="font-weight: bold; color:red; ">{{this.args.oneProduct.price.current}}</i>
+<i style="text-decoration: line-through;" >{{@price.original}}</i>
+<i style="font-weight: bold; color:red; ">{{@price.current}}</i>
 
 </section>
 <div class="buy-div">
-<button class="add-cart-btn">ADD TO CART</button><button class="buy-btn">BUY NOW</button>
+<button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
+<button class="buy-btn">BUY NOW</button>
 </div>
 <button class="offer-btn" {{on "click" this.offerStatus}}>Offers</button>
 {{#if this.active}}

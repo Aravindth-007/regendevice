@@ -185,6 +185,13 @@
     value: true
   });
   _exports.default = void 0;
+  var _dec, _class, _descriptor;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
     <nav class="nav">
@@ -198,6 +205,9 @@
       <i class="n-button">sign up</i>
       <LinkTo @route="cart">
   <i class="fas fa-cart-plus  shop-btn"></i>
+  {{#if this.shopCart.itemList.length}}
+    <span class="cart-count ">{{this.shopCart.itemList.length}}</span>
+    {{/if}}
   </LinkTo>
     </div>
     
@@ -209,14 +219,23 @@
   
   */
   {
-    id: "RoqWAgPN",
-    block: "{\"symbols\":[\"&default\"],\"statements\":[[7,\"nav\",true],[10,\"class\",\"nav\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-content\"],[8],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"products\"]],{\"statements\":[[0,\"Products\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"about\"]],{\"statements\":[[0,\"About Us\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"contact\"]],{\"statements\":[[0,\"Contact Us\"]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-l-s\"],[8],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign in\"],[9],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign up\"],[9],[0,\"\\n    \"],[5,\"link-to\",[],[[\"@route\"],[\"cart\"]],{\"statements\":[[0,\"\\n\"],[7,\"i\",true],[10,\"class\",\"fas fa-cart-plus  shop-btn\"],[8],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n  \\n  \"],[14,1],[0,\"\\n\\n\"]],\"hasEval\":false}",
+    id: "bpmYG70z",
+    block: "{\"symbols\":[\"&default\"],\"statements\":[[7,\"nav\",true],[10,\"class\",\"nav\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-content\"],[8],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"products\"]],{\"statements\":[[0,\"Products\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"about\"]],{\"statements\":[[0,\"About Us\"]],\"parameters\":[]}],[0,\"\\n      \"],[5,\"link-to\",[[12,\"class\",\"n-button\"]],[[\"@route\"],[\"contact\"]],{\"statements\":[[0,\"Contact Us\"]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"nav-l-s\"],[8],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign in\"],[9],[0,\"\\n    \"],[7,\"i\",true],[10,\"class\",\"n-button\"],[8],[0,\"sign up\"],[9],[0,\"\\n    \"],[5,\"link-to\",[],[[\"@route\"],[\"cart\"]],{\"statements\":[[0,\"\\n\"],[7,\"i\",true],[10,\"class\",\"fas fa-cart-plus  shop-btn\"],[8],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"shopCart\",\"itemList\",\"length\"]]],null,{\"statements\":[[0,\"  \"],[7,\"span\",true],[10,\"class\",\"cart-count \"],[8],[1,[23,0,[\"shopCart\",\"itemList\",\"length\"]],false],[9],[0,\"\\n\"]],\"parameters\":[]},null]],\"parameters\":[]}],[0,\"\\n  \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n  \\n  \"],[14,1],[0,\"\\n\\n\"]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/general-container.hbs"
     }
   });
-  class GeneralContainerComponent extends _component.default {}
-  _exports.default = GeneralContainerComponent;
+  let GeneralContainerComponent = _exports.default = (_dec = Ember.inject.service, (_class = class GeneralContainerComponent extends _component.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "shopCart", _descriptor, this);
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "shopCart", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, GeneralContainerComponent);
 });
 ;define("regendevice/components/product-detail", ["exports", "@glimmer/component"], function (_exports, _component) {
@@ -226,7 +245,7 @@
     value: true
   });
   _exports.default = void 0;
-  var _dec, _dec2, _class, _descriptor;
+  var _dec, _dec2, _dec3, _dec4, _class, _descriptor, _descriptor2;
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -237,24 +256,25 @@
   /*
     <div class="p-d-content">
         <div class="p-d-img-div">
-        <img class="p-d-img" src="{{this.args.oneProduct.image}}" alt="phone">
+        <img class="p-d-img" src="{{@image}}" alt="phone">
       </div>
       <div class="p-d-m_p-content">
   <div class="p-m-content">
   
-    <h3>{{this.args.oneProduct.brand}}</h3>
-      <h2> {{this.args.oneProduct.model}} </h2>
+    <h3>{{@brand}}</h3>
+      <h2> {{@model}} </h2>
         <h2>{{this.args.oneProduct.description}}</h2>
   
   </div>
   <div class="p-d-rpice-div">
     <section class="price_sec">
-  <i style="text-decoration: line-through;" >{{this.args.oneProduct.price.original}}</i>
-  <i style="font-weight: bold; color:red; ">{{this.args.oneProduct.price.current}}</i>
+  <i style="text-decoration: line-through;" >{{@price.original}}</i>
+  <i style="font-weight: bold; color:red; ">{{@price.current}}</i>
   
   </section>
   <div class="buy-div">
-  <button class="add-cart-btn">ADD TO CART</button><button class="buy-btn">BUY NOW</button>
+  <button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
+  <button class="buy-btn">BUY NOW</button>
   </div>
   <button class="offer-btn" {{on "click" this.offerStatus}}>Offers</button>
   {{#if this.active}}
@@ -284,26 +304,44 @@
     </div>
   */
   {
-    id: "WQ1j+WM5",
-    block: "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,0,[\"args\",\"oneProduct\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"args\",\"oneProduct\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"args\",\"oneProduct\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"args\",\"oneProduct\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,0,[\"args\",\"oneProduct\",\"price\",\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,0,[\"args\",\"oneProduct\",\"price\",\"current\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"add-cart-btn\"],[8],[0,\"ADD TO CART\"],[9],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"offerStatus\"]]]],[8],[0,\"Offers\"],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"active\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Bank Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \u20B9850.00 discount on select Credit Cards.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"about_this_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
+    id: "6sCGBwiv",
+    block: "{\"symbols\":[\"aboutItem\",\"feature\",\"@image\",\"@brand\",\"@model\",\"@price\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,3,[]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,4,[]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,5,[]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"args\",\"oneProduct\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,6,[\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,6,[\"current\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"add-cart-btn\"],[3,\"on\",[\"click\",[23,0,[\"addToCart\"]]]],[8],[0,\"ADD TO CART\"],[9],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"offerStatus\"]]]],[8],[0,\"Offers\"],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"active\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Bank Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \u20B9850.00 discount on select Credit Cards.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"about_this_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product-detail.hbs"
     }
   });
-  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
+  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._action, _dec3 = Ember.inject.service('shopCart'), _dec4 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
     constructor(...args) {
       super(...args);
       _initializerDefineProperty(this, "active", _descriptor, this);
+      _initializerDefineProperty(this, "cart", _descriptor2, this);
     }
     offerStatus() {
       this.active = true;
+    }
+    addToCart() {
+      const {
+        model,
+        image,
+        price
+      } = this.args;
+      this.cart.addItem({
+        model,
+        image,
+        price: price.current
+      });
     }
   }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "active", [_dec], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _applyDecoratedDescriptor(_class.prototype, "offerStatus", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "offerStatus"), _class.prototype)), _class));
+  }), _applyDecoratedDescriptor(_class.prototype, "offerStatus", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "offerStatus"), _class.prototype), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec3], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec4], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
 });
 ;define("regendevice/components/product", ["exports", "@glimmer/component"], function (_exports, _component) {
@@ -405,7 +443,18 @@
     value: true
   });
   _exports.default = void 0;
-  class CartController extends Ember.Controller {
+  var _dec, _class, _descriptor;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  let CartController = _exports.default = (_dec = Ember.inject.service('shopCart'), (_class = class CartController extends Ember.Controller {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "cart", _descriptor, this);
+    }
     get subtotal() {
       return this.model.reduce((acc, item) => {
         return acc + item.price;
@@ -417,8 +466,12 @@
     get total() {
       return this.subtotal + this.tax;
     }
-  }
-  _exports.default = CartController;
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
 });
 ;define("regendevice/controllers/product-detail", ["exports"], function (_exports) {
   "use strict";
@@ -667,16 +720,7 @@
     value: true
   });
   _exports.default = void 0;
-  class CartRoute extends Ember.Route {
-    model() {
-      const items = [{
-        price: 12999
-      }, {
-        price: 20000
-      }];
-      return items;
-    }
-  }
+  class CartRoute extends Ember.Route {}
   _exports.default = CartRoute;
 });
 ;define("regendevice/routes/not-found", ["exports"], function (_exports) {
@@ -763,6 +807,27 @@
     }
   });
 });
+;define("regendevice/services/shop-cart", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  class ShopCartService extends Ember.Service {
+    constructor(...args) {
+      super(...args);
+      _defineProperty(this, "itemList", Ember.A([]));
+    }
+    addItem(item) {
+      this.itemList.pushObject(item);
+    }
+  }
+  _exports.default = ShopCartService;
+});
 ;define("regendevice/services/store", ["exports", "ember-data/store"], function (_exports, _store) {
   "use strict";
 
@@ -814,8 +879,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "mGL8VswH",
-    "block": "{\"symbols\":[],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[7,\"main\",true],[10,\"class\",\"container mt-5\"],[8],[0,\"\\n  \"],[7,\"h1\",true],[8],[0,\"Shopping cart\"],[9],[0,\"\\n  \"],[7,\"ol\",true],[10,\"class\",\"breadcrumb\"],[8],[0,\"\\n\"],[0,\"     \"],[7,\"li\",true],[10,\"class\",\"breadcrumb-item\"],[8],[0,\"Shopping cart\"],[9],[0,\"\\n  \"],[9],[0,\"\\n\\n  \"],[7,\"section\",true],[10,\"class\",\"w-50 ml-auto text-right mb-5\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal\"],[9],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[1,[23,0,[\"subtotal\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax\"],[9],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Total\"],[9],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[1,[23,0,[\"total\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "6cp0HDJj",
+    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[23,1,[\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"total-text\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/cart.hbs"
     }
@@ -874,8 +939,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "Oc8qmrWA",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]],{\"statements\":[[0,\"\\n\\n  \"],[5,\"product-detail\",[],[[\"@oneProduct\"],[[23,0,[\"model\"]]]]],[0,\"\\n  \\n\"]],\"parameters\":[]}]],\"hasEval\":false}",
+    "id": "IEsvhh4s",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]],{\"statements\":[[0,\"\\n\\n  \"],[5,\"product-detail\",[],[[\"@model\",\"@brand\",\"@image\",\"@price\",\"@oneProduct\"],[[23,0,[\"model\",\"model\"]],[23,0,[\"model\",\"brand\"]],[23,0,[\"model\",\"image\"]],[23,0,[\"model\",\"price\"]],[23,0,[\"model\"]]]]],[0,\"\\n  \\n\"]],\"parameters\":[]}]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/product-detail.hbs"
     }
@@ -889,8 +954,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "NTIvKS6f",
-    "block": "{\"symbols\":[\"productObg\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[5,\"search-bar\",[],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "0vzycovm",
+    "block": "{\"symbols\":[\"productObg\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[5,\"search-bar\",[],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \\n\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/products.hbs"
     }
@@ -971,7 +1036,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+394bdcc7"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+8b8a4b6c"});
           }
         
 //# sourceMappingURL=regendevice.map

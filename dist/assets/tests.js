@@ -1,5 +1,43 @@
 'use strict';
 
+define("regendevice/tests/integration/components/cart-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | cart', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <Cart />
+      */
+      {
+        id: "4Omny3zr",
+        block: "{\"symbols\":[],\"statements\":[[5,\"cart\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <Cart>
+              template block text
+            </Cart>
+          
+      */
+      {
+        id: "+/8bOfCn",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"cart\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/integration/components/general-container-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -573,6 +611,19 @@ define("regendevice/tests/unit/routes/sample-test", ["qunit", "ember-qunit"], fu
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:sample');
       assert.ok(route);
+    });
+  });
+});
+define("regendevice/tests/unit/services/shop-cart-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Service | shop-cart', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let service = this.owner.lookup('service:shop-cart');
+      assert.ok(service);
     });
   });
 });

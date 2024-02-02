@@ -9,6 +9,9 @@
     <i class="n-button">sign up</i>
     <LinkTo @route="cart">
 <i class="fas fa-cart-plus  shop-btn"></i>
+{{#if this.shopCart.itemList.length}}
+  <span class="cart-count ">{{this.shopCart.itemList.length}}</span>
+  {{/if}}
 </LinkTo>
   </div>
   

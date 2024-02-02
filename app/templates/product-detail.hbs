@@ -1,5 +1,10 @@
 <GeneralContainer>
 
-  <Product-Detail @oneProduct = {{this.model}} />
+  <Product-Detail
+  @model = {{this.model.model}}
+  @brand = {{this.model.brand}}
+  @image = {{this.model.image}}
+  @price = {{this.model.price}}
+   @oneProduct = {{this.model}} />
   
 </GeneralContainer>
