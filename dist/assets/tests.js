@@ -1,5 +1,43 @@
 'use strict';
 
+define("regendevice/tests/integration/components/add-product-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | add-product', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <AddProduct />
+      */
+      {
+        id: "SIo5VchC",
+        block: "{\"symbols\":[],\"statements\":[[5,\"add-product\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <AddProduct>
+              template block text
+            </AddProduct>
+          
+      */
+      {
+        id: "ier5Qggg",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"add-product\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/integration/components/cart-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -526,6 +564,17 @@ define("regendevice/tests/unit/controllers/item-test", ["qunit", "ember-qunit"],
     });
   });
 });
+define("regendevice/tests/unit/routes/add-product-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | addProduct', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:add-product');
+      assert.ok(route);
+    });
+  });
+});
 define("regendevice/tests/unit/routes/addnewphone-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
@@ -599,6 +648,17 @@ define("regendevice/tests/unit/routes/products-test", ["qunit", "ember-qunit"], 
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
       let route = this.owner.lookup('route:products');
+      assert.ok(route);
+    });
+  });
+});
+define("regendevice/tests/unit/routes/register-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Route | register', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+    (0, _qunit.test)('it exists', function (assert) {
+      let route = this.owner.lookup('route:register');
       assert.ok(route);
     });
   });

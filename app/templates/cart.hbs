@@ -2,27 +2,37 @@
 
 <GeneralContainer />
 <div class="cart-container">
+  <div class="product-container">
   {{#each this.cart.itemList as |item|}}
   <div class="add-cart-price-content">
   <div class="product-card">
   <img class="product-image" src="{{item.image}}" alt="Product Image">
-  <div class="product-details">
-    <div class="product-name">{{item.model}}</div>
-    <div class="product-price">{{item.price}}</div>
-  </div>
+  
 </div>
 <div class="price-div">
-  <div class="row">
+  <div class="product-des-div">
+    <div class="product-details">
+    <div class="product-name">{{item.model}}</div>
+    <div class="product-price">{{item.price}}</div>
+    <button></button>
+  </div>
+    <p class="product-des"></p>
+  </div> 
+</div>
+</div>
+  {{/each}}
+
+  </div>
+
+    <div class="total-div">
+      <div class="">
+    <div class="row">
       <span class="col">Subtotal : {{item.price}}</span> 
     </div>
     <div class="row">
       <span class="col">Tax : {{this.tax}}</span>
     </div>
-</div>
-</div>
-  {{/each}}
-
-    <div class="total-div">
+  </div>
       <span class="total-text">Total : {{this.total}}</span> 
       <button class="s-c-buy-btn">Buy Now</button>
     </div>

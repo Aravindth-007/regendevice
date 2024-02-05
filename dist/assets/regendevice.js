@@ -49,6 +49,91 @@
     }
   });
 });
+;define("regendevice/components/add-product", ["exports", "@glimmer/component"], function (_exports, _component) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _dec, _class;
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
+  /*
+    
+  <form class="form" {{on "submit" this.submitForm gfcb }}>
+      <p class="title">Add Product </p>
+      <p class="message">Here you can add your new Products! </p>
+          
+              
+      <label>
+          {{input class="input" type="text" value=model.brand}}
+          <span>Brand </span>
+      </label> 
+          
+      <label>
+          {{input class="input" type="text" value=model.model}}
+          <span>Product model</span>
+      </label>
+      <label>
+          {{input class="input" type="url" value=model.image}}
+          <span> Product Image URL</span>
+      </label>
+  
+       <label>
+          {{input class="input" type="text" value=model.description}}
+          <span> Description</span>
+      </label>
+       <div class="flex">
+          <label>
+              {{input class="input" type="number" name="radioGroup" value=model.a_price}}
+              <span>Actual price</span>
+          </label>
+  
+          <label>
+              {{input class="input" type="number" name="radioGroup" value=model.c_price}}
+              <span>Current price</span>
+          </label>
+      </div> 
+      <label>
+              {{textarea class="input" value=model.features name="features" id="features" cols="30" rows="1" }}
+              <span>Features</span>
+          </label>
+  
+          <label>
+              {{textarea class="input" value=model.about_this_item name="aboutthisitem" id="aboutthisitem" cols="30" rows="1" }}
+              <span>About this item</span>
+          </label>
+      <button class="submit">Submit</button>
+  </form>
+  */
+  {
+    id: "ZLqDxQgH",
+    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"form\",false],[12,\"class\",\"form\"],[3,\"on\",[\"submit\",[23,0,[\"submitForm\"]],[24,[\"gfcb\"]]]],[8],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"title\"],[8],[0,\"Add Product \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"message\"],[8],[0,\"Here you can add your new Products! \"],[9],[0,\"\\n        \\n            \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"brand\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Brand \"],[9],[0,\"\\n    \"],[9],[0,\" \\n        \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"model\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Product model\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"url\",[24,[\"model\",\"image\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Product Image URL\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n     \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"description\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Description\"],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"flex\"],[8],[0,\"\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"a_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Actual price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"c_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Current price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[9],[0,\" \\n    \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"features\"]],\"features\",\"features\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Features\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"about_this_item\"]],\"aboutthisitem\",\"aboutthisitem\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"About this item\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[7,\"button\",true],[10,\"class\",\"submit\"],[8],[0,\"Submit\"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}",
+    meta: {
+      moduleName: "regendevice/components/add-product.hbs"
+    }
+  });
+  let AddProductComponent = _exports.default = (_dec = Ember._action, (_class = class AddProductComponent extends _component.default {
+    model() {
+      return {
+        brand: '',
+        model: '',
+        image: '',
+        description: '',
+        a_price: '',
+        c_price: '',
+        features: '',
+        about_this_item: ''
+      };
+    }
+    submitForm() {
+      // Handle form submission logic here
+      console.log('Form submitted with values:', this.model);
+    }
+  }, (_applyDecoratedDescriptor(_class.prototype, "submitForm", [_dec], Object.getOwnPropertyDescriptor(_class.prototype, "submitForm"), _class.prototype)), _class));
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, AddProductComponent);
+});
 ;define("regendevice/components/data/productdata", ["exports"], function (_exports) {
   "use strict";
 
@@ -405,16 +490,19 @@
   <form class="search-bar-f" action="/search" method="get">
   <div class="search-icon-div">
       <li class="fas fa-search serch-icon"></li>
-  </div>
-          
-          <input class="search-bar-i" type="text" id="search" name="q" placeholder="Enter your search term">
-          
+  </div>  
+          <input class="search-bar-i" type="text" id="search" name="q" placeholder="Enter your search term"> 
+          <div class="add-product-btn-div">
+              <LinkTo @route="addProduct" >
+              <button class="add-product-btn">Add Product</button>
+              </LinkTo>
+          </div>  
       </form>
      
   */
   {
-    id: "8VpYJnaR",
-    block: "{\"symbols\":[],\"statements\":[[0,\"  \\n\"],[7,\"form\",true],[10,\"class\",\"search-bar-f\"],[10,\"action\",\"/search\"],[10,\"method\",\"get\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"search-icon-div\"],[8],[0,\"\\n    \"],[7,\"li\",true],[10,\"class\",\"fas fa-search serch-icon\"],[8],[9],[0,\"\\n\"],[9],[0,\"\\n        \\n        \"],[7,\"input\",true],[10,\"class\",\"search-bar-i\"],[10,\"id\",\"search\"],[10,\"name\",\"q\"],[10,\"placeholder\",\"Enter your search term\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n        \\n    \"],[9],[0,\"\\n   \"]],\"hasEval\":false}",
+    id: "V0LvrOhV",
+    block: "{\"symbols\":[],\"statements\":[[0,\"  \\n\"],[7,\"form\",true],[10,\"class\",\"search-bar-f\"],[10,\"action\",\"/search\"],[10,\"method\",\"get\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"search-icon-div\"],[8],[0,\"\\n    \"],[7,\"li\",true],[10,\"class\",\"fas fa-search serch-icon\"],[8],[9],[0,\"\\n\"],[9],[0,\"  \\n        \"],[7,\"input\",true],[10,\"class\",\"search-bar-i\"],[10,\"id\",\"search\"],[10,\"name\",\"q\"],[10,\"placeholder\",\"Enter your search term\"],[10,\"type\",\"text\"],[8],[9],[0,\" \\n        \"],[7,\"div\",true],[10,\"class\",\"add-product-btn-div\"],[8],[0,\"\\n            \"],[5,\"link-to\",[],[[\"@route\"],[\"addProduct\"]],{\"statements\":[[0,\"\\n            \"],[7,\"button\",true],[10,\"class\",\"add-product-btn\"],[8],[0,\"Add Product\"],[9],[0,\"\\n            \"]],\"parameters\":[]}],[0,\"\\n        \"],[9],[0,\"  \\n    \"],[9],[0,\"\\n   \"]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/search-bar.hbs"
     }
@@ -454,18 +542,17 @@
     constructor(...args) {
       super(...args);
       _initializerDefineProperty(this, "cart", _descriptor, this);
-    }
-    get subtotal() {
-      return this.model.reduce((acc, item) => {
-        return acc + item.price;
-      }, 0);
-    }
-    get tax() {
-      return 0.09 * this.subtotal;
-    }
-    get total() {
-      return this.subtotal + this.tax;
-    }
+    } //  get subtotal(){
+    //   return this.model.reduce((acc, item) =>{
+    //     return acc + item.price;
+    //    },0);
+    //  }
+    //  get tax(){
+    //   return 0.09 * this.subtotal;
+    //  }
+    //  get total(){
+    //   return this.subtotal + this.tax;
+    //  }
   }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec], {
     configurable: true,
     enumerable: true,
@@ -701,7 +788,18 @@
       path: 'shop-cart'
     });
     this.route('products');
+    this.route('addProduct');
   });
+});
+;define("regendevice/routes/add-product", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  class AddProductRoute extends Ember.Route {}
+  _exports.default = AddProductRoute;
 });
 ;define("regendevice/routes/addnewphone/addphone", ["exports"], function (_exports) {
   "use strict";
@@ -856,6 +954,21 @@
     }
   });
 });
+;define("regendevice/templates/add-product", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _default = _exports.default = Ember.HTMLBars.template({
+    "id": "k9Q0GOuq",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"add-product\",[],[[],[]]]],\"hasEval\":false}",
+    "meta": {
+      "moduleName": "regendevice/templates/add-product.hbs"
+    }
+  });
+});
 ;define("regendevice/templates/application", ["exports"], function (_exports) {
   "use strict";
 
@@ -879,8 +992,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "6cp0HDJj",
-    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[23,1,[\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"total-text\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
+    "id": "uZzi6YBK",
+    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-des-div\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n    \"],[7,\"button\",true],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"product-des\"],[8],[9],[0,\"\\n  \"],[9],[0,\" \\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[24,[\"item\",\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"total-text\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/cart.hbs"
     }
@@ -1036,7 +1149,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+8b8a4b6c"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+12d22983"});
           }
         
 //# sourceMappingURL=regendevice.map

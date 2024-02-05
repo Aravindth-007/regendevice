@@ -2,9 +2,12 @@
 <form class="search-bar-f" action="/search" method="get">
 <div class="search-icon-div">
     <li class="fas fa-search serch-icon"></li>
-</div>
-        
-        <input class="search-bar-i" type="text" id="search" name="q" placeholder="Enter your search term">
-        
+</div>  
+        <input class="search-bar-i" type="text" id="search" name="q" placeholder="Enter your search term"> 
+        <div class="add-product-btn-div">
+            <LinkTo @route="addProduct" >
+            <button class="add-product-btn">Add Product</button>
+            </LinkTo>
+        </div>  
     </form>
    

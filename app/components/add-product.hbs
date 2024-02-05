@@ -1,0 +1,46 @@
+
+<form class="form" {{on "submit" this.submitForm gfcb }}>
+    <p class="title">Add Product </p>
+    <p class="message">Here you can add your new Products! </p>
+        
+            
+    <label>
+        {{input class="input" type="text" value=model.brand}}
+        <span>Brand </span>
+    </label> 
+        
+    <label>
+        {{input class="input" type="text" value=model.model}}
+        <span>Product model</span>
+    </label>
+    <label>
+        {{input class="input" type="url" value=model.image}}
+        <span> Product Image URL</span>
+    </label>
+
+     <label>
+        {{input class="input" type="text" value=model.description}}
+        <span> Description</span>
+    </label>
+     <div class="flex">
+        <label>
+            {{input class="input" type="number" name="radioGroup" value=model.a_price}}
+            <span>Actual price</span>
+        </label>
+
+        <label>
+            {{input class="input" type="number" name="radioGroup" value=model.c_price}}
+            <span>Current price</span>
+        </label>
+    </div> 
+    <label>
+            {{textarea class="input" value=model.features name="features" id="features" cols="30" rows="1" }}
+            <span>Features</span>
+        </label>
+
+        <label>
+            {{textarea class="input" value=model.about_this_item name="aboutthisitem" id="aboutthisitem" cols="30" rows="1" }}
+            <span>About this item</span>
+        </label>
+    <button class="submit">Submit</button>
+</form>

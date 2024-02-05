@@ -1,3 +1,4 @@
+
 export const productArray = [{
   "id":"1",
   "image":"https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
