@@ -418,6 +418,44 @@ define("regendevice/tests/integration/components/product/image-test", ["qunit", 
     });
   });
 });
+define("regendevice/tests/integration/components/products-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | products', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <Products />
+      */
+      {
+        id: "WDVbCDYE",
+        block: "{\"symbols\":[],\"statements\":[[5,\"products\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <Products>
+              template block text
+            </Products>
+          
+      */
+      {
+        id: "ViNAIq7P",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"products\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/integration/components/sampl1-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -561,6 +599,20 @@ define("regendevice/tests/unit/controllers/item-test", ["qunit", "ember-qunit"],
     (0, _qunit.test)('it exists', function (assert) {
       let controller = this.owner.lookup('controller:item');
       assert.ok(controller);
+    });
+  });
+});
+define("regendevice/tests/unit/models/product-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Model | product', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let store = this.owner.lookup('service:store');
+      let model = store.createRecord('product', {});
+      assert.ok(model);
     });
   });
 });

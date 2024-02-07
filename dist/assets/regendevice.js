@@ -56,12 +56,18 @@
     value: true
   });
   _exports.default = void 0;
-  var _dec, _class;
+  var _dec, _dec2, _class, _descriptor;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
     
-  <form class="form" {{on "submit" this.submitForm gfcb }}>
+  
+  <form {{on "submit" this.submitForm}} class="form" >
       <p class="title">Add Product </p>
       <p class="message">Here you can add your new Products! </p>
           
@@ -81,12 +87,12 @@
       </label>
   
        <label>
-          {{input class="input" type="text" value=model.description}}
+          {{input  class="input" type="text" value=model.description}}
           <span> Description</span>
       </label>
        <div class="flex">
           <label>
-              {{input class="input" type="number" name="radioGroup" value=model.a_price}}
+              {{input  class="input" type="number" name="radioGroup" value=model.a_price}}
               <span>Actual price</span>
           </label>
   
@@ -104,34 +110,48 @@
               {{textarea class="input" value=model.about_this_item name="aboutthisitem" id="aboutthisitem" cols="30" rows="1" }}
               <span>About this item</span>
           </label>
+    {{!-- after this inputs for testing every inputs works in ember --}}
+          <label>
+              <select class="input" value= {{dropdowm.selectedOption}}>
+                {{#each this.dropdowm.selectOptions as |opt| }}
+  
+                <option>{{opt}}</option>
+  
+                {{/each}}
+              </select>
+              <span>Product type</span>
+          </label>
       <button class="submit">Submit</button>
   </form>
   */
   {
-    id: "ZLqDxQgH",
-    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"form\",false],[12,\"class\",\"form\"],[3,\"on\",[\"submit\",[23,0,[\"submitForm\"]],[24,[\"gfcb\"]]]],[8],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"title\"],[8],[0,\"Add Product \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"message\"],[8],[0,\"Here you can add your new Products! \"],[9],[0,\"\\n        \\n            \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"brand\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Brand \"],[9],[0,\"\\n    \"],[9],[0,\" \\n        \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"model\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Product model\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"url\",[24,[\"model\",\"image\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Product Image URL\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n     \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"description\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Description\"],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"flex\"],[8],[0,\"\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"a_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Actual price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"c_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Current price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[9],[0,\" \\n    \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"features\"]],\"features\",\"features\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Features\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"about_this_item\"]],\"aboutthisitem\",\"aboutthisitem\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"About this item\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[7,\"button\",true],[10,\"class\",\"submit\"],[8],[0,\"Submit\"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}",
+    id: "cZHD2yKE",
+    block: "{\"symbols\":[\"opt\"],\"statements\":[[0,\"\\n\\n\"],[7,\"form\",false],[12,\"class\",\"form\"],[3,\"on\",[\"submit\",[23,0,[\"submitForm\"]]]],[8],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"title\"],[8],[0,\"Add Product \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"message\"],[8],[0,\"Here you can add your new Products! \"],[9],[0,\"\\n        \\n            \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"brand\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Brand \"],[9],[0,\"\\n    \"],[9],[0,\" \\n        \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"model\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"Product model\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"url\",[24,[\"model\",\"image\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Product Image URL\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n     \"],[7,\"label\",true],[8],[0,\"\\n        \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"value\"],[\"input\",\"text\",[24,[\"model\",\"description\"]]]]],false],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\" Description\"],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"flex\"],[8],[0,\"\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"a_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Actual price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"input\",null,[[\"class\",\"type\",\"name\",\"value\"],[\"input\",\"number\",\"radioGroup\",[24,[\"model\",\"c_price\"]]]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Current price\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[9],[0,\" \\n    \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"features\"]],\"features\",\"features\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Features\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[1,[28,\"textarea\",null,[[\"class\",\"value\",\"name\",\"id\",\"cols\",\"rows\"],[\"input\",[24,[\"model\",\"about_this_item\"]],\"aboutthisitem\",\"aboutthisitem\",\"30\",\"1\"]]],false],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"About this item\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\"],[0,\"        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[7,\"select\",true],[10,\"class\",\"input\"],[11,\"value\",[24,[\"dropdowm\",\"selectedOption\"]]],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"dropdowm\",\"selectOptions\"]]],null,{\"statements\":[[0,\"\\n              \"],[7,\"option\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\\n\"]],\"parameters\":[1]},null],[0,\"            \"],[9],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"Product type\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[7,\"button\",true],[10,\"class\",\"submit\"],[8],[0,\"Submit\"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/add-product.hbs"
     }
   });
-  let AddProductComponent = _exports.default = (_dec = Ember._action, (_class = class AddProductComponent extends _component.default {
-    model() {
-      return {
-        brand: '',
-        model: '',
-        image: '',
-        description: '',
-        a_price: '',
-        c_price: '',
-        features: '',
-        about_this_item: ''
-      };
+  let AddProductComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._action, (_class = class AddProductComponent extends _component.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "dropdowm", _descriptor, this);
     }
     submitForm() {
+      event.preventDefault();
       // Handle form submission logic here
-      console.log('Form submitted with values:', this.model);
+      console.log('Form submitted with values:');
     }
-  }, (_applyDecoratedDescriptor(_class.prototype, "submitForm", [_dec], Object.getOwnPropertyDescriptor(_class.prototype, "submitForm"), _class.prototype)), _class));
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "dropdowm", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function () {
+      return {
+        selectedOption: null,
+        selectOptions: ['phone', 'laptop', 'watch']
+      };
+    }
+  }), _applyDecoratedDescriptor(_class.prototype, "submitForm", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "submitForm"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, AddProductComponent);
 });
 ;define("regendevice/components/data/productdata", ["exports"], function (_exports) {
@@ -428,6 +448,51 @@
     initializer: null
   }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec4], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
+});
+;define("regendevice/components/product-list", ["exports", "@glimmer/component", "regendevice/components/data/productdata"], function (_exports, _component, _productdata) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
+  /*
+    <div class="cards_div">
+  
+    {{#each this.model as |productObj|}}
+    <Product @item ={{productObj}} />
+    {{/each}}
+    
+  
+  </div>
+  */
+  {
+    id: "LwodAlg6",
+    block: "{\"symbols\":[\"productObj\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \\n\\n\"],[9]],\"hasEval\":false}",
+    meta: {
+      moduleName: "regendevice/components/product-list.hbs"
+    }
+  });
+  // import { tracked } from '@glimmer/tracking';
+  // import fetch from 'fetch';
+  class ProductsComponent extends _component.default {
+    model() {
+      return _productdata.productArray;
+    }
+
+    // @tracked products;
+
+    // constructor() {
+    //   super(...arguments);
+
+    //   fetch('/products').then(data => {
+    //     this.products = data;
+    //   });
+    // }
+  }
+  _exports.default = ProductsComponent;
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductsComponent);
 });
 ;define("regendevice/components/product", ["exports", "@glimmer/component"], function (_exports, _component) {
   "use strict";
@@ -754,6 +819,80 @@
     initialize: _initializeStoreService.default
   };
 });
+;define("regendevice/models/product", ["exports", "@ember-data/model"], function (_exports, _model) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  let ProductModel = _exports.default = (_dec = (0, _model.attr)('string'), _dec2 = (0, _model.attr)('string'), _dec3 = (0, _model.attr)('string'), _dec4 = (0, _model.attr)('string'), _dec5 = (0, _model.attr)('number'), _dec6 = (0, _model.attr)('number'), _dec7 = (0, _model.attr)('string'), _dec8 = (0, _model.attr)('string'), _dec9 = (0, _model.attr)('string'), (_class = class ProductModel extends _model.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "brand", _descriptor, this);
+      _initializerDefineProperty(this, "model", _descriptor2, this);
+      _initializerDefineProperty(this, "image", _descriptor3, this);
+      _initializerDefineProperty(this, "description", _descriptor4, this);
+      _initializerDefineProperty(this, "a_price", _descriptor5, this);
+      _initializerDefineProperty(this, "c_price", _descriptor6, this);
+      _initializerDefineProperty(this, "features", _descriptor7, this);
+      _initializerDefineProperty(this, "about_this_item", _descriptor8, this);
+      _initializerDefineProperty(this, "product_type", _descriptor9, this);
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "brand", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "model", [_dec2], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "image", [_dec3], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "description", [_dec4], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "a_price", [_dec5], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "c_price", [_dec6], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor7 = _applyDecoratedDescriptor(_class.prototype, "features", [_dec7], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "about_this_item", [_dec8], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor9 = _applyDecoratedDescriptor(_class.prototype, "product_type", [_dec9], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
+});
 ;define("regendevice/router", ["exports", "regendevice/config/environment"], function (_exports, _environment) {
   "use strict";
 
@@ -947,8 +1086,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "rwHHyjET",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\\n    \\n        \"],[7,\"div\",true],[10,\"class\",\"a-us-section\"],[8],[0,\"\\n            \"],[7,\"div\",true],[10,\"class\",\"a-c-image\"],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://lh3.googleusercontent.com/proxy/bf-7VYznqTFJjY2nE4YT7NZ7eZmtg8sWFrjkEunHekyV-Pa3llblTILsWqJv5_RLBm-UnCcgWXri-s8nc1c\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[7,\"div\",true],[8],[0,\"\\n        \"],[7,\"h2\",true],[10,\"class\",\"a-us-content\"],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \\n      \\n       \\n\\n        \\n    \\n        \\n    \\n\"]],\"hasEval\":false}",
+    "id": "3dQeOghZ",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n    \"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n        \"],[7,\"div\",true],[10,\"class\",\"a-us-section\"],[8],[0,\"\\n            \"],[7,\"div\",true],[10,\"class\",\"a-c-image\"],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://assets-global.website-files.com/605826c62e8de87de744596e/6298b33e6aafa619b517757c_Blog-Coverasdfghjs.jpg\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[7,\"div\",true],[10,\"class\",\"about-us-c-div\"],[8],[0,\"\\n        \"],[7,\"p\",true],[10,\"class\",\"a-us-content\"],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[9],[0,\"\\n        \\n      \\n       \\n\\n        \\n    \\n        \\n    \\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/about.hbs"
     }
@@ -992,8 +1131,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "uZzi6YBK",
-    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-des-div\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n    \"],[7,\"button\",true],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"product-des\"],[8],[9],[0,\"\\n  \"],[9],[0,\" \\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[24,[\"item\",\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"total-text\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
+    "id": "LXyG+pqo",
+    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-des-div\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n    \"],[7,\"button\",true],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"product-des\"],[8],[9],[0,\"\\n  \"],[9],[0,\" \\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"total-content\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[24,[\"item\",\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"buy-btn-div\"],[8],[0,\"\\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n      \\n      \\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/cart.hbs"
     }
@@ -1007,8 +1146,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "6tYO184N",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[7,\"h2\",true],[8],[0,\"Contact Us\"],[9],[0,\"\\n  \"],[7,\"img\",true],[10,\"src\",\"https://media.istockphoto.com/id/1457106246/photo/the-companys-product-quality-certificate-is-compliant-the-check-mark-symbol-represents-the.webp?b=1&s=170667a&w=0&k=20&c=0B-wEScFlzca10cZsOepMEmvm4tNX-9-v_uPJmmSTIw=\"],[10,\"alt\",\"\"],[8],[9],[0,\"\\n  \"],[7,\"p\",true],[8],[0,\"\\n    Regendevice Representatives would love to help you\"],[7,\"br\",true],[8],[9],[0,\"\\n    choose a destination or answer any questions you may have.\\n  \"],[9],[0,\"\\n  \"],[7,\"address\",true],[8],[0,\"\\n    Regendevice HQ\\n    \"],[7,\"p\",true],[8],[0,\"\\n      1212 Test Address Avenue\"],[7,\"br\",true],[8],[9],[0,\"\\n      Testington, OR 97233\\n    \"],[9],[0,\"\\n \\n  \"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "OlXVbD5X",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[7,\"div\",true],[10,\"class\",\"contact-us-container\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"contact-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"src\",\"https://media.istockphoto.com/id/1457106246/photo/the-companys-product-quality-certificate-is-compliant-the-check-mark-symbol-represents-the.webp?b=1&s=170667a&w=0&k=20&c=0B-wEScFlzca10cZsOepMEmvm4tNX-9-v_uPJmmSTIw=\"],[10,\"alt\",\"\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"contact-form-div\"],[8],[0,\"\\n      \"],[7,\"form\",true],[10,\"class\",\"form\"],[8],[0,\"\\n    \\n    \"],[7,\"div\",true],[10,\"class\",\"flex\"],[8],[0,\"\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"first name\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"last name\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[9],[0,\"  \\n            \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"email\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"email\"],[9],[0,\"\\n    \"],[9],[0,\" \\n        \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"tel\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"contact number\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"textarea\",true],[10,\"class\",\"input-textarea\"],[10,\"placeholder\",\"\"],[10,\"rows\",\"3\"],[10,\"required\",\"\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"message\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \\n    \"],[7,\"button\",true],[10,\"href\",\"#\"],[10,\"class\",\"contact-us-submit-btn\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"contact-us-submit-text\"],[8],[0,\"submit\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n  \\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/contact.hbs"
     }
@@ -1067,8 +1206,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "0vzycovm",
-    "block": "{\"symbols\":[\"productObg\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[5,\"search-bar\",[],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \\n\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "Dx4KB3in",
+    "block": "{\"symbols\":[\"productObj\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[5,\"search-bar\",[],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \\n\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/products.hbs"
     }
@@ -1149,7 +1288,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+12d22983"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+8e9c16b5"});
           }
         
 //# sourceMappingURL=regendevice.map

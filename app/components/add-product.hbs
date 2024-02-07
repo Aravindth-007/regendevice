@@ -1,5 +1,6 @@
 
-<form class="form" {{on "submit" this.submitForm gfcb }}>
+
+<form {{on "submit" this.submitForm}} class="form" >
     <p class="title">Add Product </p>
     <p class="message">Here you can add your new Products! </p>
         
@@ -19,12 +20,12 @@
     </label>
 
      <label>
-        {{input class="input" type="text" value=model.description}}
+        {{input  class="input" type="text" value=model.description}}
         <span> Description</span>
     </label>
      <div class="flex">
         <label>
-            {{input class="input" type="number" name="radioGroup" value=model.a_price}}
+            {{input  class="input" type="number" name="radioGroup" value=model.a_price}}
             <span>Actual price</span>
         </label>
 
@@ -41,6 +42,17 @@
         <label>
             {{textarea class="input" value=model.about_this_item name="aboutthisitem" id="aboutthisitem" cols="30" rows="1" }}
             <span>About this item</span>
+        </label>
+  {{!-- after this inputs for testing every inputs works in ember --}}
+        <label>
+            <select class="input" value= {{dropdowm.selectedOption}}>
+              {{#each this.dropdowm.selectOptions as |opt| }}
+
+              <option>{{opt}}</option>
+
+              {{/each}}
+            </select>
+            <span>Product type</span>
         </label>
     <button class="submit">Submit</button>
 </form>

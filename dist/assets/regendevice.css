@@ -208,6 +208,34 @@ h2 {
   column-gap: 5%;
 }
 
+.a-us-section {
+  display: flex;
+}
+
+.a-c-image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+
+.a-c-image img {
+  width: 100%;
+  height: 98%;
+}
+
+.about-us-c-div {
+  padding: 2%;
+  border: 1px solid rgb(195, 192, 192);
+  margin: 2%;
+}
+
+.a-us-content {
+  font-weight: bolder;
+}
+
 .search-bar-f {
   display: flex;
   height: fit-content;
@@ -307,6 +335,7 @@ h2 {
   padding: 2%;
   display: flex;
   gap: 2%;
+  padding: 1% 15%;
 }
 
 .price-div {
@@ -324,16 +353,27 @@ h2 {
 }
 
 .total-div {
-  background-color: red;
-  position: relative;
+  padding: 2%;
+  display: flex;
+  justify-content: end;
+}
+
+.total-content {
+  width: 25%;
+}
+
+.total-content .col {
+  font-weight: bold;
 }
 
 .s-c-buy-btn {
-  background-color: green;
-}
-
-.product-container {
-  background-color: #e44d26;
+  background-color: rgb(137, 215, 20);
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  font-size: large;
+  font-weight: bold;
 }
 
 .form {
@@ -473,5 +513,79 @@ h2 {
     transform: scale(1.8);
     opacity: 0;
   }
+}
+.contact-us-container {
+  display: flex;
+  height: 40rem;
+  background-color: #aae7fc;
+}
+
+.contact-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+}
+
+.contact-img-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form-div {
+  display: flex;
+  flex: 2;
+}
+
+.input-textarea {
+  background-color: #333;
+  color: #fff;
+  width: 95%;
+  padding: 20px 5px 5px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.contact-us-submit-btn {
+  width: 100%;
+  background-color: aqua;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.form label .input-textarea:focus + span,
+.form label .input-textarea:valid + span {
+  color: #00bfff;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input-textarea:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input-textarea + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.input-textarea {
+  background-color: #333;
+  color: #fff;
+  width: 95%;
+  height: 280px;
+  padding: 20px 5px 5px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
 }
 /*@ sourceMappingURL=regendevice.css.map*/
