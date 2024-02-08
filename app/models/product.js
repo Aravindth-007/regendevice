@@ -10,5 +10,4 @@ export default class ProductModel extends Model {
   @attr('string') features;
   @attr('string') about_this_item;
   @attr('string') product_type;
-
 }

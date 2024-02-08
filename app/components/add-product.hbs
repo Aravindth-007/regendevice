@@ -20,18 +20,18 @@
     </label>
 
      <label>
-        {{input  class="input" type="text" value=model.description}}
+        {{input class="input" type="text" value=model.description}}
         <span> Description</span>
     </label>
      <div class="flex">
         <label>
             {{input  class="input" type="number" name="radioGroup" value=model.a_price}}
-            <span>Actual price</span>
+            <span>Actual price in $</span>
         </label>
 
         <label>
             {{input class="input" type="number" name="radioGroup" value=model.c_price}}
-            <span>Current price</span>
+            <span>Current price in $</span>
         </label>
     </div> 
     <label>
@@ -45,8 +45,8 @@
         </label>
   {{!-- after this inputs for testing every inputs works in ember --}}
         <label>
-            <select class="input" value= {{dropdowm.selectedOption}}>
-              {{#each this.dropdowm.selectOptions as |opt| }}
+            <select class="input" value={{model.product_type}} {{on "change" this.handleSelectChange}}>
+              {{#each this.selectOptions as |opt| }}
 
               <option>{{opt}}</option>
 
