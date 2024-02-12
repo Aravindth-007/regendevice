@@ -7,11 +7,11 @@ export default class CartController extends Controller {
 
   @tracked total = 0;
 
- get subtotal(){
-  return this.cart.itemList(acc, item =>{
-    return acc + item.price;
-   },0);
- }
+//  get subtotal(){
+//   return this.cart.itemList(acc, item =>{
+//     return acc + item.price;
+//    },0);
+//  }
   
  get tax(){
   return 0.09 * this.subtotal;

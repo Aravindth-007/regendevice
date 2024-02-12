@@ -2,12 +2,18 @@ import Component from '@glimmer/component';
 import {action} from '@ember/object';
 import {tracked} from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
+// import fetch from 'fetch';
 export default class AddProductComponent extends Component {
 
   @service store;
   model = null;
 
+//   fetch('https://dummyjson.com/products/categories')
+// .then(res => res.json())
+// .then(console.log);
+
   @tracked selectedOption =  null;
+  
   selectOptions = ['phone','laptop','watch']
   
 

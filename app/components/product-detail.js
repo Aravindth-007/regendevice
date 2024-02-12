@@ -14,11 +14,12 @@ offerStatus(){
 
 @action
 addToCart(){
-  const { model, image, price } = this.args;
+  const { model, image, price ,pDescription} = this.args;
   this.cart.addItem({
     model,
     image,
     price:price.current,
+    pDescription,
     
   });
 }
