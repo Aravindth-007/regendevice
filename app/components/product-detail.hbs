@@ -1,38 +1,54 @@
 <div class="p-d-content">
       <div class="p-d-img-div">
-      <img class="p-d-img" src="{{@image}}" alt="phone">
+      <img class="p-d-img" src="{{this.model.image}}" alt="phone">
     </div>
     <div class="p-d-m_p-content">
 <div class="p-m-content">
 
-  <h3>{{@brand}}</h3>
-    <h2> {{@model}} </h2>
-      <h2>{{@pDescription}}</h2>
+  <h3>{{this.model.brand}}</h3>
+    <h2> {{this.model.productName}} </h2>
+      <h2>{{this.model.description}}</h2>
 
 </div>
 <div class="p-d-rpice-div">
   <section class="price_sec">
-<i style="text-decoration: line-through;" >{{@price.original}}</i>
-<i style="font-weight: bold; color:red; ">{{@price.current}}</i>
+<del style="text-decoration: line-through;" >{{currency this.model.price.original}}</del>
+<i style="font-weight: bold; color:red; ">{{currency this.model.price.current}}</i>
 
 </section>
 <div class="buy-div">
 <button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
 <button class="buy-btn">BUY NOW</button>
 </div>
-<button class="offer-btn" {{on "click" this.offerStatus}}>Offers</button>
-{{#if this.active}}
-<div class="offer-div">
+<button class="offer-btn" {{on "click" this.emiOffer}}>EMI Option</button>
+<button class="offer-btn" {{on "click" this.bankOffer}} >Bank Offer</button>
+<button class="offer-btn" {{on "click" this.creditCardOffer}} >Credit Card Offer</button>
+{{!-- offer cards show here when user click offer button --}}
+{{#if this.bankActive }}
+<div  class="offer-div">
   <p  class="off-div-head">Bank Offer</p>
-  <p class="off-div-para">Upto ₹850.00 discount on select Credit Cards.</p>
+  <p class="off-div-para">Upto {{currency this.offerPrice}} discount on select Net Banking.</p>
 </div>
 {{/if}}
+{{#if this.creditActive}}
+<div  class="offer-div">
+  <p  class="off-div-head">Credit Card Offer</p>
+  <p class="off-div-para">Upto {{currency  this.offerPrice}} discount on select Credit Cards.</p>
+</div>
+{{/if}}
+{{#if this.emiActive}}
+<div  class="offer-div">
+  <p  class="off-div-head">EMI Option</p>
+  <p class="off-div-para">Per month only  {{currency this.offerPrice}}.</p>
+</div>
+{{/if}}
+
 </div>
 </div>
 <div class="fea-content">
   <h2>Features</h2>
   <ul>
-    {{#each this.args.oneProduct.features  as |feature|}}
+    {{#each this.model.features  as |feature|}}
     <li>{{feature}}</li>
     {{/each}}
   </ul>
@@ -40,7 +56,7 @@
 <div class="a-item-content">
   <h2>About this item</h2>
   <ul>
-    {{#each this.args.oneProduct.about_this_item  as |aboutItem| }}
+    {{#each this.model.about_item  as |aboutItem| }}
     <li>{{aboutItem}}</li>
     {{/each}}
   </ul>

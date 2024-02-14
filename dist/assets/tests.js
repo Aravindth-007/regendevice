@@ -228,6 +228,44 @@ define("regendevice/tests/integration/components/product-detail/aboutitem-test",
     });
   });
 });
+define("regendevice/tests/integration/components/product-detail/bank-offer-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Component | product-detail/bank-offer', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+    (0, _qunit.test)('it renders', async function (assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        <ProductDetail::BankOffer />
+      */
+      {
+        id: "7O1xZWcY",
+        block: "{\"symbols\":[],\"statements\":[[5,\"product-detail/bank-offer\",[],[[],[]]]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '');
+
+      // Template block usage:
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        
+            <ProductDetail::BankOffer>
+              template block text
+            </ProductDetail::BankOffer>
+          
+      */
+      {
+        id: "nfffwQ3g",
+        block: "{\"symbols\":[],\"statements\":[[0,\"\\n      \"],[5,\"product-detail/bank-offer\",[],[[],[]],{\"statements\":[[0,\"\\n        template block text\\n      \"]],\"parameters\":[]}],[0,\"\\n    \"]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), 'template block text');
+    });
+  });
+});
 define("regendevice/tests/integration/components/product-detail/description-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
@@ -570,6 +608,28 @@ define("regendevice/tests/integration/components/search-bar-test", ["qunit", "em
     });
   });
 });
+define("regendevice/tests/integration/helpers/currency-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
+  "use strict";
+
+  (0, _qunit.module)('Integration | Helper | currency', function (hooks) {
+    (0, _emberQunit.setupRenderingTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it renders', async function (assert) {
+      this.set('inputValue', '1234');
+      await (0, _testHelpers.render)(Ember.HTMLBars.template(
+      /*
+        {{currency inputValue}}
+      */
+      {
+        id: "7Gctkp+I",
+        block: "{\"symbols\":[],\"statements\":[[1,[28,\"currency\",[[24,[\"inputValue\"]]],null],false]],\"hasEval\":false}",
+        meta: {}
+      }));
+      assert.equal(this.element.textContent.trim(), '1234');
+    });
+  });
+});
 define("regendevice/tests/test-helper", ["regendevice/app", "regendevice/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
   "use strict";
 
@@ -612,6 +672,34 @@ define("regendevice/tests/unit/models/product-test", ["qunit", "ember-qunit"], f
     (0, _qunit.test)('it exists', function (assert) {
       let store = this.owner.lookup('service:store');
       let model = store.createRecord('product', {});
+      assert.ok(model);
+    });
+  });
+});
+define("regendevice/tests/unit/models/profile-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Model | profile', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let store = this.owner.lookup('service:store');
+      let model = store.createRecord('profile', {});
+      assert.ok(model);
+    });
+  });
+});
+define("regendevice/tests/unit/models/user-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  (0, _qunit.module)('Unit | Model | user', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let store = this.owner.lookup('service:store');
+      let model = store.createRecord('user', {});
       assert.ok(model);
     });
   });

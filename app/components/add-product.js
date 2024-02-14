@@ -8,6 +8,7 @@ export default class AddProductComponent extends Component {
   @service store;
   model = null;
 
+
 //   fetch('https://dummyjson.com/products/categories')
 // .then(res => res.json())
 // .then(console.log);
@@ -26,17 +27,19 @@ export default class AddProductComponent extends Component {
   constructor() {
     super(...arguments);
 
+
     this.model = this.store.createRecord('product', {
-      model : "realme 12 Pro",
-      brand : "realme",
-      product_type : "watch",
+      // model : "realme 12 Pro",
+      // brand : "realme",
+      // product_type : "watch",
     });
+  
     
   }
 
  
  @action
-    submitForm() {
+    submitForm(event) {
       event.preventDefault();
       // this.store.push(this.model);
       

@@ -148,12 +148,12 @@
       _initializerDefineProperty(this, "selectedOption", _descriptor2, this);
       _defineProperty(this, "selectOptions", ['phone', 'laptop', 'watch']);
       this.model = this.store.createRecord('product', {
-        model: "realme 12 Pro",
-        brand: "realme",
-        product_type: "watch"
+        // model : "realme 12 Pro",
+        // brand : "realme",
+        // product_type : "watch",
       });
     }
-    submitForm() {
+    submitForm(event) {
       event.preventDefault();
       // this.store.push(this.model);
 
@@ -175,6 +175,119 @@
   }), _applyDecoratedDescriptor(_class.prototype, "handleSelectChange", [_dec3], Object.getOwnPropertyDescriptor(_class.prototype, "handleSelectChange"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "submitForm", [_dec4], Object.getOwnPropertyDescriptor(_class.prototype, "submitForm"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, AddProductComponent);
 });
+;define("regendevice/components/cart", ["exports", "@glimmer/component"], function (_exports, _component) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _dec, _dec2, _class, _descriptor;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
+  /*
+    <div class="cart-container">
+    <div class="product-container">
+    {{#each this.cart.itemList as |item|}}
+    <div class="add-cart-price-content">
+    <div class="product-card">
+    <img class="product-image" src="{{item.image}}" alt="Product Image">
+    
+  </div>
+  <div class="price-div">
+    <input type="number" 
+    class="increse-product" 
+    value="{{item.count}}"
+    {{on "input" (fn this.updateItemCount item)}}
+    >
+    <div class="product-des-div">
+      <div class="product-details">
+      <div class="product-name">{{item.productName}}</div>
+      <div class="product-name">{{item.pDescription}}</div>
+      <div class="product-price">{{currency item.price}}</div>
+    
+    </div>
+      <p class="product-des"></p>
+    </div> 
+  </div>
+  </div>
+    {{/each}}
+  
+    </div>
+  
+      <div class="total-div">
+        <div class="total-content">
+      <div class="row">
+        <span class="col">Subtotal : {{currency this.subtotal }}</span> 
+      </div>
+      <div class="row">
+        <span class="col">Tax : {{currency this.tax }}</span>
+      </div>
+       <div class="row">
+        <span class="col">Total : {{currency this.total}}</span> 
+      </div>
+      <div class="buy-btn-div">
+        <button class="s-c-buy-btn">Buy Now</button>
+      </div>
+    </div>
+        
+        
+      </div>
+    
+  </div>
+  
+  */
+  {
+    id: "JkAgHXuJ",
+    block: "{\"symbols\":[\"item\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"input\",false],[12,\"class\",\"increse-product\"],[12,\"value\",[29,[[23,1,[\"count\"]]]]],[12,\"type\",\"number\"],[3,\"on\",[\"input\",[28,\"fn\",[[23,0,[\"updateItemCount\"]],[23,1,[]]],null]]],[8],[9],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-des-div\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"productName\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"pDescription\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[28,\"currency\",[[23,1,[\"price\"]]],null],false],[9],[0,\"\\n  \\n  \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"product-des\"],[8],[9],[0,\"\\n  \"],[9],[0,\" \\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"total-content\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[28,\"currency\",[[23,0,[\"subtotal\"]]],null],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[28,\"currency\",[[23,0,[\"tax\"]]],null],false],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Total : \"],[1,[28,\"currency\",[[23,0,[\"total\"]]],null],false],[9],[0,\"\xA0\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"buy-btn-div\"],[8],[0,\"\\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n      \\n      \\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"]],\"hasEval\":false}",
+    meta: {
+      moduleName: "regendevice/components/cart.hbs"
+    }
+  });
+  // import { tracked } from '@glimmer/tracking';
+  let CartComponent = _exports.default = (_dec = Ember.inject.service('shopCart'), _dec2 = Ember._action, (_class = class CartComponent extends _component.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "cart", _descriptor, this);
+    }
+    // @tracked price = item.price;
+    // @tracked finalCount = 0;
+    // @tracked tax = 0;
+    // @tracked itemCount = item.count;
+
+    get subtotal() {
+      return this.cart.itemList.reduce((acc, item) => {
+        return acc + item.price * item.count;
+      }, 0);
+    }
+    get tax() {
+      return 0.09 * this.subtotal;
+    }
+    get total() {
+      return this.subtotal + this.tax;
+    }
+    updateItemCount(item, event) {
+      const count = event.target.value;
+      if (count >= 0) {
+        item.count = count;
+        // this.finalCount = count;
+      } else {
+        item.count = 0;
+      }
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _applyDecoratedDescriptor(_class.prototype, "updateItemCount", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "updateItemCount"), _class.prototype)), _class));
+  Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, CartComponent);
+});
 ;define("regendevice/components/data/productdata", ["exports"], function (_exports) {
   "use strict";
 
@@ -186,122 +299,122 @@
     "id": "1",
     "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
     "brand": "TECNO",
-    "model": "pova 5 Pro 5G",
+    "productName": "pova 5 Pro 5G",
     "description": "(Dark Illusion, 8GB RAM,256GB Storage)| Segment 1st 68W Ultra Fast Charging | India's 1st Multi-Colored Backlit ARC Interface | 50MP AI Dual Camera | 6.78”FHD+ Dot-in Display",
     "price": {
-      "original": "$198.00",
-      "current": "$98.00"
+      "original": "198",
+      "current": "98"
     },
     "features": ["Special Feature	 :  Front Camera, Camera, Fast Charging", "Connectivity Technology : Bluetooth, Wi-Fi, USB", "Memory Storage Capacity : 256 GB"],
-    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+    "about_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
   }, {
     "id": "2",
     "image": "https://m.media-amazon.com/images/I/71b+-Y1SaML._SX679_.jpg",
     "brand": "TECNO",
-    "model": "TECNO cammon 20 Pro 5G",
+    "productName": "TECNO cammon 20 Pro 5G",
     "description": "(Dark Welkin, 8GB RAM,128GB Storage)| India's 1st MediaTek Dimensity 8050 Processor | 16GB Expandable RAM | 64MP RGBW(G+P) OIS Rear Camera",
     "price": {
-      "original": "$290.00",
-      "current": "$250.00"
+      "original": "290",
+      "current": "250"
     },
     "features": ["Network Service Provider :	Unlocked", "Operating System :	Android 13.0", "Cellular Technology :	5G"],
-    "about_this_item": ["Amazing night photography with 64MP RGBW(G+P) OIS lens & F1.65 large aperture | 32MP Selfie Camera for ultra-clear selfie | DSLR level portrait system, Pro-shooting modes and Video HDR", "6.67FHD+AMOLED 10bit Dot-in display| DC Dimming and 1920Hz PWM Dimming for flicker free display | TÜV Rheinland Low blue light emission certified Eye Protection | Ultra-fast In-display Fingerprint sensor", "India's 1st MediaTek Dimensity 8050 Processor", "Up to 256GB UFS 2.1 Internal Storage for seamless data experience | 8GB LPDDR4x RAM with 8GB Software powered Customizable RAM | Up to 1TB dedicated expandable storage slot", "7.8mm Ultra sleek design | Super Slim Leather finished back | Muse Design Award 2023 Gold winner | Ring Flashlight"]
+    "about_item": ["Amazing night photography with 64MP RGBW(G+P) OIS lens & F1.65 large aperture | 32MP Selfie Camera for ultra-clear selfie | DSLR level portrait system, Pro-shooting modes and Video HDR", "6.67FHD+AMOLED 10bit Dot-in display| DC Dimming and 1920Hz PWM Dimming for flicker free display | TÜV Rheinland Low blue light emission certified Eye Protection | Ultra-fast In-display Fingerprint sensor", "India's 1st MediaTek Dimensity 8050 Processor", "Up to 256GB UFS 2.1 Internal Storage for seamless data experience | 8GB LPDDR4x RAM with 8GB Software powered Customizable RAM | Up to 1TB dedicated expandable storage slot", "7.8mm Ultra sleek design | Super Slim Leather finished back | Muse Design Award 2023 Gold winner | Ring Flashlight"]
   }, {
     "id": "3",
     "image": "https://m.media-amazon.com/images/I/71VW8LmqqPL._SX679_.jpg",
     "brand": "Redmi",
-    "model": "Redmi Note 13 5G",
+    "productName": "Redmi Note 13 5G",
     "description": "Arctic White, 6GB RAM, 128GB Storage) | MTK Dimensity 6080 5G | 7.6mm, Slimmest Note Ever",
     "price": {
-      "original": "$240.00",
-      "current": "$180.00"
+      "original": "240",
+      "current": "180"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System :	Android 13, MIUI 14", "Cellular Technology	: 5G"],
-    "about_this_item": ["Display: 6.67 FHD+ pOLED (1080x2400) Ultra-narrow bezels Display with 120Hz Refresh rate; 1000nits peak brightness; Corning Gorilla Glass 5 Display Protection", "Processor:Mediatek Dimensity 6080 6nm Octa-core 5G processor for high performance ; Up to 2.4GHz; Upto 12GB RAM including 6GB Virtual RAM", "Camera: 108MP 3X in-sensor zoom AI Triple Camera with 8MP Ultra Wide sensor and 2MP Macro camera| 16MP Front camera", "Battery: 5000 mAh large battery with 33W fast charger in-box and Type-C connectivityt", "Memory, Storage & SIM: 6GB RAM | 128GB UFS 2.2 | Dual SIM (nano+nano) 5G"]
+    "about_item": ["Display: 6.67 FHD+ pOLED (1080x2400) Ultra-narrow bezels Display with 120Hz Refresh rate; 1000nits peak brightness; Corning Gorilla Glass 5 Display Protection", "Processor:Mediatek Dimensity 6080 6nm Octa-core 5G processor for high performance ; Up to 2.4GHz; Upto 12GB RAM including 6GB Virtual RAM", "Camera: 108MP 3X in-sensor zoom AI Triple Camera with 8MP Ultra Wide sensor and 2MP Macro camera| 16MP Front camera", "Battery: 5000 mAh large battery with 33W fast charger in-box and Type-C connectivityt", "Memory, Storage & SIM: 6GB RAM | 128GB UFS 2.2 | Dual SIM (nano+nano) 5G"]
   }, {
     "id": "4",
     "image": "https://m.media-amazon.com/images/I/61amb0CfMGL._SX679_.jpg",
     "brand": "OnePlus",
-    "model": "OnePlus 11 5G",
+    "productName": "OnePlus 11 5G",
     "description": "(Eternal Green, 16GB RAM, 256GB Storage)",
     "price": {
-      "original": "$780.00",
-      "current": "$470.00"
+      "original": "780",
+      "current": "470"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System :	OxygenOS", "Cellular Technology	: 5G"],
-    "about_this_item": ["Camera: 50MP Main Camera with Sony IMX890 (OIS supported), 48MP Ultrawide Camera with Sony IMX581 (FOV: 115 degree) and 32MP Telephoto lens with Sony IMX709 (2X Optical Zoom); 16MP Front (Selfie) Camera with EIS support", "Camera Modes: Photo, Video, Night, PRO, PANO, Portrait, TIME-LAPSE, SLO-MO, Text scanner, Movie, Long Exposure, Dual-view video, TILT-SHIFT, XPAN, Scan, STICKER, and AI ID photo", "Display: 6.7 Inches; 120 Hz AMOLED QHD Display with Corning Gorilla Glass Victus; Resolution: 3216 X 1440 pixels; HDR 10+, sRGB, 10-bit Color Depth, PWM + DC dimming", "Operating System: OxygenOS based on Android 13 Processor: Snapdragon 8 Gen 2 Mobile Platform"]
+    "about_item": ["Camera: 50MP Main Camera with Sony IMX890 (OIS supported), 48MP Ultrawide Camera with Sony IMX581 (FOV: 115 degree) and 32MP Telephoto lens with Sony IMX709 (2X Optical Zoom); 16MP Front (Selfie) Camera with EIS support", "Camera Modes: Photo, Video, Night, PRO, PANO, Portrait, TIME-LAPSE, SLO-MO, Text scanner, Movie, Long Exposure, Dual-view video, TILT-SHIFT, XPAN, Scan, STICKER, and AI ID photo", "Display: 6.7 Inches; 120 Hz AMOLED QHD Display with Corning Gorilla Glass Victus; Resolution: 3216 X 1440 pixels; HDR 10+, sRGB, 10-bit Color Depth, PWM + DC dimming", "Operating System: OxygenOS based on Android 13 Processor: Snapdragon 8 Gen 2 Mobile Platform"]
   }, {
     "id": "5",
     "image": "https://m.media-amazon.com/images/I/41yAce7gd4L._SX300_SY300_QL70_FMwebp_.jpg",
     "brand": "iQOO",
-    "model": "iQOO Z7 Pro 5G",
+    "productName": "iQOO Z7 Pro 5G",
     "description": "(Blue Lagoon, 8GB RAM, 256GB Storage) | 3D Curved AMOLED Display | 4nm MediaTek Dimesity 7200 5G Processor | 64MP Aura Light OIS Camera | Segment's Slimmest & Lightest Smartphone",
     "price": {
-      "original": "$550.00",
-      "current": "$350.00"
+      "original": "550",
+      "current": "350"
     },
     "features": ["Network Service Provider	: Unlocked for All Carriers", "Operating System :	Funtouch OS 13 Based On Android 13", "Cellular Technology :	5G"],
-    "about_this_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
+    "about_item": ["Segment 1st 68W Ultra Fast Charging - 50% battery in just 15minutes | Bypass Charging for playing games | 5000mAh Battery | 10W Reverse Charging", "India's 1st Multi-colored Backlit ARC Interface | Customize New multi color light effect for Notifications, Calls, Gaming, Music and others", "Dimensity 6080 highly efficient 6nm 5G Processor | 2.4GHz powerful octa-core Processor with 390K antutu score | 10 5G Bands support | HyperEngine 3.0 Lite Game Engine and Panther Game Engine 3.0", "Upto 16GB Expandable RAM with memory fusion | 128GB internal storage | Dedicated SD Card slot", "6.78FHD+dot-in display| Buttery smooth with 120Hz refresh rate | 240Hz touch Sampling rate | 50MP high-res dual Rear Camera | F1.6 large aperture with PDAF | 16MP Selfie Camera | NFC for quick contactless operations"]
   }, {
     "id": "6",
     "image": "https://m.media-amazon.com/images/I/71G7wMeIZ8L._SX679_.jpg",
     "brand": "Samsung",
-    "model": "Samsung Galaxy S24 Plus 5G",
+    "productName": "Samsung Galaxy S24 Plus 5G",
     "description": "(Cobalt Violet, 12GB, 512GB Storage) ",
     "price": {
-      "original": "$1200.00",
-      "current": "$950.00"
+      "original": "1200",
+      "current": "950"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System	: Android 14.0", "Cellular Technology	: 5G"],
-    "about_this_item": ["Easy to grip. Satisfying to hold. With their unified design and satin finish, Galaxy S24+ feels as smooth as it looks.", "They're the upgrades you've waited for. More screen. More battery. More processing power. There's so much more to love about Galaxy S24+. Especially now that Galaxy S24+ comes with the highest screen resolution on a Galaxy device: QHD+.", "A true pixel powerhouse that will not disappoint. Ever. Snap high-res pics for that will no doubt withstand the test of time for years to come.", "Search like never before with Circle to Search. Simply trace an object to get Google Search results. It's a new visual way to find what you're looking for."]
+    "about_item": ["Easy to grip. Satisfying to hold. With their unified design and satin finish, Galaxy S24+ feels as smooth as it looks.", "They're the upgrades you've waited for. More screen. More battery. More processing power. There's so much more to love about Galaxy S24+. Especially now that Galaxy S24+ comes with the highest screen resolution on a Galaxy device: QHD+.", "A true pixel powerhouse that will not disappoint. Ever. Snap high-res pics for that will no doubt withstand the test of time for years to come.", "Search like never before with Circle to Search. Simply trace an object to get Google Search results. It's a new visual way to find what you're looking for."]
   }, {
     "id": "7",
     "image": "https://m.media-amazon.com/images/I/81WimZLWH1L._SX679_.jpg",
     "brand": "Realme",
-    "model": "realme narzo 60X 5G",
+    "productName": "realme narzo 60X 5G",
     "description": "（Stellar Green,6GB,128GB Storage ） Up to 2TB External Memory | 50 MP AI Primary Camera | Segments only 33W Supervooc Charge",
     "price": {
-      "original": "$198.00",
-      "current": "$125.00"
+      "original": "198",
+      "current": "125"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System	: Android 14.0", "Cellular Technology	: 5G"],
-    "about_this_item": ["With a 33 W Powerful SUPERVOOC Charge, 30 minutes charge for 50% battery and full charge in 70 minutes,5000mAh massive battery, without ever being concerned about the battery running out", "50MP Primary Camera,street photography high-quality pictures that catch every details with astounding clarity", "Fast refresh displays cut blur in animations, scrolling and games to provide a notably better user experience. Multi levels of refresh rates means the display can save much energy and users can use for longer time", "According to the installation of a photo 4M to calculate: 128GB of memory can be installed 28000 + photos； According to a 720P TV series size of 250M to calculate: 128GB memory can be loaded with 450 + TV series"]
+    "about_item": ["With a 33 W Powerful SUPERVOOC Charge, 30 minutes charge for 50% battery and full charge in 70 minutes,5000mAh massive battery, without ever being concerned about the battery running out", "50MP Primary Camera,street photography high-quality pictures that catch every details with astounding clarity", "Fast refresh displays cut blur in animations, scrolling and games to provide a notably better user experience. Multi levels of refresh rates means the display can save much energy and users can use for longer time", "According to the installation of a photo 4M to calculate: 128GB of memory can be installed 28000 + photos； According to a 720P TV series size of 250M to calculate: 128GB memory can be loaded with 450 + TV series"]
   }, {
     "id": "8",
     "image": "https://m.media-amazon.com/images/I/61JS7lF2aqL._SX679_.jpg",
     "brand": "iQOO",
-    "model": "iQOO Neo 7 5G",
+    "productName": "iQOO Neo 7 5G",
     "description": "(Frost Blue, 8GB RAM, 128GB Storage) | Dimensity 8200, only 4nm Processor in The Segment | 50% Charge in 10 mins | Motion Control & 90 FPS Gaming",
     "price": {
-      "original": "$280.00",
-      "current": "$230.00"
+      "original": "280",
+      "current": "230"
     },
     "features": ["Network Service Provider	Unlocked for All Carriers", "Operating System	Funtouch OS 13 Based On Android 13", "Cellular Technology	: 5G"],
-    "about_this_item": ["MediaTek Dimensity 8200 5G Mobile platform adopts TSMC 4nm process and has excellent Power Efficiency Performance. Also, Equipped with the LPDDR5 RAM & UFS 3.1 Storage.", "The 120W FlashCharge charges from 1% to 50% in just 10 minutes (25 minutes for a full charge)", "Motion Control powered by Gyroscope & Acceleration Sensors to give 6 additional Phone movement-based control options while Gaming", "6.78” 120Hz AMOLED Display with HDR 10+ Certification, Netflix HDR Support & 1300 Nits Peak Brightness"]
+    "about_item": ["MediaTek Dimensity 8200 5G Mobile platform adopts TSMC 4nm process and has excellent Power Efficiency Performance. Also, Equipped with the LPDDR5 RAM & UFS 3.1 Storage.", "The 120W FlashCharge charges from 1% to 50% in just 10 minutes (25 minutes for a full charge)", "Motion Control powered by Gyroscope & Acceleration Sensors to give 6 additional Phone movement-based control options while Gaming", "6.78” 120Hz AMOLED Display with HDR 10+ Certification, Netflix HDR Support & 1300 Nits Peak Brightness"]
   }, {
     "id": "9",
     "image": "https://m.media-amazon.com/images/I/71E5zB1qbIL._SX679_.jpg",
     "brand": "Apple",
-    "model": "Apple iPhone 12",
+    "productName": "Apple iPhone 12",
     "description": "Apple iPhone 12 (256GB) - (Product) RED",
     "price": {
-      "original": "$940.00",
-      "current": "$650.00"
+      "original": "940",
+      "current": "650"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System	: iOS 14", "Cellular Technology	: 5G"],
-    "about_this_item": ["6.1-inch (15.5 cm diagonal) Super Retina XDR display Ceramic Shield, tougher than any smartphone glass", "A14 Bionic chip, the fastest chip ever in a smartphone Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording ", "12MP TrueDepth front camera with Night mode, 4K Dolby Vision HDR recording Industry-leading IP68 water resistance", "Supports MagSafe accessories for easy attach and faster wireless charging"]
+    "about_item": ["6.1-inch (15.5 cm diagonal) Super Retina XDR display Ceramic Shield, tougher than any smartphone glass", "A14 Bionic chip, the fastest chip ever in a smartphone Advanced dual-camera system with 12MP Ultra Wide and Wide cameras; Night mode, Deep Fusion, Smart HDR 3, 4K Dolby Vision HDR recording ", "12MP TrueDepth front camera with Night mode, 4K Dolby Vision HDR recording Industry-leading IP68 water resistance", "Supports MagSafe accessories for easy attach and faster wireless charging"]
   }, {
     "id": "10",
     "image": "https://m.media-amazon.com/images/I/51TK-AM4k0L._SX679_.jpg",
     "brand": "Lava",
-    "model": "Lava Blaze 5G",
+    "productName": "Lava Blaze 5G",
     "description": "Glass Blue, 6GB RAM, UFS 2.2 128GB Storage) | 5G Ready | 50MP AI Triple Camera | Upto 11GB Expandable RAM | Charger Included | Clean Android (No Bloatware)",
     "price": {
-      "original": "$130.00",
-      "current": "$102.00"
+      "original": "130",
+      "current": "102"
     },
     "features": ["Network Service Provider :	Unlocked for All Carriers", "Operating System :	Android 13", "Cellular Technology	: 5G"],
-    "about_this_item": ["Supports All India 5G Bands - All sub-6mm-wave bands being auctioned and bought by Operators in India", "6+5*GB RAM with UFS 2.2 compliant 128GB ROM, Expandable up to 1 TB (*Virtual RAM)", "16.55cm(6.5) HD+ 90Hz Display with Widevine L1 DRM Protection - Enjoy all your Content in High Resolution", "Clean Android 12 OS and Anonymous Call Recording | 2K Video Recording with EIS support | 5000mAh Lithium Polymer Battery | Side Fingerprint Sensor"]
+    "about_item": ["Supports All India 5G Bands - All sub-6mm-wave bands being auctioned and bought by Operators in India", "6+5*GB RAM with UFS 2.2 compliant 128GB ROM, Expandable up to 1 TB (*Virtual RAM)", "16.55cm(6.5) HD+ 90Hz Display with Widevine L1 DRM Protection - Enjoy all your Content in High Resolution", "Clean Android 12 OS and Anonymous Call Recording | 2K Video Recording with EIS support | 5000mAh Lithium Polymer Battery | Side Fingerprint Sensor"]
   }];
 });
 ;define("regendevice/components/general-container", ["exports", "@glimmer/component"], function (_exports, _component) {
@@ -356,6 +469,11 @@
       super(...args);
       _initializerDefineProperty(this, "shopCart", _descriptor, this);
     }
+    get itemCount() {
+      this.shopCart.itemList.reduce((total, item) => {
+        return total += item.count;
+      }, 0);
+    }
   }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "shopCart", [_dec], {
     configurable: true,
     enumerable: true,
@@ -371,7 +489,7 @@
     value: true
   });
   _exports.default = void 0;
-  var _dec, _dec2, _dec3, _dec4, _class, _descriptor, _descriptor2;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -382,39 +500,55 @@
   /*
     <div class="p-d-content">
         <div class="p-d-img-div">
-        <img class="p-d-img" src="{{@image}}" alt="phone">
+        <img class="p-d-img" src="{{this.model.image}}" alt="phone">
       </div>
       <div class="p-d-m_p-content">
   <div class="p-m-content">
   
-    <h3>{{@brand}}</h3>
-      <h2> {{@model}} </h2>
-        <h2>{{@pDescription}}</h2>
+    <h3>{{this.model.brand}}</h3>
+      <h2> {{this.model.productName}} </h2>
+        <h2>{{this.model.description}}</h2>
   
   </div>
   <div class="p-d-rpice-div">
     <section class="price_sec">
-  <i style="text-decoration: line-through;" >{{@price.original}}</i>
-  <i style="font-weight: bold; color:red; ">{{@price.current}}</i>
+  <del style="text-decoration: line-through;" >{{currency this.model.price.original}}</del>
+  <i style="font-weight: bold; color:red; ">{{currency this.model.price.current}}</i>
   
   </section>
   <div class="buy-div">
   <button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
   <button class="buy-btn">BUY NOW</button>
   </div>
-  <button class="offer-btn" {{on "click" this.offerStatus}}>Offers</button>
-  {{#if this.active}}
-  <div class="offer-div">
+  <button class="offer-btn" {{on "click" this.emiOffer}}>EMI Option</button>
+  <button class="offer-btn" {{on "click" this.bankOffer}} >Bank Offer</button>
+  <button class="offer-btn" {{on "click" this.creditCardOffer}} >Credit Card Offer</button>
+  {{!-- offer cards show here when user click offer button --}}
+  {{#if this.bankActive }}
+  <div  class="offer-div">
     <p  class="off-div-head">Bank Offer</p>
-    <p class="off-div-para">Upto ₹850.00 discount on select Credit Cards.</p>
+    <p class="off-div-para">Upto {{currency this.offerPrice}} discount on select Net Banking.</p>
   </div>
   {{/if}}
+  {{#if this.creditActive}}
+  <div  class="offer-div">
+    <p  class="off-div-head">Credit Card Offer</p>
+    <p class="off-div-para">Upto {{currency  this.offerPrice}} discount on select Credit Cards.</p>
+  </div>
+  {{/if}}
+  {{#if this.emiActive}}
+  <div  class="offer-div">
+    <p  class="off-div-head">EMI Option</p>
+    <p class="off-div-para">Per month only  {{currency this.offerPrice}}.</p>
+  </div>
+  {{/if}}
+  
   </div>
   </div>
   <div class="fea-content">
     <h2>Features</h2>
     <ul>
-      {{#each this.args.oneProduct.features  as |feature|}}
+      {{#each this.model.features  as |feature|}}
       <li>{{feature}}</li>
       {{/each}}
     </ul>
@@ -422,7 +556,7 @@
   <div class="a-item-content">
     <h2>About this item</h2>
     <ul>
-      {{#each this.args.oneProduct.about_this_item  as |aboutItem| }}
+      {{#each this.model.about_item  as |aboutItem| }}
       <li>{{aboutItem}}</li>
       {{/each}}
     </ul>
@@ -430,46 +564,79 @@
     </div>
   */
   {
-    id: "Ygx9TfbM",
-    block: "{\"symbols\":[\"aboutItem\",\"feature\",\"@image\",\"@brand\",\"@model\",\"@pDescription\",\"@price\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,3,[]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,4,[]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,5,[]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,6,[]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,7,[\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,7,[\"current\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"add-cart-btn\"],[3,\"on\",[\"click\",[23,0,[\"addToCart\"]]]],[8],[0,\"ADD TO CART\"],[9],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"offerStatus\"]]]],[8],[0,\"Offers\"],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"active\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Bank Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \u20B9850.00 discount on select Credit Cards.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"args\",\"oneProduct\",\"about_this_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
+    id: "hp5npNjP",
+    block: "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,0,[\"model\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"model\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"model\",\"productName\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"model\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"del\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"original\"]]],null],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"current\"]]],null],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"add-cart-btn\"],[3,\"on\",[\"click\",[23,0,[\"addToCart\"]]]],[8],[0,\"ADD TO CART\"],[9],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"emiOffer\"]]]],[8],[0,\"EMI Option\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"bankOffer\"]]]],[8],[0,\"Bank Offer\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"creditCardOffer\"]]]],[8],[0,\"Credit Card Offer\"],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"bankActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Bank Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\" discount on select Net Banking.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[23,0,[\"creditActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Credit Card Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\" discount on select Credit Cards.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[23,0,[\"emiActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"EMI Option\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Per month only  \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\".\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"about_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product-detail.hbs"
     }
   });
-  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._action, _dec3 = Ember.inject.service('shopCart'), _dec4 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
+  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._action, _dec6 = Ember._action, _dec7 = Ember._action, _dec8 = Ember.inject.service('shopCart'), _dec9 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
     constructor(...args) {
       super(...args);
-      _initializerDefineProperty(this, "active", _descriptor, this);
-      _initializerDefineProperty(this, "cart", _descriptor2, this);
+      _initializerDefineProperty(this, "bankActive", _descriptor, this);
+      _initializerDefineProperty(this, "creditActive", _descriptor2, this);
+      _initializerDefineProperty(this, "emiActive", _descriptor3, this);
+      _initializerDefineProperty(this, "offerPrice", _descriptor4, this);
+      _defineProperty(this, "model", this.args.oneProduct);
+      // inject shopCart service from shop-cart service.
+      _initializerDefineProperty(this, "cart", _descriptor5, this);
     }
-    offerStatus() {
-      this.active = true;
+    // this action for active bank offer
+    bankOffer() {
+      this.bankActive = true;
+      this.creditActive = false;
+      this.emiActive = false;
+      this.offerPrice = this.model.price.current / 10 * 9;
     }
+    // this action for credit card offer
+    creditCardOffer() {
+      this.creditActive = true;
+      this.bankActive = false;
+      this.emiActive = false;
+      this.offerPrice = this.model.price.current / 10 * 8;
+    }
+    // this action for EMI offer
+    emiOffer() {
+      this.emiActive = true;
+      this.bankActive = false;
+      this.creditActive = false;
+      this.offerPrice = this.model.price.current / 12;
+    }
+    // function for add item for add to cart page.
     addToCart() {
-      const {
-        model,
-        image,
-        price,
-        pDescription
-      } = this.args;
       this.cart.addItem({
-        model,
-        image,
-        price: price.current,
-        pDescription
+        productName: this.model.productName,
+        image: this.model.image,
+        price: this.model.price.current,
+        pDescription: this.model.description
       });
     }
-  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "active", [_dec], {
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "bankActive", [_dec], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _applyDecoratedDescriptor(_class.prototype, "offerStatus", [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, "offerStatus"), _class.prototype), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec3], {
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "creditActive", [_dec2], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec4], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "emiActive", [_dec3], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "offerPrice", [_dec4], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _applyDecoratedDescriptor(_class.prototype, "bankOffer", [_dec5], Object.getOwnPropertyDescriptor(_class.prototype, "bankOffer"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "creditCardOffer", [_dec6], Object.getOwnPropertyDescriptor(_class.prototype, "creditCardOffer"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "emiOffer", [_dec7], Object.getOwnPropertyDescriptor(_class.prototype, "emiOffer"), _class.prototype), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec8], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec9], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
 });
 ;define("regendevice/components/product-list", ["exports", "@glimmer/component", "regendevice/components/data/productdata"], function (_exports, _component, _productdata) {
@@ -544,8 +711,8 @@
           {{!-- <li class="	fas fa-star-half-alt"></li> --}}
         </div>
     <section class="price_sec">
-  <i style="text-decoration: line-through;" >{{this.args.item.price.original}}</i>
-  <i style="font-weight: bold; color:red; ">{{this.args.item.price.current}}</i>
+  <i style="text-decoration: line-through;" >{{currency this.args.item.price.original}}</i>
+  <i style="font-weight: bold; color:red; ">{{currency this.args.item.price.current}}</i>
   </section>
   <div class="view_btn_div">
     <LinkTo @route="product-detail" @model="{{this.args.item.id}}" class="view_btn" href="#">View more</LinkTo> 
@@ -555,8 +722,8 @@
   </div>
   */
   {
-    id: "VjGLMtaU",
-    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n   \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"  \\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[11,\"src\",[29,[[23,0,[\"args\",\"item\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[1,[23,0,[\"args\",\"item\",\"brand\"]],false],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"args\",\"item\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[23,0,[\"args\",\"item\",\"price\",\"original\"]],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[23,0,[\"args\",\"item\",\"price\",\"current\"]],false],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",[29,[[23,0,[\"args\",\"item\",\"id\"]]]]]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
+    id: "3NCDviyc",
+    block: "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"card\"],[8],[0,\"\\n   \"],[7,\"div\",true],[10,\"class\",\"c_img_div\"],[8],[0,\"  \\n      \"],[7,\"img\",true],[10,\"class\",\"c_img\"],[11,\"src\",[29,[[23,0,[\"args\",\"item\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"c_content_div\"],[8],[0,\"\\n      \"],[7,\"h1\",true],[8],[1,[23,0,[\"args\",\"item\",\"brand\"]],false],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"args\",\"item\",\"model\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"rating-div\"],[8],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"fas fa-star\"],[8],[9],[0,\"\\n        \"],[7,\"li\",true],[10,\"class\",\"far fa-star\"],[8],[9],[0,\"\\n\"],[0,\"      \"],[9],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[28,\"currency\",[[23,0,[\"args\",\"item\",\"price\",\"original\"]]],null],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[28,\"currency\",[[23,0,[\"args\",\"item\",\"price\",\"current\"]]],null],false],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"view_btn_div\"],[8],[0,\"\\n  \"],[5,\"link-to\",[[12,\"class\",\"view_btn\"],[12,\"href\",\"#\"]],[[\"@route\",\"@model\"],[\"product-detail\",[29,[[23,0,[\"args\",\"item\",\"id\"]]]]]],{\"statements\":[[0,\"View more\"]],\"parameters\":[]}],[0,\" \\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\\n\"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product.hbs"
     }
@@ -612,52 +779,6 @@
     }
   });
 });
-;define("regendevice/controllers/cart", ["exports"], function (_exports) {
-  "use strict";
-
-  Object.defineProperty(_exports, "__esModule", {
-    value: true
-  });
-  _exports.default = void 0;
-  var _dec, _dec2, _class, _descriptor, _descriptor2;
-  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
-  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
-  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
-  let CartController = _exports.default = (_dec = Ember.inject.service('shopCart'), _dec2 = Ember._tracked, (_class = class CartController extends Ember.Controller {
-    constructor(...args) {
-      super(...args);
-      _initializerDefineProperty(this, "cart", _descriptor, this);
-      _initializerDefineProperty(this, "total", _descriptor2, this);
-    }
-    //  get subtotal(){
-    //   return this.cart.itemList(acc, item =>{
-    //     return acc + item.price;
-    //    },0);
-    //  }
-
-    get tax() {
-      return 0.09 * this.subtotal;
-    }
-    get total() {
-      return this.subtotal + this.tax;
-    }
-  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: null
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "total", [_dec2], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: function () {
-      return 0;
-    }
-  })), _class));
-});
 ;define("regendevice/controllers/product-detail", ["exports"], function (_exports) {
   "use strict";
 
@@ -712,6 +833,31 @@
     return match ? match[0] : version;
   }
   var _default = _exports.default = Ember.Helper.helper(appVersion);
+});
+;define("regendevice/helpers/currency", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  // import {tracked} from '@ember/tracking';
+
+  class currency extends Ember.Helper {
+    compute(params, hash = {}) {
+      const [number] = params;
+      const {
+        sign = "$"
+      } = hash;
+      const dollars = Math.floor(number);
+      let cents = Math.floor(number * 100 % 100);
+      if (cents.toString().length === 1) {
+        cents = '0' + cents;
+      }
+      return `${sign}${dollars}.${cents}`;
+    }
+  }
+  _exports.default = currency;
 });
 ;define("regendevice/helpers/pluralize", ["exports", "ember-inflector/lib/helpers/pluralize"], function (_exports, _pluralize) {
   "use strict";
@@ -870,13 +1016,13 @@
     constructor(...args) {
       super(...args);
       _initializerDefineProperty(this, "brand", _descriptor, this);
-      _initializerDefineProperty(this, "model", _descriptor2, this);
+      _initializerDefineProperty(this, "productName", _descriptor2, this);
       _initializerDefineProperty(this, "image", _descriptor3, this);
       _initializerDefineProperty(this, "description", _descriptor4, this);
       _initializerDefineProperty(this, "a_price", _descriptor5, this);
       _initializerDefineProperty(this, "c_price", _descriptor6, this);
       _initializerDefineProperty(this, "features", _descriptor7, this);
-      _initializerDefineProperty(this, "about_this_item", _descriptor8, this);
+      _initializerDefineProperty(this, "about_item", _descriptor8, this);
       _initializerDefineProperty(this, "product_type", _descriptor9, this);
     }
   }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "brand", [_dec], {
@@ -884,7 +1030,7 @@
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "model", [_dec2], {
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "productName", [_dec2], {
     configurable: true,
     enumerable: true,
     writable: true,
@@ -914,12 +1060,112 @@
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "about_this_item", [_dec8], {
+  }), _descriptor8 = _applyDecoratedDescriptor(_class.prototype, "about_item", [_dec8], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
   }), _descriptor9 = _applyDecoratedDescriptor(_class.prototype, "product_type", [_dec9], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
+});
+;define("regendevice/models/profile", ["exports", "@ember-data/model"], function (_exports, _model) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _dec, _dec2, _dec3, _dec4, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  let ProfileModel = _exports.default = (_dec = (0, _model.belongsTo)('user'), _dec2 = (0, _model.attr)('string'), _dec3 = (0, _model.attr)('string'), _dec4 = (0, _model.attr)('string'), (_class = class ProfileModel extends _model.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "user", _descriptor, this);
+      _initializerDefineProperty(this, "photo", _descriptor2, this);
+      _initializerDefineProperty(this, "name", _descriptor3, this);
+      _initializerDefineProperty(this, "phone", _descriptor4, this);
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "user", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "photo", [_dec2], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "name", [_dec3], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "phone", [_dec4], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
+});
+;define("regendevice/models/user", ["exports", "@ember-data/model"], function (_exports, _model) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
+  function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
+  function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  let UserModel = _exports.default = (_dec = (0, _model.belongsTo)('profile'), _dec2 = (0, _model.attr)('string'), _dec3 = (0, _model.attr)('string'), _dec4 = (0, _model.attr)('string'), _dec5 = (0, _model.attr)('string'), _dec6 = (0, _model.attr)('string'), (_class = class UserModel extends _model.default {
+    constructor(...args) {
+      super(...args);
+      _initializerDefineProperty(this, "profile", _descriptor, this);
+      _initializerDefineProperty(this, "username", _descriptor2, this);
+      _initializerDefineProperty(this, "photo", _descriptor3, this);
+      _initializerDefineProperty(this, "email", _descriptor4, this);
+      _initializerDefineProperty(this, "password", _descriptor5, this);
+      _initializerDefineProperty(this, "phone", _descriptor6, this);
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "profile", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "username", [_dec2], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "photo", [_dec3], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "email", [_dec4], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "password", [_dec5], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, "phone", [_dec6], {
     configurable: true,
     enumerable: true,
     writable: true,
@@ -1011,6 +1257,7 @@
   });
   _exports.default = void 0;
   class ItemRoute extends Ember.Route {
+    // find the product by product id!
     model(params) {
       const {
         product_id
@@ -1018,7 +1265,6 @@
       const oneProduct = _productdata.productArray.find(({
         id
       }) => id === product_id);
-      console.log(oneProduct);
       return oneProduct;
     }
   }
@@ -1084,19 +1330,66 @@
     value: true
   });
   _exports.default = void 0;
+  var _dec, _class, _descriptor, _dec2, _class3, _descriptor2;
+  function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
   function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-  class ShopCartService extends Ember.Service {
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+  function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'transform-class-properties is enabled and runs after the decorators transform.'); }
+  // create new class and create object for add item count and push object to array.
+  let Item = (_dec = Ember._tracked, (_class = class Item {
+    // create constructor for assign the value to arguments
+    constructor(item) {
+      _initializerDefineProperty(this, "count", _descriptor, this);
+      _defineProperty(this, "productName", void 0);
+      _defineProperty(this, "image", void 0);
+      _defineProperty(this, "pDescription", void 0);
+      _defineProperty(this, "price", void 0);
+      this.count = item.count;
+      this.productName = item.productName;
+      this.image = item.image;
+      this.pDescription = item.pDescription;
+      this.price = item.price;
+    }
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "count", [_dec], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: null
+  })), _class));
+  let ShopCartService = _exports.default = (_dec2 = Ember._tracked, (_class3 = class ShopCartService extends Ember.Service {
     constructor(...args) {
       super(...args);
-      _defineProperty(this, "itemList", Ember.A([]));
+      // itemList = A([]);
+      _initializerDefineProperty(this, "itemList", _descriptor2, this);
     }
+    // add new item to add to cart page checking the item is already exiting or not.
     addItem(item) {
-      this.itemList.pushObject(item);
+      const exitingItem = this.itemList.find(({
+        productName,
+        pDescription
+      }) => {
+        return productName === item.productName && pDescription === item.pDescription;
+      });
+      if (exitingItem) {
+        exitingItem.count += 1;
+      } else {
+        // this.itemList.pushObject(item);
+        this.itemList = [...this.itemList, new Item({
+          ...item,
+          count: 1
+        })];
+      }
     }
-  }
-  _exports.default = ShopCartService;
+  }, (_descriptor2 = _applyDecoratedDescriptor(_class3.prototype, "itemList", [_dec2], {
+    configurable: true,
+    enumerable: true,
+    writable: true,
+    initializer: function () {
+      return [];
+    }
+  })), _class3));
 });
 ;define("regendevice/services/store", ["exports", "ember-data/store"], function (_exports, _store) {
   "use strict";
@@ -1164,8 +1457,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "aIAx5/Ha",
-    "block": "{\"symbols\":[\"item\"],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"cart-container\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-container\"],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"cart\",\"itemList\"]]],null,{\"statements\":[[0,\"  \"],[7,\"div\",true],[10,\"class\",\"add-cart-price-content\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-card\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"class\",\"product-image\"],[11,\"src\",[29,[[23,1,[\"image\"]]]]],[10,\"alt\",\"Product Image\"],[8],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"price-div\"],[8],[0,\"\\n  \"],[7,\"div\",true],[10,\"class\",\"product-des-div\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-details\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"model\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-name\"],[8],[1,[23,1,[\"pDescription\"]],false],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"product-price\"],[8],[1,[23,1,[\"price\"]],false],[9],[0,\"\\n  \\n  \"],[9],[0,\"\\n    \"],[7,\"p\",true],[10,\"class\",\"product-des\"],[8],[9],[0,\"\\n  \"],[9],[0,\" \\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"total-div\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"total-content\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Subtotal : \"],[1,[24,[\"item\",\"price\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Tax : \"],[1,[23,0,[\"tax\"]],false],[9],[0,\"\\n    \"],[9],[0,\"\\n     \"],[7,\"div\",true],[10,\"class\",\"row\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"col\"],[8],[0,\"Total : \"],[1,[23,0,[\"total\"]],false],[9],[0,\" \\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"buy-btn-div\"],[8],[0,\"\\n      \"],[7,\"button\",true],[10,\"class\",\"s-c-buy-btn\"],[8],[0,\"Buy Now\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n      \\n      \\n    \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
+    "id": "tNoTzYQU",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[5,\"cart\",[],[[],[]]],[0,\"\\n\"],[0,\"\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/cart.hbs"
     }
@@ -1224,8 +1517,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "NIeo6mzF",
-    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[5,\"product-detail\",[],[[\"@model\",\"@brand\",\"@image\",\"@price\",\"@pDescription\",\"@oneProduct\"],[[23,0,[\"model\",\"model\"]],[23,0,[\"model\",\"brand\"]],[23,0,[\"model\",\"image\"]],[23,0,[\"model\",\"price\"]],[23,0,[\"model\",\"description\"]],[23,0,[\"model\"]]]]],[0,\"\\n  \\n\"]],\"hasEval\":false}",
+    "id": "9pyIFz5D",
+    "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[5,\"product-detail\",[],[[\"@oneProduct\"],[[23,0,[\"model\"]]]]],[0,\"\\n  \\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/product-detail.hbs"
     }
@@ -1321,7 +1614,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+bb99be4e"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+dacee29d"});
           }
         
 //# sourceMappingURL=regendevice.map
