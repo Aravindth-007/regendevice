@@ -489,7 +489,7 @@
     value: true
   });
   _exports.default = void 0;
-  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
+  var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4;
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -520,26 +520,16 @@
   <button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
   <button class="buy-btn">BUY NOW</button>
   </div>
-  <button class="offer-btn" {{on "click" this.emiOffer}}>EMI Option</button>
-  <button class="offer-btn" {{on "click" this.bankOffer}} >Bank Offer</button>
-  <button class="offer-btn" {{on "click" this.creditCardOffer}} >Credit Card Offer</button>
+  <button class="offer-btn" {{on "click" (fn this.Offer 'emi')}}>EMI Option</button>
+  <button class="offer-btn" {{on "click" (fn this.Offer 'bank')}} >Bank Offer</button>
+  <button class="offer-btn" {{on "click" (fn this.Offer 'credit')}} >Credit Card Offer</button>
+  
   {{!-- offer cards show here when user click offer button --}}
-  {{#if this.bankActive }}
+  {{#if this.active }}
   <div  class="offer-div">
-    <p  class="off-div-head">Bank Offer</p>
-    <p class="off-div-para">Upto {{currency this.offerPrice}} discount on select Net Banking.</p>
-  </div>
-  {{/if}}
-  {{#if this.creditActive}}
-  <div  class="offer-div">
-    <p  class="off-div-head">Credit Card Offer</p>
-    <p class="off-div-para">Upto {{currency  this.offerPrice}} discount on select Credit Cards.</p>
-  </div>
-  {{/if}}
-  {{#if this.emiActive}}
-  <div  class="offer-div">
-    <p  class="off-div-head">EMI Option</p>
-    <p class="off-div-para">Per month only  {{currency this.offerPrice}}.</p>
+    <p  class="off-div-head"> Offer</p>
+    <p class="off-div-para"> {{currency this.offerPrice}}{{this.priceDetails}} </p>
+    
   </div>
   {{/if}}
   
@@ -564,43 +554,35 @@
     </div>
   */
   {
-    id: "hp5npNjP",
-    block: "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,0,[\"model\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"model\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"model\",\"productName\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"model\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"del\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"original\"]]],null],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"current\"]]],null],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"add-cart-btn\"],[3,\"on\",[\"click\",[23,0,[\"addToCart\"]]]],[8],[0,\"ADD TO CART\"],[9],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"emiOffer\"]]]],[8],[0,\"EMI Option\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"bankOffer\"]]]],[8],[0,\"Bank Offer\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[23,0,[\"creditCardOffer\"]]]],[8],[0,\"Credit Card Offer\"],[9],[0,\"\\n\"],[4,\"if\",[[23,0,[\"bankActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Bank Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\" discount on select Net Banking.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[23,0,[\"creditActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"Credit Card Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Upto \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\" discount on select Credit Cards.\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[4,\"if\",[[23,0,[\"emiActive\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\"EMI Option\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\"Per month only  \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[0,\".\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"about_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
+    id: "1KjrM7hl",
+    block: "{\"symbols\":[\"aboutItem\",\"feature\"],\"statements\":[[7,\"div\",true],[10,\"class\",\"p-d-content\"],[8],[0,\"\\n      \"],[7,\"div\",true],[10,\"class\",\"p-d-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"class\",\"p-d-img\"],[11,\"src\",[29,[[23,0,[\"model\",\"image\"]]]]],[10,\"alt\",\"phone\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"p-d-m_p-content\"],[8],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-m-content\"],[8],[0,\"\\n\\n  \"],[7,\"h3\",true],[8],[1,[23,0,[\"model\",\"brand\"]],false],[9],[0,\"\\n    \"],[7,\"h2\",true],[8],[0,\" \"],[1,[23,0,[\"model\",\"productName\"]],false],[0,\" \"],[9],[0,\"\\n      \"],[7,\"h2\",true],[8],[1,[23,0,[\"model\",\"description\"]],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"p-d-rpice-div\"],[8],[0,\"\\n  \"],[7,\"section\",true],[10,\"class\",\"price_sec\"],[8],[0,\"\\n\"],[7,\"del\",true],[10,\"style\",\"text-decoration: line-through;\"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"original\"]]],null],false],[9],[0,\"\\n\"],[7,\"i\",true],[10,\"style\",\"font-weight: bold; color:red; \"],[8],[1,[28,\"currency\",[[23,0,[\"model\",\"price\",\"current\"]]],null],false],[9],[0,\"\\n\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"buy-div\"],[8],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"add-cart-btn\"],[3,\"on\",[\"click\",[23,0,[\"addToCart\"]]]],[8],[0,\"ADD TO CART\"],[9],[0,\"\\n\"],[7,\"button\",true],[10,\"class\",\"buy-btn\"],[8],[0,\"BUY NOW\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[28,\"fn\",[[23,0,[\"Offer\"]],\"emi\"],null]]],[8],[0,\"EMI Option\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[28,\"fn\",[[23,0,[\"Offer\"]],\"bank\"],null]]],[8],[0,\"Bank Offer\"],[9],[0,\"\\n\"],[7,\"button\",false],[12,\"class\",\"offer-btn\"],[3,\"on\",[\"click\",[28,\"fn\",[[23,0,[\"Offer\"]],\"credit\"],null]]],[8],[0,\"Credit Card Offer\"],[9],[0,\"\\n\\n\"],[4,\"if\",[[23,0,[\"active\"]]],null,{\"statements\":[[7,\"div\",true],[10,\"class\",\"offer-div\"],[8],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-head\"],[8],[0,\" Offer\"],[9],[0,\"\\n  \"],[7,\"p\",true],[10,\"class\",\"off-div-para\"],[8],[0,\" \"],[1,[28,\"currency\",[[23,0,[\"offerPrice\"]]],null],false],[1,[23,0,[\"priceDetails\"]],false],[0,\" \"],[9],[0,\"\\n  \\n\"],[9],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"fea-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"Features\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"features\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,2,[]],false],[9],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-item-content\"],[8],[0,\"\\n  \"],[7,\"h2\",true],[8],[0,\"About this item\"],[9],[0,\"\\n  \"],[7,\"ul\",true],[8],[0,\"\\n\"],[4,\"each\",[[23,0,[\"model\",\"about_item\"]]],null,{\"statements\":[[0,\"    \"],[7,\"li\",true],[8],[1,[23,1,[]],false],[9],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \"],[9],[0,\"\\n\"],[9],[0,\"\\n  \"],[9]],\"hasEval\":false}",
     meta: {
       moduleName: "regendevice/components/product-detail.hbs"
     }
   });
-  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._tracked, _dec5 = Ember._action, _dec6 = Ember._action, _dec7 = Ember._action, _dec8 = Ember.inject.service('shopCart'), _dec9 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
+  let ProductDetailComponent = _exports.default = (_dec = Ember._tracked, _dec2 = Ember._tracked, _dec3 = Ember._tracked, _dec4 = Ember._action, _dec5 = Ember.inject.service('shopCart'), _dec6 = Ember._action, (_class = class ProductDetailComponent extends _component.default {
     constructor(...args) {
       super(...args);
-      _initializerDefineProperty(this, "bankActive", _descriptor, this);
-      _initializerDefineProperty(this, "creditActive", _descriptor2, this);
-      _initializerDefineProperty(this, "emiActive", _descriptor3, this);
-      _initializerDefineProperty(this, "offerPrice", _descriptor4, this);
+      _initializerDefineProperty(this, "offerPrice", _descriptor, this);
+      _initializerDefineProperty(this, "priceDetails", _descriptor2, this);
+      _initializerDefineProperty(this, "active", _descriptor3, this);
       _defineProperty(this, "model", this.args.oneProduct);
       // inject shopCart service from shop-cart service.
-      _initializerDefineProperty(this, "cart", _descriptor5, this);
+      _initializerDefineProperty(this, "cart", _descriptor4, this);
     }
     // this action for active bank offer
-    bankOffer() {
-      this.bankActive = true;
-      this.creditActive = false;
-      this.emiActive = false;
-      this.offerPrice = this.model.price.current / 10 * 9;
-    }
-    // this action for credit card offer
-    creditCardOffer() {
-      this.creditActive = true;
-      this.bankActive = false;
-      this.emiActive = false;
-      this.offerPrice = this.model.price.current / 10 * 8;
-    }
-    // this action for EMI offer
-    emiOffer() {
-      this.emiActive = true;
-      this.bankActive = false;
-      this.creditActive = false;
-      this.offerPrice = this.model.price.current / 12;
+    Offer(params) {
+      this.active = true;
+      if (params === "bank") {
+        this.offerPrice = this.model.price.current / 10 * 9;
+        this.priceDetails = "discount on select Net Banking.";
+      } else if (params === "credit") {
+        this.offerPrice = this.model.price.current / 10 * 8;
+        this.priceDetails = "discount on select Credit Card payment.";
+      } else if (params === "emi") {
+        this.offerPrice = this.model.price.current / 12;
+        this.priceDetails = "Per month!";
+      }
     }
     // function for add item for add to cart page.
     addToCart() {
@@ -611,32 +593,27 @@
         pDescription: this.model.description
       });
     }
-  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "bankActive", [_dec], {
+  }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, "offerPrice", [_dec], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "creditActive", [_dec2], {
+  }), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, "priceDetails", [_dec2], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "emiActive", [_dec3], {
+  }), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, "active", [_dec3], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "offerPrice", [_dec4], {
+  }), _applyDecoratedDescriptor(_class.prototype, "Offer", [_dec4], Object.getOwnPropertyDescriptor(_class.prototype, "Offer"), _class.prototype), _descriptor4 = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec5], {
     configurable: true,
     enumerable: true,
     writable: true,
     initializer: null
-  }), _applyDecoratedDescriptor(_class.prototype, "bankOffer", [_dec5], Object.getOwnPropertyDescriptor(_class.prototype, "bankOffer"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "creditCardOffer", [_dec6], Object.getOwnPropertyDescriptor(_class.prototype, "creditCardOffer"), _class.prototype), _applyDecoratedDescriptor(_class.prototype, "emiOffer", [_dec7], Object.getOwnPropertyDescriptor(_class.prototype, "emiOffer"), _class.prototype), _descriptor5 = _applyDecoratedDescriptor(_class.prototype, "cart", [_dec8], {
-    configurable: true,
-    enumerable: true,
-    writable: true,
-    initializer: null
-  }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec9], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
+  }), _applyDecoratedDescriptor(_class.prototype, "addToCart", [_dec6], Object.getOwnPropertyDescriptor(_class.prototype, "addToCart"), _class.prototype)), _class));
   Ember._setComponentTemplate(__COLOCATED_TEMPLATE__, ProductDetailComponent);
 });
 ;define("regendevice/components/product-list", ["exports", "@glimmer/component", "regendevice/components/data/productdata"], function (_exports, _component, _productdata) {
@@ -1457,8 +1434,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "tNoTzYQU",
-    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[5,\"cart\",[],[[],[]]],[0,\"\\n\"],[0,\"\\n\"]],\"hasEval\":false}",
+    "id": "0ZSTldq1",
+    "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[5,\"cart\",[],[[],[]]],[0,\"\\n\\n\\n\"]],\"hasEval\":false}",
     "meta": {
       "moduleName": "regendevice/templates/cart.hbs"
     }
@@ -1614,7 +1591,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+dacee29d"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+5f7cd8f7"});
           }
         
 //# sourceMappingURL=regendevice.map

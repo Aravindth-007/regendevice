@@ -1,40 +1,33 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import {inject as service}from '@ember/service';
-import {action} from '@ember/object';
+import {action, set} from '@ember/object';
 
 export default class ProductDetailComponent extends Component {
 
-@tracked bankActive;
-@tracked creditActive;
-@tracked emiActive;
-@tracked offerPrice;
+
+@tracked offerPrice ;
+@tracked priceDetails;
+@tracked active;
 model = this.args.oneProduct;
 
 // this action for active bank offer
 @action
-bankOffer(){
-  this.bankActive = true;
-  this.creditActive = false;
-  this.emiActive = false;
-  this.offerPrice = (this.model.price.current / 10) * 9;
+Offer(params){
+ this.active = true;
+  if(params === "bank"){
+    this.offerPrice = (this.model.price.current / 10) * 9;
+    this.priceDetails = "discount on select Net Banking."
+  }else if(params === "credit"){
+    this.offerPrice = (this.model.price.current / 10) * 8;
+    this.priceDetails = "discount on select Credit Card payment."
+  }else if(params === "emi"){
+    this.offerPrice = this.model.price.current / 12;
+    this.priceDetails = "Per month!"
+  }
+  
 }
-// this action for credit card offer
-@action
-creditCardOffer(){
-  this.creditActive = true;
-  this.bankActive = false;
-  this.emiActive = false;
-  this.offerPrice = (this.model.price.current / 10) * 8;
-}
-// this action for EMI offer
-@action
-emiOffer(){
-  this.emiActive = true;
-  this.bankActive =false;
-  this.creditActive = false;
-  this.offerPrice = this.model.price.current / 12;
-}
+
 // inject shopCart service from shop-cart service.
 @service('shopCart') cart;
 

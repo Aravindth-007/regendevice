@@ -20,26 +20,16 @@
 <button {{on "click" this.addToCart}} class="add-cart-btn">ADD TO CART</button>
 <button class="buy-btn">BUY NOW</button>
 </div>
-<button class="offer-btn" {{on "click" this.emiOffer}}>EMI Option</button>
-<button class="offer-btn" {{on "click" this.bankOffer}} >Bank Offer</button>
-<button class="offer-btn" {{on "click" this.creditCardOffer}} >Credit Card Offer</button>
+<button class="offer-btn" {{on "click" (fn this.Offer 'emi')}}>EMI Option</button>
+<button class="offer-btn" {{on "click" (fn this.Offer 'bank')}} >Bank Offer</button>
+<button class="offer-btn" {{on "click" (fn this.Offer 'credit')}} >Credit Card Offer</button>
+
 {{!-- offer cards show here when user click offer button --}}
-{{#if this.bankActive }}
+{{#if this.active }}
 <div  class="offer-div">
-  <p  class="off-div-head">Bank Offer</p>
-  <p class="off-div-para">Upto {{currency this.offerPrice}} discount on select Net Banking.</p>
-</div>
-{{/if}}
-{{#if this.creditActive}}
-<div  class="offer-div">
-  <p  class="off-div-head">Credit Card Offer</p>
-  <p class="off-div-para">Upto {{currency  this.offerPrice}} discount on select Credit Cards.</p>
-</div>
-{{/if}}
-{{#if this.emiActive}}
-<div  class="offer-div">
-  <p  class="off-div-head">EMI Option</p>
-  <p class="off-div-para">Per month only  {{currency this.offerPrice}}.</p>
+  <p  class="off-div-head"> Offer</p>
+  <p class="off-div-para"> {{currency this.offerPrice}}{{this.priceDetails}} </p>
+  
 </div>
 {{/if}}
 
