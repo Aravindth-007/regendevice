@@ -3,6 +3,7 @@
 define("regendevice/tests/integration/components/add-product-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | add-product', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -41,6 +42,7 @@ define("regendevice/tests/integration/components/add-product-test", ["qunit", "e
 define("regendevice/tests/integration/components/cart-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | cart', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -79,6 +81,7 @@ define("regendevice/tests/integration/components/cart-test", ["qunit", "ember-qu
 define("regendevice/tests/integration/components/general-container-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | general-container', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -117,6 +120,7 @@ define("regendevice/tests/integration/components/general-container-test", ["quni
 define("regendevice/tests/integration/components/my-component-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | my-component', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -155,6 +159,7 @@ define("regendevice/tests/integration/components/my-component-test", ["qunit", "
 define("regendevice/tests/integration/components/product-detail-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product-detail', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -193,6 +198,7 @@ define("regendevice/tests/integration/components/product-detail-test", ["qunit",
 define("regendevice/tests/integration/components/product-detail/aboutitem-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product-detail/aboutitem', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -231,6 +237,7 @@ define("regendevice/tests/integration/components/product-detail/aboutitem-test",
 define("regendevice/tests/integration/components/product-detail/bank-offer-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product-detail/bank-offer', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -269,6 +276,7 @@ define("regendevice/tests/integration/components/product-detail/bank-offer-test"
 define("regendevice/tests/integration/components/product-detail/description-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product-detail/description', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -307,6 +315,7 @@ define("regendevice/tests/integration/components/product-detail/description-test
 define("regendevice/tests/integration/components/product-detail/features-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product-detail/features', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -345,6 +354,7 @@ define("regendevice/tests/integration/components/product-detail/features-test", 
 define("regendevice/tests/integration/components/product-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -383,6 +393,7 @@ define("regendevice/tests/integration/components/product-test", ["qunit", "ember
 define("regendevice/tests/integration/components/product/detail-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product/detail', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -421,6 +432,7 @@ define("regendevice/tests/integration/components/product/detail-test", ["qunit",
 define("regendevice/tests/integration/components/product/image-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | product/image', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -459,6 +471,7 @@ define("regendevice/tests/integration/components/product/image-test", ["qunit", 
 define("regendevice/tests/integration/components/products-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | products', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -497,6 +510,7 @@ define("regendevice/tests/integration/components/products-test", ["qunit", "embe
 define("regendevice/tests/integration/components/sampl1-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | sampl1', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -535,6 +549,7 @@ define("regendevice/tests/integration/components/sampl1-test", ["qunit", "ember-
 define("regendevice/tests/integration/components/sample-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | sample', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -573,6 +588,7 @@ define("regendevice/tests/integration/components/sample-test", ["qunit", "ember-
 define("regendevice/tests/integration/components/search-bar-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Component | search-bar', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
     (0, _qunit.test)('it renders', async function (assert) {
@@ -611,6 +627,7 @@ define("regendevice/tests/integration/components/search-bar-test", ["qunit", "em
 define("regendevice/tests/integration/helpers/currency-test", ["qunit", "ember-qunit", "@ember/test-helpers"], function (_qunit, _emberQunit, _testHelpers) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit",0,"@ember/test-helpers",0,"ember-cli-htmlbars"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Integration | Helper | currency', function (hooks) {
     (0, _emberQunit.setupRenderingTest)(hooks);
 
@@ -633,12 +650,14 @@ define("regendevice/tests/integration/helpers/currency-test", ["qunit", "ember-q
 define("regendevice/tests/test-helper", ["regendevice/app", "regendevice/config/environment", "@ember/test-helpers", "ember-qunit"], function (_app, _environment, _testHelpers, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"regendevice/app",0,"regendevice/config/environment",0,"@ember/test-helpers",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _testHelpers.setApplication)(_app.default.create(_environment.default.APP));
   (0, _emberQunit.start)();
 });
 define("regendevice/tests/unit/controllers/cart-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Controller | cart', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 
@@ -652,6 +671,7 @@ define("regendevice/tests/unit/controllers/cart-test", ["qunit", "ember-qunit"],
 define("regendevice/tests/unit/controllers/item-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Controller | item', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 
@@ -665,6 +685,7 @@ define("regendevice/tests/unit/controllers/item-test", ["qunit", "ember-qunit"],
 define("regendevice/tests/unit/models/product-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Model | product', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 
@@ -679,6 +700,7 @@ define("regendevice/tests/unit/models/product-test", ["qunit", "ember-qunit"], f
 define("regendevice/tests/unit/models/profile-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Model | profile', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 
@@ -693,6 +715,7 @@ define("regendevice/tests/unit/models/profile-test", ["qunit", "ember-qunit"], f
 define("regendevice/tests/unit/models/user-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Model | user', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 
@@ -707,6 +730,7 @@ define("regendevice/tests/unit/models/user-test", ["qunit", "ember-qunit"], func
 define("regendevice/tests/unit/routes/add-product-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | addProduct', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -718,6 +742,7 @@ define("regendevice/tests/unit/routes/add-product-test", ["qunit", "ember-qunit"
 define("regendevice/tests/unit/routes/addnewphone-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | addnewphone', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -729,6 +754,7 @@ define("regendevice/tests/unit/routes/addnewphone-test", ["qunit", "ember-qunit"
 define("regendevice/tests/unit/routes/addnewphone/addphone-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | addnewphone/addphone', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -740,6 +766,7 @@ define("regendevice/tests/unit/routes/addnewphone/addphone-test", ["qunit", "emb
 define("regendevice/tests/unit/routes/cart-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | cart', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -751,6 +778,7 @@ define("regendevice/tests/unit/routes/cart-test", ["qunit", "ember-qunit"], func
 define("regendevice/tests/unit/routes/home-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | home', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -762,6 +790,7 @@ define("regendevice/tests/unit/routes/home-test", ["qunit", "ember-qunit"], func
 define("regendevice/tests/unit/routes/item-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | item', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -773,6 +802,7 @@ define("regendevice/tests/unit/routes/item-test", ["qunit", "ember-qunit"], func
 define("regendevice/tests/unit/routes/not-found-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | not-found', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -784,6 +814,7 @@ define("regendevice/tests/unit/routes/not-found-test", ["qunit", "ember-qunit"],
 define("regendevice/tests/unit/routes/products-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | products', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -795,6 +826,7 @@ define("regendevice/tests/unit/routes/products-test", ["qunit", "ember-qunit"], 
 define("regendevice/tests/unit/routes/register-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | register', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -806,6 +838,7 @@ define("regendevice/tests/unit/routes/register-test", ["qunit", "ember-qunit"], 
 define("regendevice/tests/unit/routes/sample-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Route | sample', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
     (0, _qunit.test)('it exists', function (assert) {
@@ -814,9 +847,31 @@ define("regendevice/tests/unit/routes/sample-test", ["qunit", "ember-qunit"], fu
     });
   });
 });
+define("regendevice/tests/unit/serializers/product-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
+  "use strict";
+
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
+  (0, _qunit.module)('Unit | Serializer | product', function (hooks) {
+    (0, _emberQunit.setupTest)(hooks);
+
+    // Replace this with your real tests.
+    (0, _qunit.test)('it exists', function (assert) {
+      let store = this.owner.lookup('service:store');
+      let serializer = store.serializerFor('product');
+      assert.ok(serializer);
+    });
+    (0, _qunit.test)('it serializes records', function (assert) {
+      let store = this.owner.lookup('service:store');
+      let record = store.createRecord('product', {});
+      let serializedRecord = record.serialize();
+      assert.ok(serializedRecord);
+    });
+  });
+});
 define("regendevice/tests/unit/services/shop-cart-test", ["qunit", "ember-qunit"], function (_qunit, _emberQunit) {
   "use strict";
 
+  0; //eaimeta@70e063a35619d71f0,"qunit",0,"ember-qunit"eaimeta@70e063a35619d71f
   (0, _qunit.module)('Unit | Service | shop-cart', function (hooks) {
     (0, _emberQunit.setupTest)(hooks);
 

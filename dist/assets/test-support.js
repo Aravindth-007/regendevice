@@ -9768,6 +9768,19 @@ define("ember-testing/lib/test/waiters", ["exports"], function (_exports) {
   QUnit.config.testTimeout = QUnit.urlParams.devmode ? null : 60000; //Default Test Timeout 60 Seconds
 })();
 
+(function() {
+  var key = '_embroider_macros_runtime_config';
+  if (!window[key]) {
+    window[key] = [];
+  }
+  window[key].push(function(m) {
+    m.setGlobalConfig(
+      '@embroider/macros',
+      Object.assign({}, m.getGlobalConfig()['@embroider/macros'], { isTesting: true })
+    );
+  });
+})();
+
 var QUnitDOM = (function (exports) {
   'use strict';
 
@@ -14355,6 +14368,60 @@ define("@ember/test-helpers/wait-until", ["exports", "@ember/test-helpers/-utils
         }, interval);
       }
       scheduleCheck(0);
+    });
+  }
+});
+define("ember-cli-mirage/test-support/index", ["exports", "ember-cli-mirage/test-support/setup-mirage"], function (_exports, _setupMirage) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "setupMirage", {
+    enumerable: true,
+    get: function () {
+      return _setupMirage.default;
+    }
+  });
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/test-support/setup-mirage",0,"@embroider/macros"eaimeta@70e063a35619d71f
+  if (true) {
+    window.QUnit.config.urlConfig.push({
+      id: 'mirageLogging',
+      label: 'Mirage logging'
+    });
+  }
+});
+define("ember-cli-mirage/test-support/setup-mirage", ["exports", "ember-cli-mirage/start-mirage", "@ember/test-helpers"], function (_exports, _startMirage, _testHelpers) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = setupMirage;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/start-mirage",0,"@ember/test-helpers"eaimeta@70e063a35619d71f
+  /**
+    Used to set up mirage for a test. Must be called after one of the
+    `ember-qunit` `setup*Test()` methods. It starts the server and sets
+    `this.server` to point to it, and shuts the server down when the test
+    finishes.
+  
+    NOTE: the `hooks = self` is for mocha support
+    @hide
+  */
+  function setupMirage(hooks = self, options) {
+    hooks.beforeEach(function () {
+      if (!this.owner) {
+        throw new Error('You must call one of the ember-qunit setupTest(),' + ' setupRenderingTest() or setupApplicationTest() methods before' + ' calling setupMirage()');
+      }
+      this.server = (0, _startMirage.default)(this.owner, options);
+    });
+    hooks.afterEach(function () {
+      return (0, _testHelpers.settled)().then(() => {
+        if (this.server) {
+          this.server.shutdown();
+          delete this.server;
+        }
+      });
     });
   }
 });

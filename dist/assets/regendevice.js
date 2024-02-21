@@ -14,6 +14,7 @@
       return _jsonApi.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/adapter/json-api"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/app", ["exports", "ember-resolver", "ember-load-initializers", "regendevice/config/environment"], function (_exports, _emberResolver, _emberLoadInitializers, _environment) {
   "use strict";
@@ -22,6 +23,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/application",0,"ember-resolver",0,"ember-load-initializers",0,"regendevice/config/environment"eaimeta@70e063a35619d71f
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
   function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
@@ -48,6 +50,7 @@
       return _emberComponentManager.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@glimmer/component/-private/ember-component-manager"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/components/add-product", ["exports", "@glimmer/component"], function (_exports, _component) {
   "use strict";
@@ -57,6 +60,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _dec3, _dec4, _class, _descriptor, _descriptor2;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"@ember/object",0,"@glimmer/tracking",0,"@ember/service"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -183,6 +187,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _class, _descriptor;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"@ember/service",0,"@ember/object"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -295,6 +300,7 @@
     value: true
   });
   _exports.productArray = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   const productArray = _exports.productArray = [{
     "id": "1",
     "image": "https://m.media-amazon.com/images/I/61jmM8GL9BL._SX679_.jpg",
@@ -425,6 +431,7 @@
   });
   _exports.default = void 0;
   var _dec, _class, _descriptor;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"@ember/service"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -490,6 +497,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"@glimmer/tracking",0,"@ember/service",0,"@ember/object"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -623,6 +631,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component",0,"regendevice/components/data/productdata"eaimeta@70e063a35619d71f
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
     <div class="cards_div">
@@ -668,6 +677,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component"eaimeta@70e063a35619d71f
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
     
@@ -716,6 +726,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-htmlbars",0,"@glimmer/component"eaimeta@70e063a35619d71f
   const __COLOCATED_TEMPLATE__ = Ember.HTMLBars.template(
   /*
       
@@ -755,6 +766,7 @@
       return _welcomePage.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"ember-welcome-page/components/welcome-page"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/controllers/product-detail", ["exports"], function (_exports) {
   "use strict";
@@ -763,6 +775,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/controller"eaimeta@70e063a35619d71f
   class ItemController extends Ember.Controller {}
   _exports.default = ItemController;
 });
@@ -778,6 +791,7 @@
       return _debug.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/debug"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/helpers/app-version", ["exports", "regendevice/config/environment", "ember-cli-app-version/utils/regexp"], function (_exports, _environment, _regexp) {
   "use strict";
@@ -787,6 +801,7 @@
   });
   _exports.appVersion = appVersion;
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/component/helper",0,"regendevice/config/environment",0,"ember-cli-app-version/utils/regexp"eaimeta@70e063a35619d71f
   function appVersion(_, hash = {}) {
     const version = _environment.default.APP.version;
     // e.g. 1.0.0-alpha.1+4jds75hf
@@ -818,6 +833,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/component/helper"eaimeta@70e063a35619d71f
   // import {tracked} from '@ember/tracking';
 
   class currency extends Ember.Helper {
@@ -843,6 +859,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-inflector/lib/helpers/pluralize"eaimeta@70e063a35619d71f
   var _default = _exports.default = _pluralize.default;
 });
 ;define("regendevice/helpers/singularize", ["exports", "ember-inflector/lib/helpers/singularize"], function (_exports, _singularize) {
@@ -852,6 +869,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-inflector/lib/helpers/singularize"eaimeta@70e063a35619d71f
   var _default = _exports.default = _singularize.default;
 });
 ;define("regendevice/initializers/app-version", ["exports", "ember-cli-app-version/initializer-factory", "regendevice/config/environment"], function (_exports, _initializerFactory, _environment) {
@@ -861,6 +879,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-app-version/initializer-factory",0,"regendevice/config/environment"eaimeta@70e063a35619d71f
   let name, version;
   if (_environment.default.APP) {
     name = _environment.default.APP.name;
@@ -878,6 +897,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-resolver/resolvers/classic/container-debug-adapter"eaimeta@70e063a35619d71f
   var _default = _exports.default = {
     name: 'container-debug-adapter',
     initialize() {
@@ -886,6 +906,69 @@
       app.inject('container-debug-adapter:main', 'namespace', 'application:main');
     }
   };
+});
+;define("regendevice/initializers/ember-cli-mirage", ["exports", "regendevice/config/environment", "ember-cli-mirage/get-rfc232-test-context", "ember-cli-mirage/start-mirage", "regendevice/mirage/config"], function (_exports, _environment, _getRfc232TestContext, _startMirage, config) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"regendevice/config/environment",0,"ember-cli-mirage/get-rfc232-test-context",0,"ember-cli-mirage/start-mirage",0,"regendevice/mirage/config"eaimeta@70e063a35619d71f
+  const {
+    default: makeServer
+  } = config;
+
+  //
+  // This initializer does two things:
+  //
+  // 1. Pulls the mirage config objects from the application's config and
+  //    registers them in the container so `ember-cli-mirage/start-mirage` can
+  //    find them (since it doesn't have access to the app's namespace).
+  // 2. Provides legacy support for auto-starting mirage in pre-rfc268 acceptance
+  //    tests.
+  //
+  var _default = _exports.default = {
+    name: 'ember-cli-mirage',
+    initialize(application) {
+      if (makeServer) {
+        application.register('mirage:make-server', makeServer, {
+          instantiate: false
+        });
+      }
+      _environment.default['ember-cli-mirage'] = _environment.default['ember-cli-mirage'] || {};
+      if (_shouldUseMirage(_environment.default.environment, _environment.default['ember-cli-mirage'])) {
+        startMirage(application.__container__, _environment.default);
+      }
+    }
+  };
+  function startMirage(owner, env = _environment.default) {
+    return (0, _startMirage.default)(owner, {
+      env,
+      makeServer
+    });
+  }
+  function _shouldUseMirage(env, addonConfig) {
+    if (typeof FastBoot !== 'undefined') {
+      return false;
+    }
+    if ((0, _getRfc232TestContext.default)()) {
+      return false;
+    }
+    let userDeclaredEnabled = typeof addonConfig.enabled !== 'undefined';
+    let defaultEnabled = _defaultEnabled(env, addonConfig);
+    return userDeclaredEnabled ? addonConfig.enabled : defaultEnabled;
+  }
+
+  /*
+    Returns a boolean specifying the default behavior for whether
+    to initialize Mirage.
+  */
+  function _defaultEnabled(env, addonConfig) {
+    let usingInDev = env === 'development' && !addonConfig.usingProxy;
+    let usingInTest = env === 'test';
+    return usingInDev || usingInTest;
+  }
 });
 ;define("regendevice/initializers/ember-data-data-adapter", ["exports", "@ember-data/debug/setup"], function (_exports, _setup) {
   "use strict";
@@ -899,6 +982,7 @@
       return _setup.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/debug/setup"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/initializers/ember-data", ["exports", "ember-data", "ember-data/setup-container"], function (_exports, _emberData, _setupContainer) {
   "use strict";
@@ -907,6 +991,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-data",0,"ember-data/setup-container"eaimeta@70e063a35619d71f
   /*
     This code initializes EmberData in an Ember application.
   
@@ -926,6 +1011,7 @@
   });
   _exports.default = void 0;
   _exports.initialize = initialize;
+  0; //eaimeta@70e063a35619d71f0,"ember",0,"regendevice/config/environment"eaimeta@70e063a35619d71f
   function initialize() {
     var application = arguments[1] || arguments[0];
     if (_environment.default.exportApplicationGlobal !== false) {
@@ -963,6 +1049,20 @@
     initialize: initialize
   };
 });
+;define("regendevice/instance-initializers/ember-cli-mirage-autostart", ["exports", "ember-cli-mirage/instance-initializers/ember-cli-mirage-autostart"], function (_exports, _emberCliMirageAutostart) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _emberCliMirageAutostart.default;
+    }
+  });
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/instance-initializers/ember-cli-mirage-autostart"eaimeta@70e063a35619d71f
+});
 ;define("regendevice/instance-initializers/ember-data", ["exports", "ember-data/initialize-store-service"], function (_exports, _initializeStoreService) {
   "use strict";
 
@@ -970,10 +1070,211 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-data/initialize-store-service"eaimeta@70e063a35619d71f
   var _default = _exports.default = {
     name: 'ember-data',
     initialize: _initializeStoreService.default
   };
+});
+;define("regendevice/mirage/config", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = _default;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
+  // import {
+  // //   discoverEmberDataModels,
+  //    applyEmberDataSerializers,
+  // } from 'ember-cli-mirage';
+  // import { createServer } from 'miragejs';
+
+  function _default(product) {
+    this.namespace = 'api';
+
+    // let allProducts = {
+    //   ...product,
+    //   // Remove discoverEmberDataModels if you do not want ember-cli-mirage to auto discover the ember models
+    //   models: {
+    //     ...(product.store),
+    //     ...product.models
+    //   },
+    //   // uncomment to opt into ember-cli-mirage to auto discover ember serializers
+    //   serializers: applyEmberDataSerializers(product.serializers),
+    //   routes,
+    // };
+    // return createServer(allProducts);
+
+    // these all are static data's in defined in routes.
+    this.get('/products', () => {
+      return {
+        products: [{
+          id: 1,
+          name: 'phone'
+        }, {
+          id: 2,
+          name: 'watch'
+        }, {
+          id: 3,
+          name: 'laptop'
+        }]
+      };
+    });
+
+    // create a new  product
+    this.post('/products', (schema, request) => {
+      const attrs = JSON.parse(request.requestBody).product;
+      return schema.products.create(attrs);
+    });
+
+    //Shorthands
+    this.get('/products');
+    this.post('/products');
+    this.get('/products/:id');
+
+    // Dynamic paths and query params
+    this.get('/products/:id', (schema, request) => {
+      return schema.products.find(request.params.id);
+    });
+
+    //     //Create a new unsaved model instance with attributes attrs.
+    // let product = products.new({ productName: 'realme c3' })
+    // product.productName;  // realme c3
+    // product.id;      // null
+    // product.isNew();
+
+    // //Create a new model instance with attributes attrs, and insert it into the database.
+
+    // let product = products.create({productName: 'realme c3'})
+    // product.title;   // realme c3
+    // product.id;      // 1
+    // product.isNew(); // false
+
+    //   let product  = products.find(1);
+    //   product.attrs;
+
+    //   console.log(product);
+
+    this.passthrough();
+  }
+
+  // function routes() {
+
+  // These comments are here to help you get started. Feel free to delete them.
+
+  /*
+    Config (with defaults).
+     Note: these only affect routes defined *after* them!
+  */
+
+  // this.urlPrefix = '';    // make this `http://localhost:8080`, for example, if your API is on a different server
+  // this.namespace = '';    // make this `/api`, for example, if your API is namespaced
+  // this.timing = 400;      // delay for each request, automatically set to 0 during testing
+
+  /*
+    Shorthand cheatsheet:
+     this.get('/posts');
+    this.post('/posts');
+    this.get('/posts/:id');
+    this.put('/posts/:id'); // or this.patch
+    this.del('/posts/:id');
+     https://miragejs.com/docs/getting-started/overview/
+  */
+  // }
+});
+;define("regendevice/mirage/factories/product", ["exports", "miragejs"], function (_exports, _miragejs) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"miragejs"eaimeta@70e063a35619d71f
+  var _default = _exports.default = _miragejs.Factory.extend({
+    name(i) {
+      return `Product ${i}`;
+    },
+    price: 28,
+    available: false,
+    image() {
+      return _miragejs.faker.internet.image();
+    }
+  });
+});
+;define("regendevice/mirage/models/product", ["exports", "miragejs"], function (_exports, _miragejs) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"miragejs"eaimeta@70e063a35619d71f
+  var _default = _exports.default = _miragejs.Model.extend({});
+});
+;define("regendevice/mirage/scenarios/default", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = _default;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
+  function _default(server) {
+    /*
+      Seed your development database using your factories.
+      This data will not be loaded in your tests.
+    */
+
+    server.createList('product', 10);
+  }
+});
+;define("regendevice/mirage/serializers/application", ["exports", "ember-cli-mirage"], function (_exports, _emberCliMirage) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage",0,"ember"eaimeta@70e063a35619d71f
+  // Let’s say your backend server returns dasherized object keys instead of camel cased.
+  // You can customize the response by extending the base Serializer and overwriting keyForAttribute
+  //GET /authors/1
+  // {
+  //   author: {
+  //     id: 1,
+  //     firstName: 'Keyser',
+  //     lastName: 'Soze',
+  //     age: 145
+  //   }
+  // }
+  const {
+    dasherize
+  } = Ember.String;
+  var _default = _exports.default = _emberCliMirage.Serializer.extend({
+    keyForAttribute(key) {
+      return dasherize(key);
+    }
+  }); // after this Serializer it will look like this
+  // GET /authors/1
+  // {
+  //   author: {
+  //     id: 1,
+  //     'first-name': 'Keyser',
+  //     'last-name': 'Soze',
+  //     age: 145
+  //   }
+  // }
+});
+;define("regendevice/mirage/serializers/product", ["exports", "regendevice/mirage/serializers/application"], function (_exports, _application) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"regendevice/mirage/serializers/application"eaimeta@70e063a35619d71f
+  var _default = _exports.default = _application.default.extend({});
 });
 ;define("regendevice/models/product", ["exports", "@ember-data/model"], function (_exports, _model) {
   "use strict";
@@ -983,6 +1284,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9;
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/model"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -1057,6 +1359,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _dec3, _dec4, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4;
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/model",0,"@ember-data/model"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -1101,6 +1404,7 @@
   });
   _exports.default = void 0;
   var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6;
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/model",0,"@ember-data/model"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -1156,6 +1460,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/router",0,"regendevice/config/environment"eaimeta@70e063a35619d71f
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
   function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
@@ -1193,6 +1498,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
   class AddProductRoute extends Ember.Route {}
   _exports.default = AddProductRoute;
 });
@@ -1203,6 +1509,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
   class AddnewphoneAddphoneRoute extends Ember.Route {}
   _exports.default = AddnewphoneAddphoneRoute;
 });
@@ -1213,6 +1520,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
   class CartRoute extends Ember.Route {}
   _exports.default = CartRoute;
 });
@@ -1223,6 +1531,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route"eaimeta@70e063a35619d71f
   class NotFoundRoute extends Ember.Route {}
   _exports.default = NotFoundRoute;
 });
@@ -1233,6 +1542,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route",0,"regendevice/components/data/productdata"eaimeta@70e063a35619d71f
   class ItemRoute extends Ember.Route {
     // find the product by product id!
     model(params) {
@@ -1254,6 +1564,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"@ember/routing/route",0,"regendevice/components/data/productdata"eaimeta@70e063a35619d71f
   class ProductsRoute extends Ember.Route {
     model() {
       return _productdata.productArray;
@@ -1273,6 +1584,7 @@
       return _json.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/json"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/serializers/-json-api", ["exports", "@ember-data/serializer/json-api"], function (_exports, _jsonApi) {
   "use strict";
@@ -1286,6 +1598,7 @@
       return _jsonApi.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/json-api"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/serializers/-rest", ["exports", "@ember-data/serializer/rest"], function (_exports, _rest) {
   "use strict";
@@ -1299,6 +1612,7 @@
       return _rest.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/rest"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/services/shop-cart", ["exports"], function (_exports) {
   "use strict";
@@ -1308,6 +1622,7 @@
   });
   _exports.default = void 0;
   var _dec, _class, _descriptor, _dec2, _class3, _descriptor2;
+  0; //eaimeta@70e063a35619d71f0,"@ember/service",0,"@glimmer/tracking"eaimeta@70e063a35619d71f
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
   function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
   function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : String(i); }
@@ -1380,6 +1695,7 @@
       return _store.default;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"ember-data/store"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/templates/about", ["exports"], function (_exports) {
   "use strict";
@@ -1388,6 +1704,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "r1h29hHu",
     "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n    \"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"      \\n       \\n\\n        \\n    \\n        \\n    \\n\"]],\"hasEval\":false}",
@@ -1403,6 +1720,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "k9Q0GOuq",
     "block": "{\"symbols\":[],\"statements\":[[5,\"add-product\",[],[[],[]]]],\"hasEval\":false}",
@@ -1418,6 +1736,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "GQOM8lGz",
     "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
@@ -1433,6 +1752,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "0ZSTldq1",
     "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\"],[5,\"cart\",[],[[],[]]],[0,\"\\n\\n\\n\"]],\"hasEval\":false}",
@@ -1448,6 +1768,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "M4TKY8DB",
     "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[0,\"  \\n\\n\"]],\"hasEval\":false}",
@@ -1463,6 +1784,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "bobukwZn",
     "block": "{\"symbols\":[],\"statements\":[[0,\"\\n\"],[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[7,\"div\",true],[8],[0,\"\\n  About Us\"],[9],[0,\"\\n\"],[7,\"div\",true],[10,\"class\",\"a-us-section\"],[8],[0,\"\\n            \"],[7,\"div\",true],[10,\"class\",\"a-c-image\"],[8],[0,\"\\n        \"],[7,\"img\",true],[10,\"src\",\"https://assets-global.website-files.com/605826c62e8de87de744596e/6298b33e6aafa619b517757c_Blog-Coverasdfghjs.jpg\"],[10,\"alt\",\"Our Team\"],[8],[9],[0,\"\\n        \"],[9],[0,\"\\n        \"],[7,\"div\",true],[10,\"class\",\"about-us-c-div\"],[8],[0,\"\\n        \"],[7,\"p\",true],[10,\"class\",\"a-us-content\"],[8],[0,\"Who We Are\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"We are a passionate team dedicated to providing the latest and best mobile devices to our customers. With a focus on quality and customer satisfaction, we strive to offer a wide range of mobile phones at competitive prices.\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\"],[9],[0,\"\\n\\n\"],[7,\"div\",true],[8],[0,\"Contact Us\"],[9],[0,\"\\n\"],[0,\"    \"],[7,\"div\",true],[10,\"class\",\"contact-us-container\"],[8],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"contact-img-div\"],[8],[0,\"\\n      \"],[7,\"img\",true],[10,\"src\",\"https://media.istockphoto.com/id/1457106246/photo/the-companys-product-quality-certificate-is-compliant-the-check-mark-symbol-represents-the.webp?b=1&s=170667a&w=0&k=20&c=0B-wEScFlzca10cZsOepMEmvm4tNX-9-v_uPJmmSTIw=\"],[10,\"alt\",\"\"],[8],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"div\",true],[10,\"class\",\"contact-form-div\"],[8],[0,\"\\n      \"],[7,\"form\",true],[10,\"class\",\"form\"],[8],[0,\"\\n    \\n    \"],[7,\"div\",true],[10,\"class\",\"flex\"],[8],[0,\"\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"first name\"],[9],[0,\"\\n        \"],[9],[0,\"\\n\\n        \"],[7,\"label\",true],[8],[0,\"\\n            \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"text\"],[8],[9],[0,\"\\n            \"],[7,\"span\",true],[8],[0,\"last name\"],[9],[0,\"\\n        \"],[9],[0,\"\\n    \"],[9],[0,\"  \\n            \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"email\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"email\"],[9],[0,\"\\n    \"],[9],[0,\" \\n        \\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"input\",true],[10,\"class\",\"input\"],[10,\"placeholder\",\"\"],[10,\"required\",\"\"],[10,\"type\",\"tel\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"contact number\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \"],[7,\"label\",true],[8],[0,\"\\n        \"],[7,\"textarea\",true],[10,\"class\",\"input-textarea\"],[10,\"placeholder\",\"\"],[10,\"rows\",\"3\"],[10,\"required\",\"\"],[8],[9],[0,\"\\n        \"],[7,\"span\",true],[8],[0,\"message\"],[9],[0,\"\\n    \"],[9],[0,\"\\n    \\n    \"],[7,\"button\",true],[10,\"href\",\"#\"],[10,\"class\",\"contact-us-submit-btn\"],[8],[0,\"\\n      \"],[7,\"span\",true],[10,\"class\",\"contact-us-submit-text\"],[8],[0,\"submit\"],[9],[0,\"\\n    \"],[9],[0,\"\\n\"],[9],[0,\"\\n    \"],[9],[0,\"\\n  \"],[9],[0,\"\\n\\n  \"]],\"hasEval\":false}",
@@ -1478,6 +1800,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "D3XazEva",
     "block": "{\"symbols\":[],\"statements\":[[1,[22,\"outlet\"],false],[0,\"\\n\\n    \"],[7,\"style\",true],[8],[0,\"\\n        body {\\n            background-color: #f4f4f4;\\n            color: #333;\\n            font-family: 'Arial', sans-serif;\\n            text-align: center;\\n            margin: 0;\\n            padding: 0;\\n            display: flex;\\n            align-items: center;\\n            justify-content: center;\\n            height: 100vh;\\n        }\\n\\n        .container {\\n            max-width: 600px;\\n            padding: 20px;\\n            background-color: #fff;\\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\\n            border-radius: 5px;\\n        }\\n\\n        h1 {\\n            color: #e44d26;\\n            font-size: 120px;\\n            margin: 0;\\n        }\\n\\n        p {\\n            font-size: 18px;\\n            margin-top: 10px;\\n        }\\n\\n        a {\\n            color: #3498db;\\n            text-decoration: none;\\n            font-weight: bold;\\n        }\\n\\n        a:hover {\\n            text-decoration: underline;\\n        }\\n    \"],[9],[0,\"\\n\\n    \"],[7,\"div\",true],[10,\"class\",\"container\"],[8],[0,\"\\n        \"],[7,\"h1\",true],[8],[0,\"404\"],[9],[0,\"\\n        \"],[7,\"p\",true],[8],[0,\"Oops! The page you are looking for might be in another castle.\"],[9],[0,\"\\n        \"],[5,\"link-to\",[],[[\"@route\"],[\"index\"]],{\"statements\":[[0,\"Return \"]],\"parameters\":[]}],[0,\"\\n    \"],[9],[0,\"\\n\\n\"]],\"hasEval\":false}",
@@ -1493,6 +1816,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "9pyIFz5D",
     "block": "{\"symbols\":[],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n  \"],[5,\"product-detail\",[],[[\"@oneProduct\"],[[23,0,[\"model\"]]]]],[0,\"\\n  \\n\"]],\"hasEval\":false}",
@@ -1508,6 +1832,7 @@
     value: true
   });
   _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71feaimeta@70e063a35619d71f
   var _default = _exports.default = Ember.HTMLBars.template({
     "id": "Dx4KB3in",
     "block": "{\"symbols\":[\"productObj\"],\"statements\":[[5,\"general-container\",[],[[],[]]],[0,\"\\n\\n\"],[5,\"search-bar\",[],[[],[]]],[0,\"\\n\\n\\n\"],[7,\"div\",true],[10,\"class\",\"cards_div\"],[8],[0,\"\\n\\n\"],[4,\"each\",[[23,0,[\"model\"]]],null,{\"statements\":[[0,\"  \"],[5,\"product\",[],[[\"@item\"],[[23,1,[]]]]],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"  \\n\\n\"],[9],[0,\"\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
@@ -1528,6 +1853,7 @@
       return _private.BooleanTransform;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/-private"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/transforms/date", ["exports", "@ember-data/serializer/-private"], function (_exports, _private) {
   "use strict";
@@ -1541,6 +1867,7 @@
       return _private.DateTransform;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/-private"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/transforms/number", ["exports", "@ember-data/serializer/-private"], function (_exports, _private) {
   "use strict";
@@ -1554,6 +1881,7 @@
       return _private.NumberTransform;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/-private"eaimeta@70e063a35619d71f
 });
 ;define("regendevice/transforms/string", ["exports", "@ember-data/serializer/-private"], function (_exports, _private) {
   "use strict";
@@ -1567,6 +1895,7 @@
       return _private.StringTransform;
     }
   });
+  0; //eaimeta@70e063a35619d71f0,"@ember-data/serializer/-private"eaimeta@70e063a35619d71f
 });
 ;
 
@@ -1591,7 +1920,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+5f7cd8f7"});
+            require("regendevice/app")["default"].create({"name":"regendevice","version":"0.0.0+d1688aee"});
           }
         
 //# sourceMappingURL=regendevice.map

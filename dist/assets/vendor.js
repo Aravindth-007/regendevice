@@ -85811,6 +85811,124 @@ require('ember');
 
   exports.default = OrderedSet;
 });
+;define("@embroider/macros/es-compat2", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = esCompat;
+  function esCompat(m) {
+    return m?.__esModule ? m : {
+      default: m,
+      ...m
+    };
+  }
+});
+;define("@embroider/macros/runtime", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.config = config;
+  _exports.each = each;
+  _exports.getGlobalConfig = getGlobalConfig;
+  _exports.isTesting = isTesting;
+  _exports.macroCondition = macroCondition;
+  /*
+    These are the runtime implementations for the javascript macros that have
+    runtime implementations.
+  
+    Not every macro has a runtime implementation, some only make sense in the
+    build and always run there.
+  
+    Even when we have runtime implementations, we are still careful to emit static
+    errors during the build wherever possible, and runtime errors when necessary,
+    so that you're not surprised when you switch from runtime-mode to compile-time
+    mode.
+  */
+
+  /*
+    CAUTION: in classic builds, this file gets shared by all present copies of
+    @embroider/macros. If you want to change its public API, you need to rename it
+    and update `pathToRuntime` in ../babel/state.ts to point at it, so that your
+    babel plugin and runtime will match.
+  */
+
+  function each(array) {
+    if (!Array.isArray(array)) {
+      throw new Error(`the argument to the each() macro must be an array`);
+    }
+    return array;
+  }
+  function macroCondition(predicate) {
+    return predicate;
+  }
+
+  // This is here as a compile target for `getConfig` and `getOwnConfig` when
+  // we're in runtime mode. This is not public API to call from your own code.
+  function config(packageRoot) {
+    return runtimeConfig.packages[packageRoot];
+  }
+  function getGlobalConfig() {
+    return runtimeConfig.global;
+  }
+  function isTesting() {
+    let g = runtimeConfig.global;
+    let e = g && g['@embroider/macros'];
+    return Boolean(e && e.isTesting);
+  }
+  const runtimeConfig = initializeRuntimeMacrosConfig();
+
+  // this exists to be targeted by our babel plugin
+  function initializeRuntimeMacrosConfig() {
+    return {
+      "packages": {
+        "/Users/arkannan/Desktop/regendevice/node_modules/ember-get-config": {
+          "modulePrefix": "regendevice"
+        }
+      },
+      "global": {
+        "@embroider/macros": {
+          "isTesting": false
+        }
+      }
+    };
+  }
+  function updaterMethods() {
+    return {
+      config,
+      getGlobalConfig,
+      setConfig(packageRoot, value) {
+        runtimeConfig.packages[packageRoot] = value;
+      },
+      setGlobalConfig(key, value) {
+        runtimeConfig.global[key] = value;
+      }
+    };
+  }
+
+  // this is how runtime config can get injected at boot. I'm not sure yet if this
+  // should be public API, but we certainly need it internally to set things like
+  // the global fastboot.isRunning.
+  //
+  // consumers of this API push a function onto
+  // window._embroider_macros_runtime_config. The function is given four methods
+  // which allow it to read and write the per-package and global configs. The
+  // reason for allowing both read & write is that merging strategies are up to
+  // each consumers -- read first, then merge, then write.
+  //
+  // For an example user of this API, see where we generate
+  // embroider_macros_fastboot_init.js' in @embroider/core.
+  let updaters = typeof window !== 'undefined' ? window._embroider_macros_runtime_config : undefined;
+  if (updaters) {
+    let methods = updaterMethods();
+    for (let updater of updaters) {
+      updater(methods);
+    }
+  }
+});
 ;define("@glimmer/component/-private/base-component-manager", ["exports", "@glimmer/component/-private/component"], function (_exports, _component) {
   "use strict";
 
@@ -86303,6 +86421,668 @@ require('ember');
   const versionRegExp = exports.versionRegExp = /\d+[.]\d+[.]\d+/; // Match any number of 3 sections of digits separated by .
   const versionExtendedRegExp = exports.versionExtendedRegExp = /\d+[.]\d+[.]\d+-[a-z]*([.]\d+)?/; // Match the above but also hyphen followed by any number of lowercase letters, then optionally period and digits
   const shaRegExp = exports.shaRegExp = /[a-z\d]{8}$/; // Match 8 lowercase letters and digits, at the end of the string only (to avoid matching with version extended part)
+});
+;define("ember-cli-mirage/assert", ["exports", "miragejs"], function (_exports, _miragejs) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "default", {
+    enumerable: true,
+    get: function () {
+      return _miragejs._assert;
+    }
+  });
+  0; //eaimeta@70e063a35619d71f0,"miragejs"eaimeta@70e063a35619d71f
+});
+;define("ember-cli-mirage/ember-data", ["exports", "require", "ember-get-config", "ember-cli-mirage/assert", "ember-cli-mirage/utils/ember-data", "miragejs", "ember-cli-mirage/serializers/ember-data-serializer"], function (_exports, _require, _emberGetConfig, _assert, _emberData, _miragejs, _emberDataSerializer) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.applyEmberDataSerializers = applyEmberDataSerializers;
+  _exports.discoverEmberDataModels = discoverEmberDataModels;
+  _exports.getDsModels = getDsModels;
+  _exports.getDsSerializers = getDsSerializers;
+  _exports.modelFor = modelFor;
+  0; //eaimeta@70e063a35619d71f0,"require",0,"ember-get-config",0,"ember-cli-mirage/assert",0,"ember-cli-mirage/utils/ember-data",0,"miragejs",0,"ember-cli-mirage/serializers/ember-data-serializer",0,"miragejs"eaimeta@70e063a35619d71f
+  /* global requirejs */
+  const {
+    modulePrefix,
+    podModulePrefix
+  } = _emberGetConfig.default;
+
+  // Caches
+  let DsModels, Models;
+  let DsSerializers, Serializers;
+
+  /**
+   * Get all ember data models under the app's namespaces
+   *
+   * @method getDsModels
+   * @private
+   * @hide
+   * @param {StoreService} store
+   * @return {Object} models
+   */
+  function getDsModels(store) {
+    if (DsModels) {
+      return DsModels;
+    }
+    let moduleMap = requirejs.entries;
+    let classicModelMatchRegex = new RegExp(`^${modulePrefix}/models/(.*)$`, 'i');
+    let podModelMatchRegex = new RegExp(`^${podModulePrefix || modulePrefix}/(.*)/model$`, 'i');
+    DsModels = {};
+    if (!_emberData.hasEmberData) {
+      return DsModels;
+    }
+    Object.keys(moduleMap).forEach(path => {
+      let matches = path.match(classicModelMatchRegex) || path.match(podModelMatchRegex);
+      if (matches && matches[1]) {
+        let modelName = matches[1];
+        let model = store.modelFor(modelName);
+        if ((0, _emberData.isDsModel)(model)) {
+          DsModels[modelName] = model;
+        }
+      }
+    });
+    return DsModels;
+  }
+
+  /**
+   * Get all mirage models for each of the ember-data models
+   *
+   * @method discoverEmberDataModels
+   * @param {StoreService} store
+   * @return {Object} models
+   */
+  function discoverEmberDataModels(store) {
+    if (Models || !store) {
+      return Models;
+    }
+    let emberDataModels = getDsModels(store);
+    Models = {};
+    Object.keys(emberDataModels).forEach(modelName => {
+      let model = emberDataModels[modelName];
+      let attrs = {};
+      model.eachRelationship((name, r) => {
+        if (r.kind === 'belongsTo') {
+          attrs[name] = (0, _miragejs.belongsTo)(r.type, r.options);
+        } else if (r.kind === 'hasMany') {
+          attrs[name] = (0, _miragejs.hasMany)(r.type, r.options);
+        }
+      });
+      Models[modelName] = _miragejs.Model.extend(attrs);
+    });
+    return Models;
+  }
+
+  /**
+   * A lookup method for an autogenerated model
+   *
+   * @method modelFor
+   * @private
+   * @param  {String} name
+   * @return {Model}
+   * @hide
+   */
+  function modelFor(name) {
+    let models = discoverEmberDataModels();
+    (0, _assert.default)(!!models[name], `Model of type '${name}' does not exist.`);
+    return models[name];
+  }
+
+  /**
+   * Get all ember data serializers under the app's namespaces
+   *
+   * @method getDsSerializers
+   * @private
+   * @hide
+   * @return {Object} serializers
+   */
+  function getDsSerializers() {
+    if (DsSerializers) {
+      return DsSerializers;
+    }
+    let moduleMap = requirejs.entries;
+    let classicSerializerMatchRegex = new RegExp(`^${modulePrefix}/serializers/(.*)$`, 'i');
+    let podSerializerMatchRegex = new RegExp(`^${podModulePrefix || modulePrefix}/(.*)/serializer$`, 'i');
+    DsSerializers = {};
+    if (!_emberData.hasEmberData) {
+      return DsSerializers;
+    }
+    Object.keys(moduleMap).forEach(path => {
+      let matches = path.match(classicSerializerMatchRegex) || path.match(podSerializerMatchRegex);
+      if (matches && matches[1]) {
+        let serializerName = matches[1];
+        let serializer = (0, _require.default)(path, null, null, true).default;
+        // in mirage, registering models takes care of camelize, serializers do not
+        DsSerializers[(0, _miragejs._utilsInflectorCamelize)(serializerName)] = serializer;
+      }
+    });
+    return DsSerializers;
+  }
+
+  /**
+   * Generate mirage serializers for each of the ember-data serializers
+   * if a mirage serializer already exists, apply the ember-data transforms
+   *
+   * @method applyEmberDataSerializers
+   * @return {Object} serializers
+   */
+  function applyEmberDataSerializers(mirageSerializers = {}) {
+    if (Serializers) {
+      return Serializers;
+    }
+    let emberDataSerializers = getDsSerializers();
+
+    // Start off with the mirage serializers,
+    // so if there are any mirage serializers with no ED counterpart, they are in the list
+    Serializers = mirageSerializers;
+    Object.keys(emberDataSerializers).forEach(serializerName => {
+      let dsSerializer = emberDataSerializers[serializerName];
+
+      // Seems I have to create it to get access to some of the properties
+      dsSerializer = dsSerializer.create ? dsSerializer.create() : new dsSerializer();
+      let transforms;
+      let primaryKey = dsSerializer.primaryKey;
+      let attrs = dsSerializer.attrs;
+      if (primaryKey || attrs) {
+        let Serializer = mirageSerializers[serializerName] || mirageSerializers.application || _emberDataSerializer.default;
+        if (attrs) {
+          let serializer = Serializer.create ? Serializer.create() : new Serializer();
+          transforms = serializer.transforms || {};
+          Object.keys(attrs).forEach(key => {
+            let transform = attrs[key];
+            let serializerTransform = serializer.transforms ? serializer.transforms[key] : {};
+            let resolvedTransform = typeof attrs[key] === 'string' ? {
+              key: attrs[key]
+            } : {
+              key: attrs[key].key
+            };
+            if (transform.serialize !== undefined) {
+              resolvedTransform.deserialize = transform.serialize;
+            }
+            if (transform.deserialize !== undefined) {
+              resolvedTransform.serialize = transform.deserialize;
+            }
+            transforms[key] = Object.assign(resolvedTransform, serializerTransform);
+          });
+        }
+        Serializers[serializerName] = Serializer.extend({
+          primaryKey,
+          transforms
+        });
+      }
+    });
+    return Serializers;
+  }
+});
+;define("ember-cli-mirage/get-rfc232-test-context", ["exports", "@embroider/macros/runtime", "@embroider/macros/es-compat2"], function (_exports, _runtime, _esCompat) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = getRfc232TestContext;
+  0; //eaimeta@70e063a35619d71f0,"@embroider/macros",0,"@ember/test-helpers"eaimeta@70e063a35619d71f
+  /**
+    Helper to get our rfc232/rfc268 test context object, or null if we're not in
+    such a test.
+  
+    @hide
+  */
+  function getRfc232TestContext() {
+    // Support older versions of `ember-qunit` that don't have
+    // `@ember/test-helpers` (and therefore cannot possibly be running an
+    // rfc232/rfc268 test).
+    if (true && (0, _runtime.isTesting)()) {
+      let {
+        getContext
+      } = (0, _esCompat.default)(require("@ember/test-helpers"));
+      return getContext();
+    }
+  }
+});
+;define("ember-cli-mirage/index", ["exports", "ember-cli-mirage/ember-data", "ember-cli-mirage/serializers/ember-data-serializer"], function (_exports, _emberData, _emberDataSerializer) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  Object.defineProperty(_exports, "EmberDataSerializer", {
+    enumerable: true,
+    get: function () {
+      return _emberDataSerializer.default;
+    }
+  });
+  Object.defineProperty(_exports, "applyEmberDataSerializers", {
+    enumerable: true,
+    get: function () {
+      return _emberData.applyEmberDataSerializers;
+    }
+  });
+  Object.defineProperty(_exports, "discoverEmberDataModels", {
+    enumerable: true,
+    get: function () {
+      return _emberData.discoverEmberDataModels;
+    }
+  });
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/ember-data",0,"ember-cli-mirage/serializers/ember-data-serializer"eaimeta@70e063a35619d71f
+});
+;define("ember-cli-mirage/instance-initializers/ember-cli-mirage-autostart", ["exports", "ember-cli-mirage/get-rfc232-test-context", "ember-cli-mirage/start-mirage"], function (_exports, _getRfc232TestContext, _startMirage) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  _exports.initialize = initialize;
+  0; //eaimeta@70e063a35619d71f0,"@ember/destroyable",0,"ember-cli-mirage/get-rfc232-test-context",0,"ember-cli-mirage/start-mirage"eaimeta@70e063a35619d71f
+  /**
+    If we are running an rfc232/rfc268 test then we want to support the
+    `autostart` configuration option, which auto-starts mirage before the test
+    runs and shuts it down afterwards, and also sets `this.server` on the test
+    context so the tests don't need to use the global `server`. We do this in an
+    instance initializer because initializers only run once per test run, not
+    before and after each test.
+  
+    @hide
+  */
+  function initialize(appInstance) {
+    let testContext = (0, _getRfc232TestContext.default)();
+    if (testContext) {
+      let {
+        'ember-cli-mirage': {
+          autostart
+        } = {}
+      } = appInstance.resolveRegistration('config:environment');
+      if (autostart) {
+        testContext.server = (0, _startMirage.default)(appInstance);
+
+        // Ensure that the server is shut down when the application is destroyed.
+        Ember._registerDestructor(appInstance, () => {
+          testContext.server.shutdown();
+          delete testContext.server;
+        });
+      }
+    }
+  }
+  var _default = _exports.default = {
+    initialize
+  };
+});
+;define("ember-cli-mirage/serializers/ember-data-serializer", ["exports", "miragejs"], function (_exports, _miragejs) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  0; //eaimeta@70e063a35619d71f0,"miragejs",0,"@ember/object"eaimeta@70e063a35619d71f
+  /**
+   * This serializer does not use following mirage properties to control how things are serialized
+   *
+   *     attrs - see `serialize` on the transform property
+   *     embed - see `serialize` on the transform property
+   *     serializeIds - see serialize on the transform property
+   *
+   * The above configuration was applied to every property on the serializer, whereas the transforms allows you
+   * to specify a value for each property or relation.
+   *
+   * This serializer uses a property `transforms` that follows the Ember Data serializer format of `attrs` to specify the
+   * serialization (`attrs` is already in use by mirageJs).
+   *
+   * The startMirage has been modified to also generate serializers from the Ember Data serializers supporting
+   * the key and the serialize/deserialize properties with the value of (true/ids/records). If a serializer is
+   * already present in the mirage directory, the transforms will be added to it. If that serializer is not
+   * a serializer of this type, there will be no effect.  Ensure that your serializers and/or the application
+   * serializer in the mirage directory is a type of this serializer
+   *
+   * @class EmberDataSerializer
+   * @constructor
+   * @public
+   *
+   */
+  let EmberDataSerializer = _miragejs.RestSerializer.extend({
+    /**
+     * The property name for the primary key for mirage and ember data is normally `id`. This allows you
+     * to specify what that property name should be in the JSON.
+     */
+    primaryKey: 'id',
+    /**
+     * Transforms follow the format of ember data serializer attrs as follows
+     *
+     * {
+     *   property: {    // property would be the name of the property in the mirage store
+     *      key: 'externalKey',   // externalKey would be the name in the JSON
+     *      serialize: 'ids',     // how should this property be serialized and deserialized
+     *      deserialize: 'ids'    // the default is 'ids' that is the id of the releation
+     *                            // or 'records', that is, embed the full record instead of the id
+     *                            // or false, do not serialize or deserialize as applied
+     *   }
+     * }
+     *
+     * These transforms will be created from the attrs on the corresponding serializer in ember data much like
+     * the models for mirage are created from the models in in ember date. If the transforms key is specified, it
+     * will overlay the definition created from the serializer key for key. That is you could override some
+     * of the transform definition.
+     */
+    transforms: undefined,
+    // resolved transforms
+    _transforms: undefined,
+    // These are the defaults
+    // include: []
+
+    keyForId() {
+      return this.primaryKey;
+    },
+    getKeysForIncluded() {
+      return typeof this.include === 'function' ? this.include(this.request, this.primaryResource) : this.include;
+    },
+    getTransforms() {
+      return this.transforms || {};
+    },
+    getResolvedTransforms() {
+      if (!this._resolvedTransforms) {
+        this._resolvedTransforms = {
+          serialize: {},
+          normalize: {}
+        };
+      }
+      return this._resolvedTransforms;
+    },
+    getTransformForSerialize(key) {
+      let resolvedTransforms = this.getResolvedTransforms();
+      let transforms = this.getTransforms();
+      if (!resolvedTransforms.serialize[key]) {
+        let transform = typeof transforms[key] === 'string' ? {
+          key: transforms[key]
+        } : Object.assign({}, transforms[key]);
+        resolvedTransforms.serialize[key] = Object.assign({
+          key: key,
+          serialize: 'ids',
+          deserialize: 'ids'
+        }, transform);
+      }
+      return resolvedTransforms.serialize[key];
+    },
+    getTransformForNormalize(key) {
+      let resolvedTransforms = this.getResolvedTransforms();
+      if (!resolvedTransforms.normalize[key]) {
+        let transforms = this.getTransforms();
+        let foundKey;
+        let foundTransform = Object.keys(transforms).find(item => {
+          foundKey = item;
+          return transforms[item].key === key;
+        });
+        let transform = foundTransform ? Object.assign({}, transforms[foundKey], {
+          key: foundKey
+        }) : {
+          key: key,
+          serialize: 'ids',
+          deserialize: 'ids'
+        };
+        resolvedTransforms.normalize[key] = transform;
+      }
+      return resolvedTransforms.normalize[key];
+    },
+    /**
+     *
+     * @param model
+     * @param removeForeignKeys
+     * @param didSerialize
+     * @returns {*}
+     * @private
+     */
+    _hashForModel(model, removeForeignKeys, didSerialize = {}) {
+      let attrs = this._attrsForModel(model);
+      let newDidSerialize = Object.assign({}, didSerialize);
+      newDidSerialize[model.modelName] = newDidSerialize[model.modelName] || {};
+      newDidSerialize[model.modelName][model.id] = true;
+      model.associationKeys.forEach(key => {
+        let transform = this.getTransformForSerialize(key);
+        if (transform.serialize) {
+          let associatedResource = model[key];
+          let serializeOption = transform.serialize;
+          if (associatedResource && Ember.get(newDidSerialize, `${associatedResource.modelName}.${associatedResource.id}`)) {
+            // force it to IDS if we already have serialized it to prevent recursion
+            // TODO: However is the end system wants records, we need to send records, so this really should be do records, dont resurse
+            serializeOption = 'ids';
+          }
+          if (serializeOption === 'records') {
+            let [associatedResourceHash] = this.getHashForResource(associatedResource, false, newDidSerialize, true);
+            let formattedKey = this._keyForProperty(key) || this.isCollection(associatedResource) ? this.keyForRelationship(key) : this.keyForEmbeddedRelationship(key);
+            attrs[formattedKey] = associatedResourceHash;
+          } else {
+            let formattedKey = this._keyForProperty(key) || this.keyForRelationshipIds(key);
+            if (this.isCollection(associatedResource)) {
+              attrs[formattedKey] = model[`${this._container.inflector.singularize(key)}Ids`];
+            } else {
+              attrs[formattedKey] = model[`${this._container.inflector.singularize(key)}Id`];
+            }
+          }
+        }
+      });
+      return attrs;
+    },
+    _keyForProperty(attr) {
+      let transform = this.getTransformForSerialize(attr);
+      return transform.key;
+    },
+    keyForAttribute(attr) {
+      if (attr === 'id') {
+        return this.keyForId();
+      }
+      return this._keyForProperty(attr) || _miragejs.RestSerializer.prototype.keyForAttribute.apply(this, arguments);
+    },
+    keyForRelationship(type) {
+      return this._keyForProperty(type) || _miragejs.RestSerializer.prototype.keyForRelationship.apply(this, arguments);
+    },
+    keyForEmbeddedRelationship(attributeName) {
+      return this._keyForProperty(attributeName) || _miragejs.RestSerializer.prototype.keyForEmbeddedRelationship.apply(this, arguments);
+    },
+    keyForRelationshipIds(type) {
+      return this._keyForProperty(type) || _miragejs.RestSerializer.prototype.keyForRelationshipIds.apply(this, arguments);
+    },
+    keyForForeignKey(relationshipName) {
+      return this._keyForProperty(relationshipName) || _miragejs.RestSerializer.prototype.keyForForeignKey.apply(this, arguments);
+    },
+    normalize(payload) {
+      // was it not wrapped when serialized?
+      if (this.root === false) {
+        let p = {};
+        p[this.type] = payload;
+        payload = p;
+      }
+      let type = Object.keys(payload)[0];
+      let attrs = payload[type];
+      let modelName = (0, _miragejs._utilsInflectorCamelize)(type);
+      let modelClass = this.schema.modelClassFor(modelName);
+      let {
+        belongsToAssociations,
+        hasManyAssociations
+      } = modelClass;
+      let belongsToKeys = Object.keys(belongsToAssociations);
+      let hasManyKeys = Object.keys(hasManyAssociations);
+      let jsonApiPayload = {
+        data: {
+          type: this._container.inflector.pluralize(type),
+          attributes: {}
+        }
+      };
+      if (attrs[this.primaryKey]) {
+        jsonApiPayload.data.id = attrs[this.primaryKey];
+      }
+      let relationships = {};
+      Object.keys(attrs).forEach(attrKey => {
+        if (attrKey !== this.primaryKey) {
+          let transform = this.getTransformForNormalize(attrKey);
+          let key = transform.key || attrKey;
+          if (this.normalizeIds) {
+            if (belongsToKeys.includes(key)) {
+              let association = belongsToAssociations[key];
+              let associationModel = association.modelName;
+              relationships[(0, _miragejs._utilsInflectorDasherize)(key)] = {
+                data: {
+                  type: associationModel,
+                  id: attrs[attrKey]
+                }
+              };
+            } else if (hasManyKeys.includes(key)) {
+              let association = hasManyAssociations[key];
+              let associationModel = association.modelName;
+              let data = attrs[attrKey].map(id => {
+                return {
+                  type: associationModel,
+                  id
+                };
+              });
+              relationships[(0, _miragejs._utilsInflectorDasherize)(key)] = {
+                data
+              };
+            } else {
+              jsonApiPayload.data.attributes[(0, _miragejs._utilsInflectorDasherize)(key)] = attrs[attrKey];
+            }
+          } else {
+            jsonApiPayload.data.attributes[(0, _miragejs._utilsInflectorDasherize)(key)] = attrs[attrKey];
+          }
+        }
+      });
+      if (Object.keys(relationships).length) {
+        jsonApiPayload.data.relationships = relationships;
+      }
+      return jsonApiPayload;
+    }
+  });
+  var _default = _exports.default = EmberDataSerializer;
+});
+;define("ember-cli-mirage/start-mirage", ["exports", "ember-cli-mirage/utils/read-modules", "ember-inflector"], function (_exports, _readModules, _emberInflector) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = startMirage;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/utils/read-modules",0,"ember-inflector",0,"@ember/debug"eaimeta@70e063a35619d71f
+  /**
+    Helper to start mirage. This should not be called directly. In rfc232/rfc268
+    tests, use `setupMirage()` or the `autoboot` option in the addon config
+    in the environment.
+  
+    @hide
+  */
+  function startMirage(owner, {
+    env,
+    makeServer
+  } = {}) {
+    if (!env || !makeServer) {
+      if (!owner) {
+        throw new Error('You must pass `owner` to startMirage()');
+      }
+      env = env || owner.resolveRegistration('config:environment');
+
+      // These are set from `<app>/initializers/ember-cli-mirage`
+      makeServer = makeServer || owner.resolveRegistration('mirage:make-server');
+    }
+    let environment = env.environment;
+    let modules = (0, _readModules.default)(env.modulePrefix);
+    let options = Object.assign(modules, {
+      environment,
+      store: owner.lookup('service:store')
+    });
+    options.inflector = {
+      singularize: _emberInflector.singularize,
+      pluralize: _emberInflector.pluralize
+    };
+
+    // MakeServer must accept at least one param
+    (true && !(makeServer) && Ember.assert('There is no makeServer function passed or registered as mirage:make-server', makeServer));
+    (true && !(makeServer.length > 0) && Ember.assert('Mirage config default exported function must at least one parameter', makeServer.length > 0));
+    let server = makeServer(options);
+    if (typeof location !== 'undefined' && location.search.indexOf('mirageLogging') !== -1) {
+      server.logging = true;
+    }
+    return server;
+  }
+});
+;define("ember-cli-mirage/utils/ember-data", ["exports"], function (_exports) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.hasEmberData = void 0;
+  _exports.isDsModel = isDsModel;
+  0; //eaimeta@70e063a35619d71f0,"@embroider/macros"eaimeta@70e063a35619d71f
+  /**
+    @hide
+  */
+  const hasEmberData = _exports.hasEmberData = true || true;
+
+  /**
+    @hide
+  */
+  function isDsModel(m) {
+    return m && typeof m.eachRelationship === 'function';
+  }
+});
+;define("ember-cli-mirage/utils/read-modules", ["exports", "ember-cli-mirage/assert", "miragejs", "ember-inflector", "require"], function (_exports, _assert, _miragejs, _emberInflector, _require) {
+  /* global requirejs */
+  /* eslint-env node */
+  'use strict';
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = _default;
+  0; //eaimeta@70e063a35619d71f0,"ember-cli-mirage/assert",0,"miragejs",0,"ember-inflector",0,"require"eaimeta@70e063a35619d71f
+  /**
+    This function looks through all files that have been loaded by Ember CLI and
+    finds the ones under /mirage/[factories, fixtures, scenarios, models]/, and exports
+    a hash containing the names of the files as keys and the data as values.
+  
+    @hide
+  */
+  function _default(prefix) {
+    let modules = ['factories', 'fixtures', 'scenarios', 'models', 'serializers', 'identity-managers'];
+    let mirageModuleRegExp = new RegExp(`^${prefix}/mirage/(${modules.join('|')})`);
+    let modulesMap = modules.reduce((memo, name) => {
+      memo[(0, _miragejs._utilsInflectorCamelize)(name)] = {};
+      return memo;
+    }, {});
+    Object.keys(requirejs.entries).filter(function (key) {
+      return mirageModuleRegExp.test(key);
+    }).forEach(function (moduleName) {
+      if (moduleName.match('.jshint')) {
+        // ignore autogenerated .jshint files
+        return;
+      }
+      let moduleParts = moduleName.split('/');
+      let moduleTypeIndex = moduleParts.indexOf('mirage') + 1;
+      let moduleType = (0, _miragejs._utilsInflectorCamelize)(moduleParts[moduleTypeIndex]);
+      let moduleKey = moduleParts.slice([moduleTypeIndex + 1]).join('/');
+      if (moduleType === 'scenario') {
+        (0, _assert.default)('Only scenario/default.js is supported at this time.', moduleKey !== 'default');
+      }
+
+      /*
+      Ensure fixture keys are pluralized
+      */
+      if (moduleType === 'fixtures') {
+        moduleKey = (0, _emberInflector.pluralize)(moduleKey);
+      }
+      let module = (0, _require.default)(moduleName, null, null, true);
+      if (!module) {
+        throw new Error(`${moduleName} must export a ${moduleType}`);
+      }
+      let data = module.default;
+      modulesMap[moduleType][(0, _miragejs._utilsInflectorCamelize)(moduleKey)] = data;
+    });
+    return modulesMap;
+  }
 });
 ;define('ember-data/-private', ['exports', '@ember-data/store', 'ember-data/version', '@ember-data/model/-private', '@ember-data/store/-private', '@ember-data/record-data/-private'], function (exports, store, VERSION, Private, Private$1, Private$2) { 'use strict';
 
@@ -87194,6 +87974,18 @@ require('ember');
     s[s.length] = `${encodeURIComponent(k)}=${encodeURIComponent(v)}`;
   }
   var _default = _exports.default = serializeQueryParams;
+});
+;define("ember-get-config/index", ["exports", "@embroider/macros/runtime"], function (_exports, _runtime) {
+  "use strict";
+
+  Object.defineProperty(_exports, "__esModule", {
+    value: true
+  });
+  _exports.default = void 0;
+  /* global require */
+
+  let configModulePath = `${(0, _runtime.config)("/Users/arkannan/Desktop/regendevice/node_modules/ember-get-config").modulePrefix}/config/environment`;
+  var _default = _exports.default = require(configModulePath).default;
 });
 ;define('ember-inflector/index', ['exports', 'ember-inflector/lib/system', 'ember-inflector/lib/ext/string'], function (exports, _system) {
   'use strict';
